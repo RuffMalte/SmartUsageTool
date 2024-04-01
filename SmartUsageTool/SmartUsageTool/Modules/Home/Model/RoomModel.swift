@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomModel {
+struct RoomModel: Identifiable {
     let id = UUID()
     let type: RoomType
     lazy var name: String = { type.rawValue.capitalized }()

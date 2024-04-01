@@ -9,6 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var text = ""
+    @ObservedObject var viewModel = HomeViewModel()
+    
+    let columns = [
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
+    ]
     
     var body: some View {
         contentView
@@ -18,7 +24,11 @@ struct HomeView: View {
 
 private extension HomeView {
     var contentView: some View {
-        headerView
+        VStack {
+            headerView
+            collectionView
+        }
+        
     }
     
     var headerView: some View {
@@ -56,6 +66,24 @@ private extension HomeView {
         }
         .padding()
         .background(Color.background)
+    }
+    
+    var collectionView: some View {
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 10) {
+                ForEach(viewModel.rooms) { room in
+                    Image(room.type.rawValue)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 15, height: UIScreen.main.bounds.width / 2 - 15)
+                        .background(
+                                       RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.background)
+                                   )
+                }
+            }
+            .padding(.top)
+        }
     }
 }
 
