@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
     @State private var text = ""
     @ObservedObject var viewModel = HomeViewModel()
+    @Query private var items: [RoomModel]
     
     let columns = [
         GridItem(.flexible(), spacing: 10),
@@ -70,20 +72,22 @@ private extension HomeView {
     
     var collectionView: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(viewModel.rooms) { room in
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(items) { room in
                     Image(room.type.rawValue)
                         .aspectRatio(contentMode: .fit)
                         .cornerRadius(10)
-                        .frame(width: UIScreen.main.bounds.width / 2 - 15, height: UIScreen.main.bounds.width / 2 - 15)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
                         .background(
                                        RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color.background)
+                                        .fill(Color.lightGrayBackground)
                                    )
+//                        .padding(10)
                 }
             }
-            .padding(.top)
+            .padding(10)
         }
+        .padding(20)
     }
 }
 

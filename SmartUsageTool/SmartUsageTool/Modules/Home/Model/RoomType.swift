@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum RoomType: String {
+enum RoomType: String, Codable {
     case kitchen, bathroom, bedroom, livingRoom, other
 }

@@ -12,16 +12,16 @@ class HomeViewModel: ObservableObject {
     @Published var totalCost: Double = 0.0
     
     
-    // TODO: - Mock data should be replaced to real
-    @Published var rooms: [RoomModel] = [
-        .init(type: .kitchen),
-        .init(type: .bathroom),
-        .init(type: .bedroom),
-        .init(type: .livingRoom),
-        .init(type: .other),
-        .init(type: .other),
-        .init(type: .other),
-        .init(type: .other),
-        .init(type: .other),
-    ]
+//    // TODO: - Mock data should be replaced to real
+//    @Published var rooms: [RoomModel] = [
+//        .init(type: .kitchen),
+//        .init(type: .bathroom),
+//        .init(type: .bedroom),
+//        .init(type: .livingRoom),
+//        .init(type: .other),
+//        .init(type: .other),
+//        .init(type: .other),
+//        .init(type: .other),
+//        .init(type: .other),
+//    ]
 }

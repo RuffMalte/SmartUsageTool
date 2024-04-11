@@ -6,9 +6,16 @@
 //
 
 import Foundation
+import SwiftData
 
-struct RoomModel: Identifiable {
+@Model
+final class RoomModel: Identifiable {
     let id = UUID()
     let type: RoomType
-    lazy var name: String = { type.rawValue.capitalized }()
+    var name: String
+    
+    init(type: RoomType, name: String) {
+        self.type = type
+        self.name = name
+    }
 }
