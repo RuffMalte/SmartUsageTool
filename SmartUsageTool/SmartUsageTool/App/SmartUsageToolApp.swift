@@ -13,6 +13,7 @@ struct SmartUsageToolApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             RoomModel.self,
+            DeviceModel.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
