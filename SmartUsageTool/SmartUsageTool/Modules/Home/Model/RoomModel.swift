@@ -13,6 +13,7 @@ final class RoomModel: Identifiable {
     let id = UUID()
     let type: RoomType
     var name: String
+    @Relationship(deleteRule: .cascade)  var devices: [DeviceModel] = []
     
     init(type: RoomType, name: String) {
         self.type = type

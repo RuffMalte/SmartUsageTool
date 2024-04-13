@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0804AB212BC91D9700E1636C /* NewRoom.swift */; };
+		0804AB7B2BCB274600E1636C /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0804AB7A2BCB274600E1636C /* DeviceModel.swift */; };
 		0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F1782BACC524002B39BD /* SmartUsageToolApp.swift */; };
 		0815F17B2BACC524002B39BD /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F17A2BACC524002B39BD /* InitialView.swift */; };
 		0815F17D2BACC525002B39BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0815F17C2BACC525002B39BD /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0804AB212BC91D9700E1636C /* NewRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoom.swift; sourceTree = "<group>"; };
+		0804AB7A2BCB274600E1636C /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		0815F1752BACC524002B39BD /* SmartUsageTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartUsageTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0815F1782BACC524002B39BD /* SmartUsageToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartUsageToolApp.swift; sourceTree = "<group>"; };
 		0815F17A2BACC524002B39BD /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				0850BA412BBAA8AB00DB1C41 /* RoomModel.swift */,
 				0850BA432BBAA8D400DB1C41 /* RoomType.swift */,
+				0804AB7A2BCB274600E1636C /* DeviceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				0850BA462BBAAAF000DB1C41 /* HomeViewModel.swift in Sources */,
 				0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */,
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,
+				0804AB7B2BCB274600E1636C /* DeviceModel.swift in Sources */,
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
 				0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */,
