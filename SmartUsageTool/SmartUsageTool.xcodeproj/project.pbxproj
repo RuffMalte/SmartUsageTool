@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0804AB212BC91D9700E1636C /* NewRoom.swift */; };
 		0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F1782BACC524002B39BD /* SmartUsageToolApp.swift */; };
 		0815F17B2BACC524002B39BD /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F17A2BACC524002B39BD /* InitialView.swift */; };
 		0815F17D2BACC525002B39BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0815F17C2BACC525002B39BD /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0804AB212BC91D9700E1636C /* NewRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoom.swift; sourceTree = "<group>"; };
 		0815F1752BACC524002B39BD /* SmartUsageTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartUsageTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0815F1782BACC524002B39BD /* SmartUsageToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartUsageToolApp.swift; sourceTree = "<group>"; };
 		0815F17A2BACC524002B39BD /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0804AB202BC91D7A00E1636C /* NewRoom */ = {
+			isa = PBXGroup;
+			children = (
+				0804AB212BC91D9700E1636C /* NewRoom.swift */,
+			);
+			path = NewRoom;
+			sourceTree = "<group>";
+		};
 		0815F16C2BACC524002B39BD = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		0815F1882BACC69F002B39BD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0804AB202BC91D7A00E1636C /* NewRoom */,
 				0815F18E2BACC9E5002B39BD /* List */,
 				0815F18A2BACC6C2002B39BD /* Home */,
 				0815F1892BACC6B5002B39BD /* Initial */,
@@ -233,6 +244,7 @@
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
+				0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

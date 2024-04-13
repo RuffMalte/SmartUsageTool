@@ -12,6 +12,7 @@ struct HomeView: View {
     @State private var text = ""
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
+    @State private var isPresentedNewRoom = false
     
     let columns = [
         GridItem(.flexible(), spacing: 10),
@@ -30,6 +31,9 @@ private extension HomeView {
             headerView
             collectionView
         }
+        .sheet(isPresented: $isPresentedNewRoom) {
+               NewRoom(isPresented: $isPresentedNewRoom)
+           }
         
     }
     
@@ -39,7 +43,7 @@ private extension HomeView {
                 Text("My Home")
                     .fontWeight(.bold)
                 Spacer()
-                Button(action: {}, label: {
+                Button(action: { isPresentedNewRoom.toggle() }, label: {
                     Image(systemName: "plus")
                         .tint(.black)
                 })
