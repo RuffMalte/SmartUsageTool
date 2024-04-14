@@ -14,6 +14,9 @@ final class RoomModel: Identifiable {
     let type: RoomType
     var name: String
     @Relationship(deleteRule: .cascade)  var devices: [DeviceModel] = []
+    var expenses: Double {
+        devices.reduce(0.0) { $0 + $1.expenses }
+    }
     
     init(type: RoomType, name: String) {
         self.type = type

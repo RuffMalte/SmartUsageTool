@@ -13,6 +13,7 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false
+//    @State private var selectedRoom: RoomModel?
     
     let columns = [
         GridItem(.flexible(), spacing: 10),
@@ -20,7 +21,9 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        contentView
+        NavigationView {
+            contentView
+        }
     }
     
 }
@@ -75,24 +78,31 @@ private extension HomeView {
     }
     
     var collectionView: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(items) { room in
-                    Image(room.type.rawValue)
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(10)
-                        .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
-                        .background(
-                                       RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color.lightGrayBackground)
-                                   )
-//                        .padding(10)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(items) { room in
+                        NavigationLink(
+                            destination: RoomView(room: room),
+                            label: {
+                                Image(room.type.rawValue)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(10)
+                                    .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color.lightGrayBackground)
+                                    )
+                            }
+                        )
+//                        .buttonStyle(PlainButtonStyle())  Avoid default button style
+                    }
                 }
+                .padding(10)
             }
-            .padding(10)
-        }
-        .padding(20)
+            .padding(20)
     }
+
 }
 
 #Preview {

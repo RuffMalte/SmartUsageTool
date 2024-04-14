@@ -14,7 +14,8 @@ struct NewDevice: View {
     @State private var power: Int = 0
     @State private var dayTime: TimeInterval = 0
     @State private var nightTime: TimeInterval = 0
-    var isNightPrice: Bool = true
+    var room: RoomModel
+    var isNightPrice: Bool { UserDefaults.isNightPrice }
     
     var body: some View {
         contentView
@@ -119,11 +120,11 @@ private extension NewDevice {
 
 private extension NewDevice {
     func addItem() {
-        let newItem = DeviceModel(name: name, dayTime: dayTime, nightTime: nightTime, power: power)
-        modelContext.insert(newItem)
+        let newItem = DeviceModel(name: name, dayTime: dayTime, nightTime: nightTime, power: power, isOn: true)
+        room.devices.append(newItem)
     }
 }
 
 #Preview {
-    NewDevice(isPresented: .constant(true))
+    NewDevice(isPresented: .constant(true), room: RoomModel(type: .bathroom, name: ""))
 }
