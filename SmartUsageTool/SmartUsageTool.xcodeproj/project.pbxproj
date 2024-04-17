@@ -23,6 +23,7 @@
 		0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA432BBAA8D400DB1C41 /* RoomType.swift */; };
 		0850BA462BBAAAF000DB1C41 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */; };
 		087069B42BD01EE10033FE43 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B32BD01EE10033FE43 /* Devices.swift */; };
+		087069B62BD02B690033FE43 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B52BD02B690033FE43 /* Rooms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0850BA432BBAA8D400DB1C41 /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
 		0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		087069B32BD01EE10033FE43 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
+		087069B52BD02B690033FE43 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				0804AB212BC91D9700E1636C /* NewRoom.swift */,
+				087069B52BD02B690033FE43 /* Rooms.swift */,
 			);
 			path = NewRoom;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				087069B42BD01EE10033FE43 /* Devices.swift in Sources */,
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
 				0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */,
+				087069B62BD02B690033FE43 /* Rooms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,9 @@ struct NewRoom: View {
     @Binding var isPresented: Bool
     @State private var name: String = ""
     
+    @State private var selectedRoom: Room = .livingRoom
+    let rooms: [Room] = Room.allCases
+    
     var body: some View {
         contentView
     }
@@ -30,40 +33,68 @@ private extension NewRoom {
                     nameView
                     Spacer()
                 }
-      
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationTitle("Add Room")
-                    .navigationBarItems(leading: Button("Cancel") {
-                        isPresented.toggle()
-                    },
-                                        trailing: Button("Save") {
-                        addItem()
-                        isPresented.toggle()
-                    })
-             
+                
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Add Room")
+                .navigationBarItems(leading: Button("Cancel") {
+                    isPresented.toggle()
+                },
+                                    trailing: Button("Save") {
+                    addItem()
+                    isPresented.toggle()
+                })
+                
             }
         }
     }
     
     var nameView: some View {
         VStack(alignment: .leading) {
-            Text("Room Name")
+            Text("Room")
                 .fontWeight(.semibold)
-            TextField("Enter name", text: $name)
-                          .padding()
-                          .textFieldStyle(.plain)
-                          .background(
-                            RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
-                          )
+            if selectedRoom == .other {
+                textfieldView
+            } else {
+                roomPickerView
+            }
+       
         }
         .padding(30)
+    }
+    
+    var textfieldView: some View {
+        TextField("Enter name", text: $name)
+            .padding()
+            .textFieldStyle(.plain)
+            .background(
+                RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
+            )
+    }
+    
+    var roomPickerView: some View {
+        HStack {
+            Picker("Select a room", selection: $selectedRoom) {
+                        ForEach(rooms, id: \.self) { room in
+                                Text(room.rawValue)
+                                    .font(.system(size: 14))
+                        }
+                    }
+            .pickerStyle(.menu)
+            Spacer()
+        }
+        .padding(.vertical,8)
+        .background(
+            RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
+        )
+
     }
 }
 
 private extension NewRoom {
-     func addItem() {
-         let newItem = RoomModel(type: RoomType.checkBy(name: name), name: name)
-            modelContext.insert(newItem)
+    func addItem() {
+        let name = selectedRoom == .other ? name : selectedRoom.rawValue
+        let newItem = RoomModel(type: RoomType.checkBy(name: name), name: name)
+        modelContext.insert(newItem)
     }
 }
 
