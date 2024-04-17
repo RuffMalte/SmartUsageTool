@@ -11,14 +11,16 @@ struct NewDevice: View {
     @Environment(\.modelContext) private var modelContext
     @Binding var isPresented: Bool
     @State private var name: String = ""
-    @State private var power: Int = 0
-    @State private var dayTime: TimeInterval = 0
-    @State private var nightTime: TimeInterval = 0
+    @State private var power: String = "0"
+    @State private var dayTime: String = "0"
+    @State private var nightTime: String = "0"
     var room: RoomModel
     var isNightPrice: Bool { UserDefaults.isNightPrice }
     
     var body: some View {
-        contentView
+        ScrollView(.vertical) {
+            contentView
+        }
     }
 }
 
@@ -79,7 +81,7 @@ private extension NewDevice {
         VStack(alignment: .leading) {
             Text("Power")
                 .fontWeight(.semibold)
-            TextField("Enter power", text: $name)
+            TextField("Enter power", text: $power)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -93,7 +95,7 @@ private extension NewDevice {
         VStack(alignment: .leading) {
             Text("Daily Usage")
                 .fontWeight(.semibold)
-            TextField("Enter time", text: $name)
+            TextField("Enter time", text: $dayTime)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -107,7 +109,7 @@ private extension NewDevice {
         VStack(alignment: .leading) {
             Text("Nightly Usage")
                 .fontWeight(.semibold)
-            TextField("Enter time", text: $name)
+            TextField("Enter time", text: $nightTime)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -120,7 +122,7 @@ private extension NewDevice {
 
 private extension NewDevice {
     func addItem() {
-        let newItem = DeviceModel(name: name, dayTime: dayTime, nightTime: nightTime, power: power, isOn: true)
+        let newItem = DeviceModel(name: name, dayTime: TimeInterval(dayTime) ?? 0, nightTime: TimeInterval(nightTime) ?? 0, power: Int(power) ?? 0, isOn: true)
         room.devices.append(newItem)
     }
 }

@@ -9,11 +9,17 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @State private var text = ""
+    @State private var text = String(format: "%.2f", UserDefaults.dayPrice)
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false
-//    @State private var selectedRoom: RoomModel?
+    private var totalCost: Double {
+       let sum = items.reduce(0.0) { $0 + $1.expenses }
+        return sum
+    }
+    private var totalCostString: String {
+        return "$" + String(format: "%.2f", totalCost)
+    }
     
     let columns = [
         GridItem(.flexible(), spacing: 10),
@@ -23,7 +29,17 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             contentView
+                .onTapGesture {
+                    hideKeyboard()
+                    }
+                .onChange(of: text) { oldValue, newValue in
+                    UserDefaults.setDay(price: Double(newValue) ?? 0)
+                }
         }
+    }
+    
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
 }
@@ -52,7 +68,7 @@ private extension HomeView {
                 })
             }
             
-            Text("Total cost: $0,00")
+            Text("Total cost:" + totalCostString)
             
             HStack {
                 Text("USD")

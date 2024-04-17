@@ -9,19 +9,28 @@ import SwiftUI
 
 struct RoomView: View {
     var room: RoomModel
-    @State private var selectedDevice: DeviceModel = DeviceModel(name: "Select Device", dayTime: 0, power: 0, isOn: false)
-    
+    @State private var selectedDevice: DeviceModel = DeviceModel(name: "Select Device", dayTime: 0, power: 0, isOn: true)
+    @State private var isPresentedNewDevice = false
     
     var body: some View {
-        VStack {
+        contentView
+    }
+}
+
+private extension RoomView {
+    var contentView: some View {
+        VStack(spacing: 0) {
             headerView
-            Spacer()
+            listView
+        }
+        .sheet(isPresented: $isPresentedNewDevice) {
+            NewDevice(isPresented: $isPresentedNewDevice, room: room)
         }
         .navigationBarItems(
             trailing:
                 HStack {
                     Button(action: {
-                        // Action for the first button
+                        isPresentedNewDevice.toggle()
                     }) {
                         Image(systemName: "plus")
                     }
@@ -32,10 +41,10 @@ struct RoomView: View {
                     }
                 }
         )
+        
     }
-}
-
-private extension RoomView {
+    
+    
     var headerView: some View {
         HStack {
             Text(room.name)
@@ -47,6 +56,53 @@ private extension RoomView {
         .padding(30)
         .padding(.bottom, 10)
         .background(Color.background)
+    }
+    
+    var detailView: some View {
+        VStack {
+            HStack {
+                Text(selectedDevice.name)
+                    .font(.system(size: 22, weight: .semibold))
+                Spacer()
+                Toggle("", isOn: $selectedDevice.isOn)
+            }
+            HStack {
+                InfoView(initialValue: selectedDevice.dayTime, type: "hrs", title: "Daily usage")
+                Spacer()
+                InfoView(initialValue: Double(selectedDevice.power), type: "W", title: "Power")
+            }
+        }
+        .padding(30)
+//        .background(Color.background)
+    }
+    
+    var listView: some View {
+        Group {
+            detailView
+            List {
+                ForEach(room.devices) { device in
+                    Button(action: {
+                        selectedDevice = device
+                    }) {
+                        HStack {
+                            Text(device.name)
+                                .font(.headline)
+                            Spacer()
+                            Toggle("", isOn: $selectedDevice.isOn)
+                        }
+                        .padding(.vertical)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                .onDelete(perform: deleteDevice)
+            }
+            .listStyle(PlainListStyle())
+        }
+    }
+    
+    
+    func deleteDevice(at offsets: IndexSet) {
+        room.devices.remove(atOffsets: offsets)
     }
 }
 
