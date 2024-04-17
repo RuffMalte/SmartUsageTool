@@ -79,7 +79,7 @@ private extension NewDevice {
     
     var powerView: some View {
         VStack(alignment: .leading) {
-            Text("Power")
+            Text("Power W")
                 .fontWeight(.semibold)
             TextField("Enter power", text: $power)
                 .padding()
@@ -93,7 +93,7 @@ private extension NewDevice {
     
     var dailyView: some View {
         VStack(alignment: .leading) {
-            Text("Daily Usage")
+            Text("Daily Usage Hours")
                 .fontWeight(.semibold)
             TextField("Enter time", text: $dayTime)
                 .padding()
