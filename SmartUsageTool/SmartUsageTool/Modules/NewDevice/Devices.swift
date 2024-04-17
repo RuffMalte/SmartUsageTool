@@ -8,6 +8,7 @@
 import Foundation
 
 enum Device: String, CaseIterable {
+    case other = "Other"
     case spaceHeater = "Space Heater"
     case heatPump = "Heat Pump"
     case portableHeater = "Portable Heater"

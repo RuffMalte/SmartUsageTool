@@ -14,13 +14,15 @@ struct NewDevice: View {
     @State private var power: String = "0"
     @State private var dayTime: String = "0"
     @State private var nightTime: String = "0"
+    @State private var selectedDevice: Device = .spaceHeater
+    let devices: [Device] = Device.allCases
     var room: RoomModel
     var isNightPrice: Bool { UserDefaults.isNightPrice }
     
     var body: some View {
-        ScrollView(.vertical) {
+//        ScrollView(.vertical) {
             contentView
-        }
+//        }
     }
 }
 
@@ -66,15 +68,41 @@ private extension NewDevice {
     
     var nameView: some View {
         VStack(alignment: .leading) {
-            Text("Device Name")
+            Text("Device")
                 .fontWeight(.semibold)
-            TextField("Enter name", text: $name)
-                .padding()
-                .textFieldStyle(.plain)
-                .background(
-                    RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
-                )
+            if selectedDevice == .other {
+                textfieldView
+            } else {
+                devicePickerView
+            }
         }
+    }
+    
+    var textfieldView: some View {
+        TextField("Enter name", text: $name)
+            .padding()
+            .textFieldStyle(.plain)
+            .background(
+                RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
+            )
+    }
+    
+    var devicePickerView: some View {
+        HStack {
+            Picker("Select a device", selection: $selectedDevice) {
+                        ForEach(devices, id: \.self) { device in
+                                Text(device.rawValue)
+                                    .font(.system(size: 14))
+                        }
+                    }
+            .pickerStyle(.menu)
+            Spacer()
+        }
+        .padding(.vertical,8)
+        .background(
+            RoundedRectangle(cornerRadius: 10).fill(.lightGrayBackground)
+        )
+
     }
     
     var powerView: some View {
@@ -122,7 +150,7 @@ private extension NewDevice {
 
 private extension NewDevice {
     func addItem() {
-        let newItem = DeviceModel(name: name, dayTime: TimeInterval(dayTime) ?? 0, nightTime: TimeInterval(nightTime) ?? 0, power: Int(power) ?? 0, isOn: true)
+        let newItem = DeviceModel(name: selectedDevice == .other ? name : selectedDevice.rawValue, dayTime: TimeInterval(dayTime) ?? 0, nightTime: TimeInterval(nightTime) ?? 0, power: Int(power) ?? 0, isOn: true)
         room.devices.append(newItem)
     }
 }
