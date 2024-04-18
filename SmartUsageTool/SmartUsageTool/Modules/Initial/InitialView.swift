@@ -19,6 +19,7 @@ struct InitialView: View {
                     Label("List", systemImage: "tablecells")
                 }
         }
+        .navigationBarHidden(true)
     }
 }
 

@@ -26,7 +26,7 @@ struct SmartUsageToolApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InitialView()
+            LaunchView()
                 .modelContainer(sharedModelContainer)
         }
     }

@@ -24,6 +24,7 @@
 		0850BA462BBAAAF000DB1C41 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */; };
 		087069B42BD01EE10033FE43 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B32BD01EE10033FE43 /* Devices.swift */; };
 		087069B62BD02B690033FE43 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B52BD02B690033FE43 /* Rooms.swift */; };
+		087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B72BD0316B0033FE43 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		087069B32BD01EE10033FE43 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		087069B52BD02B690033FE43 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		087069B72BD0316B0033FE43 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				0815F17A2BACC524002B39BD /* InitialView.swift */,
+				087069B72BD0316B0033FE43 /* LaunchView.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
+				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,
 				0804AB7D2BCB2A8000E1636C /* NewDevice.swift in Sources */,
 				0815F1912BACCA70002B39BD /* ListView.swift in Sources */,
 				0815F18D2BACC827002B39BD /* HomeView.swift in Sources */,
