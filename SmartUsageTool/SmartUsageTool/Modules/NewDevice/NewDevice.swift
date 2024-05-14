@@ -11,9 +11,9 @@ struct NewDevice: View {
     @Environment(\.modelContext) private var modelContext
     @Binding var isPresented: Bool
     @State private var name: String = ""
-    @State private var power: String = "0"
-    @State private var dayTime: String = "0"
-    @State private var nightTime: String = "0"
+    @State private var power: String = ""
+    @State private var dayTime: String = ""
+    @State private var nightTime: String = ""
     @State private var selectedDevice: Device = .spaceHeater
     let devices: [Device] = Device.allCases
     var room: RoomModel
@@ -33,11 +33,11 @@ private extension NewDevice {
                 mainView
                 
                     .navigationBarTitleDisplayMode(.inline)
-                    .navigationTitle("Add Device")
-                    .navigationBarItems(leading: Button("Cancel") {
+                    .navigationTitle(Localize.addDevice)
+                    .navigationBarItems(leading: Button(Localize.cancel) {
                         isPresented.toggle()
                     },
-                                        trailing: Button("Save") {
+                                        trailing: Button(Localize.save) {
                         addItem()
                         isPresented.toggle()
                     })
@@ -68,7 +68,7 @@ private extension NewDevice {
     
     var nameView: some View {
         VStack(alignment: .leading) {
-            Text("Device")
+            Text(Localize.device)
                 .fontWeight(.semibold)
             if selectedDevice == .other {
                 textfieldView
@@ -79,7 +79,7 @@ private extension NewDevice {
     }
     
     var textfieldView: some View {
-        TextField("Enter name", text: $name)
+        TextField(Localize.enterName, text: $name)
             .padding()
             .textFieldStyle(.plain)
             .background(
@@ -89,9 +89,9 @@ private extension NewDevice {
     
     var devicePickerView: some View {
         HStack {
-            Picker("Select a device", selection: $selectedDevice) {
+            Picker(Localize.selectDevice, selection: $selectedDevice) {
                         ForEach(devices, id: \.self) { device in
-                                Text(device.rawValue)
+                                Text(device.localizedName)
                                     .font(.system(size: 14))
                         }
                     }
@@ -107,9 +107,9 @@ private extension NewDevice {
     
     var powerView: some View {
         VStack(alignment: .leading) {
-            Text("Power W")
+            Text(Localize.powerW)
                 .fontWeight(.semibold)
-            TextField("Enter power", text: $power)
+            TextField(Localize.enterPower, text: $power)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -121,9 +121,9 @@ private extension NewDevice {
     
     var dailyView: some View {
         VStack(alignment: .leading) {
-            Text("Daily Usage Hours")
+            Text(Localize.dailyUsageHours)
                 .fontWeight(.semibold)
-            TextField("Enter time", text: $dayTime)
+            TextField(Localize.enterTime, text: $dayTime)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -135,9 +135,9 @@ private extension NewDevice {
     
     var nightlyView: some View {
         VStack(alignment: .leading) {
-            Text("Nightly Usage")
+            Text(Localize.nightlyUsage)
                 .fontWeight(.semibold)
-            TextField("Enter time", text: $nightTime)
+            TextField(Localize.enterTime, text: $nightTime)
                 .padding()
                 .keyboardType(.numberPad)
                 .textFieldStyle(.plain)
@@ -150,7 +150,7 @@ private extension NewDevice {
 
 private extension NewDevice {
     func addItem() {
-        let newItem = DeviceModel(name: selectedDevice == .other ? name : selectedDevice.rawValue, dayTime: TimeInterval(dayTime) ?? 0, nightTime: TimeInterval(nightTime) ?? 0, power: Int(power) ?? 0, isOn: true)
+        let newItem = DeviceModel(name: selectedDevice == .other ? name : selectedDevice.localizedName, dayTime: TimeInterval(dayTime) ?? 0, nightTime: TimeInterval(nightTime) ?? 0, power: Int(power) ?? 0, isOn: true)
         room.devices.append(newItem)
     }
 }

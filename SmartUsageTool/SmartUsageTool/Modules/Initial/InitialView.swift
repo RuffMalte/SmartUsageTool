@@ -12,11 +12,11 @@ struct InitialView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("My Home", systemImage: "house.fill")
+                    Label(Localize.myHome, systemImage: "house.fill")
                 }
             ListView()
                 .tabItem {
-                    Label("List", systemImage: "tablecells")
+                    Label(Localize.list, systemImage: "tablecells")
                 }
         }
         .navigationBarHidden(true)

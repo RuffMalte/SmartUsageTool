@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RoomView: View {
     var room: RoomModel
-    @State private var selectedDevice: DeviceModel = DeviceModel(name: "Select Device", dayTime: 0, power: 0, isOn: true)
+    @State private var selectedDevice: DeviceModel = DeviceModel(name: Localize.selectDevice, dayTime: 0, power: 0, isOn: true)
     @State private var isPresentedNewDevice = false
     @State private var isNightPrice = UserDefaults.isNightPrice
     
@@ -40,7 +40,7 @@ private extension RoomView {
                     }
                     Menu {
                         HStack {
-                            Toggle("Night price", isOn: $isNightPrice)
+                            Toggle(Localize.nightPricing, isOn: $isNightPrice)
                         }
                     } label: {
                         Image(systemName: "gear")
@@ -74,12 +74,12 @@ private extension RoomView {
                 Toggle("", isOn: $selectedDevice.isOn)
             }
             HStack {
-                InfoView(initialValue: selectedDevice.dayTime, type: "hrs", title: "Daily usage")
+                InfoView(initialValue: selectedDevice.dayTime, type: "hrs", title: Localize.dailyUsage)
                 if UserDefaults.isNightPrice {
-                    InfoView(initialValue: selectedDevice.nightTime, type: "hrs", title: "Nightly usage")
+                    InfoView(initialValue: selectedDevice.nightTime, type: Localize.hrs, title: Localize.nightlyUsage)
                 }
                 Spacer()
-                InfoView(initialValue: Double(selectedDevice.power), type: "W", title: "Power")
+                InfoView(initialValue: Double(selectedDevice.power), type: Localize.w, title: Localize.power)
             }
         }
         .padding(30)

@@ -14,13 +14,13 @@ enum RoomType: String, Codable {
     static func checkBy(name: String) -> RoomType {
         let lowercasedName = name.lowercased()
         switch lowercasedName {
-        case "kitchen":
+        case Localize.kitchen.lowercased():
             return .kitchen
-        case "bathroom":
+        case Localize.bathroom.lowercased():
             return .bathroom
-        case "bedroom":
+        case Localize.bedroom.lowercased():
             return .bedroom
-        case "livingroom", "living room":
+        case Localize.livingRoom.lowercased():
             return .livingRoom
         default:
             return .other

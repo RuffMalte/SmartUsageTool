@@ -15,11 +15,11 @@ struct HomeView: View {
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false
     private var totalCost: Double {
-       let sum = items.reduce(0.0) { $0 + $1.expenses }
+        let sum = items.reduce(0.0) { $0 + $1.expenses }
         return sum
     }
     private var totalCostString: String {
-        return "$" + String(format: "%.2f", totalCost)
+        return Localize.currencySymbol + String(format: "%.2f", totalCost)
     }
     
     let columns = [
@@ -32,7 +32,7 @@ struct HomeView: View {
             contentView
                 .onTapGesture {
                     hideKeyboard()
-                    }
+                }
                 .onChange(of: text) { oldValue, newValue in
                     UserDefaults.setDay(price: Double(newValue) ?? 0)
                 }
@@ -55,15 +55,15 @@ private extension HomeView {
             collectionView
         }
         .sheet(isPresented: $isPresentedNewRoom) {
-               NewRoom(isPresented: $isPresentedNewRoom)
-           }
+            NewRoom(isPresented: $isPresentedNewRoom)
+        }
         
     }
     
     var headerView: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-                Text("My Home")
+                Text(Localize.myHome)
                     .fontWeight(.bold)
                 Spacer()
                 Button(action: { isPresentedNewRoom.toggle() }, label: {
@@ -72,49 +72,49 @@ private extension HomeView {
                 })
             }
             
-            Text("Total cost:" + totalCostString)
+            Text(Localize.totalCost + totalCostString)
             
             HStack(alignment: .bottom) {
-         
-                    Text("USD")
-                        .padding(10)
-                        .background(
-                                       RoundedRectangle(cornerRadius: 10)
-                                        .fill(.white)
-                                   )
-//                        .frame(height: 48)
                 
-             
+                Text(Localize.currency)
+                    .padding(10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.white)
+                    )
+                //                        .frame(height: 48)
+                
+                
                 VStack {
                     if UserDefaults.isNightPrice {
-                        Text("Day")
+                        Text(Localize.day)
                     }
                     TextField("0,00", text: $text)
-                            .padding(10)
-                            .textFieldStyle(PlainTextFieldStyle())
-                            .keyboardType(.numberPad)
-                            .background(
-                                           RoundedRectangle(cornerRadius: 10)
-                                            .fill(.white)
-                                       )
+                        .padding(10)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .keyboardType(.numberPad)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.white)
+                        )
                 }
                 
                 if UserDefaults.isNightPrice {
                     VStack {
-                        Text("Night")
+                        Text(Localize.night)
                         TextField("0,00", text: $night)
-                                .padding(10)
-                                .textFieldStyle(PlainTextFieldStyle())
-                                .keyboardType(.numberPad)
-                                .background(
-                                               RoundedRectangle(cornerRadius: 10)
-                                                .fill(.white)
-                                           )
+                            .padding(10)
+                            .textFieldStyle(PlainTextFieldStyle())
+                            .keyboardType(.numberPad)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(.white)
+                            )
                     }
-               
+                    
                 }
-         
-                Text("per kWh")
+                
+                Text(Localize.wattPerHour)
             }
         }
         .padding()
@@ -122,31 +122,40 @@ private extension HomeView {
     }
     
     var collectionView: some View {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(items) { room in
-                        NavigationLink(
-                            destination: RoomView(room: room),
-                            label: {
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(items) { room in
+                    NavigationLink(
+                        destination: RoomView(room: room),
+                        label: {
+                            VStack {
                                 Image(room.type.rawValue)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .cornerRadius(10)
-                                    .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.lightGrayBackground)
-                                    )
+                                HStack {
+                                    Text(room.name)
+                                        .foregroundStyle(.black)
+                                    Spacer()
+                                }
+                             
                             }
-                        )
-//                        .buttonStyle(PlainButtonStyle())  Avoid default button style
-                    }
+                            .padding()
+                            .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.lightGrayBackground)
+                            )
+                        }
+                    )
+                    //                        .buttonStyle(PlainButtonStyle())  Avoid default button style
                 }
-                .padding(10)
             }
-            .padding(20)
+            .padding(10)
+        }
+        .padding(20)
     }
-
+    
 }
 
 #Preview {

@@ -35,11 +35,11 @@ private extension NewRoom {
                 }
                 
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Add Room")
-                .navigationBarItems(leading: Button("Cancel") {
+                .navigationTitle(Localize.addRoom)
+                .navigationBarItems(leading: Button(Localize.cancel) {
                     isPresented.toggle()
                 },
-                                    trailing: Button("Save") {
+                                    trailing: Button(Localize.save) {
                     addItem()
                     isPresented.toggle()
                 })
@@ -50,7 +50,7 @@ private extension NewRoom {
     
     var nameView: some View {
         VStack(alignment: .leading) {
-            Text("Room")
+            Text(Localize.room)
                 .fontWeight(.semibold)
             if selectedRoom == .other {
                 textfieldView
@@ -63,7 +63,7 @@ private extension NewRoom {
     }
     
     var textfieldView: some View {
-        TextField("Enter name", text: $name)
+        TextField(Localize.enterName, text: $name)
             .padding()
             .textFieldStyle(.plain)
             .background(
@@ -73,9 +73,9 @@ private extension NewRoom {
     
     var roomPickerView: some View {
         HStack {
-            Picker("Select a room", selection: $selectedRoom) {
+            Picker(Localize.selectRoom, selection: $selectedRoom) {
                         ForEach(rooms, id: \.self) { room in
-                                Text(room.rawValue)
+                                Text(room.localizedName)
                                     .font(.system(size: 14))
                         }
                     }
@@ -92,7 +92,7 @@ private extension NewRoom {
 
 private extension NewRoom {
     func addItem() {
-        let name = selectedRoom == .other ? name : selectedRoom.rawValue
+        let name = selectedRoom == .other ? name : selectedRoom.localizedName
         let newItem = RoomModel(type: RoomType.checkBy(name: name), name: name)
         modelContext.insert(newItem)
     }

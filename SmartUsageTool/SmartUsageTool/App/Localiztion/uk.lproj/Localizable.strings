@@ -1,0 +1,98 @@
+/* 
+  Localizable.strings
+  SmartUsageTool
+
+  Created by Serhii Molodets on 14.05.2024.
+  
+*/
+
+"Other" = "Інше";
+"Living Room" = "Вітальня";
+"Kitchen" = "Кухня";
+"Bedroom" = "Спальня";
+"Bathroom" = "Ванна кімната";
+"Dining Room" = "Їдальня";
+"Home Office" = "Домашній офіс";
+"Laundry Room" = "Пральня";
+"Garage" = "Гараж";
+"Basement" = "Підвал";
+"Attic" = "Горище";
+"Guest Room" = "Кімната для гостей";
+"Nursery" = "Дитяча";
+"Playroom" = "Ігрова кімната";
+"Library" = "Бібліотека";
+"Study Room" = "Кабінет";
+"Conservatory" = "Оранжерея";
+"Mudroom" = "Грязьова кімната";
+"Sunroom" = "Сонячна кімната";
+"Pantry" = "Комора";
+"Hallway" = "Коридор";
+"Foyer" = "Фойє";
+"Den" = "Кабінет";
+"Gym" = "Тренажерний зал";
+"Home Theater" = "Домашній театр";
+"Workshop" = "Майстерня";
+"Storage Room" = "Складська кімната";
+
+"Space Heater" = "Обігрівач";
+"Heat Pump" = "Тепловий насос";
+"Portable Heater" = "Портативний обігрівач";
+"Water Heater" = "Нагрівач води";
+"Dish Washer" = "Посудомийна машина";
+"Refrigerator" = "Холодильник";
+"Clothes Washer" = "Пральна машина";
+"Clothes Dryer" = "Сушильна машина";
+"Room AC" = "Кондиціонер";
+"Central AC" = "Центральний кондиціонер";
+"Coffee Maker" = "Кавоварка";
+"Electric Radiator" = "Електричний радіатор";
+"Humidifier" = "Зволожувач повітря";
+"Water Cooler" = "Охолоджувач води";
+"Lighting" = "Освітлення";
+"Furnace Fan" = "Вентилятор печі";
+"Fan" = "Вентилятор";
+"Iron" = "Праска";
+"Toaster" = "Тостер";
+"Computer" = "Комп'ютер";
+"Vacuum Cleaner" = "Пилосос";
+"TV" = "Телевізор";
+"Hair Dryer" = "Фен";
+"Hand Drill" = "Ручна дриль";
+"Water Pump" = "Водяний насос";
+"Blender" = "Блендер";
+"Electric Stove" = "Електрична плита";
+"Pool Pump" = "Насос для басейну";
+"Electric Vehicle" = "Електромобіль";
+"Microwave Oven" = "Мікрохвильова піч";
+"Rice Cooker" = "Рисоварка";
+"Electric Kettle" = "Електрочайник";
+"Oven" = "Духовка";
+
+"wattHour" = "Грн/кВт";
+"myHome" = "Мій дім";
+"day" = "День";
+"night" = "Ніч";
+"currency" = "Грн";
+"save" = "Зберегти";
+"cancel" = "Скасувати";
+"room" = "Кімната";
+"addRoom" = "Додати кімнату";
+"addDevice" = "Додати пристрій";
+"device" = "Пристрій";
+"powerW" = "Потужність (Вт)";
+"dailyUsageHours" = "Використання в день годин";
+"nightlyUsageHours" = "Використання вночі годин";
+"dailyUsage" = "Використання в день";
+"nightlyUsage" = "Використання вночі";
+"power" = "Потужність";
+"selectDevice" = "Вибрати пристрій";
+"totalCost" = "Загальна вартість:";
+"nightPricing" = "Нічна тарифікація";
+"hrs" = "год";
+"currencySymbol" = "₴";
+"enterPower" = "Введіть потужність";
+"w" = "Вт";
+"list" = "Список";
+"enterName" = "Введіть ім'я";
+"enterTime" = "Введіть час";
+"selectRoom" = "Оберіть кімнату";

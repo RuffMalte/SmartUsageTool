@@ -1,0 +1,98 @@
+/* 
+  Localizable.strings
+  SmartUsageTool
+
+  Created by Serhii Molodets on 14.05.2024.
+  
+*/
+
+"Other" = "Othero";
+"Living Room" = "Living Room";
+"Kitchen" = "Kitchen";
+"Bedroom" = "Bedroom";
+"Bathroom" = "Bathroom";
+"Dining Room" = "Dining Room";
+"Home Office" = "Home Office";
+"Laundry Room" = "Laundry Room";
+"Garage" = "Garage";
+"Basement" = "Basement";
+"Attic" = "Attic";
+"Guest Room" = "Guest Room";
+"Nursery" = "Nursery";
+"Playroom" = "Playroom";
+"Library" = "Library";
+"Study Room" = "Study Room";
+"Conservatory" = "Conservatory";
+"Mudroom" = "Mudroom";
+"Sunroom" = "Sunroom";
+"Pantry" = "Pantry";
+"Hallway" = "Hallway";
+"Foyer" = "Foyer";
+"Den" = "Den";
+"Gym" = "Gym";
+"Home Theater" = "Home Theater";
+"Workshop" = "Workshop";
+"Storage Room" = "Storage Room";
+
+"Space Heater" = "Space Heater";
+"Heat Pump" = "Heat Pump";
+"Portable Heater" = "Portable Heater";
+"Water Heater" = "Water Heater";
+"Dish Washer" = "Dish Washer";
+"Refrigerator" = "Refrigerator";
+"Clothes Washer" = "Clothes Washer";
+"Clothes Dryer" = "Clothes Dryer";
+"Room AC" = "Room AC";
+"Central AC" = "Central AC";
+"Coffee Maker" = "Coffee Maker";
+"Electric Radiator" = "Electric Radiator";
+"Humidifier" = "Humidifier";
+"Water Cooler" = "Water Cooler";
+"Lighting" = "Lighting";
+"Furnace Fan" = "Furnace Fan";
+"Fan" = "Fan";
+"Iron" = "Iron";
+"Toaster" = "Toaster";
+"Computer" = "Computer";
+"Vacuum Cleaner" = "Vacuum Cleaner";
+"TV" = "TV";
+"Hair Dryer" = "Hair Dryer";
+"Hand Drill" = "Hand Drill";
+"Water Pump" = "Water Pump";
+"Blender" = "Blender";
+"Electric Stove" = "Electric Stove";
+"Pool Pump" = "Pool Pump";
+"Electric Vehicle" = "Electric Vehicle";
+"Microwave Oven" = "Microwave Oven";
+"Rice Cooker" = "Rice Cooker";
+"Electric Kettle" = "Electric Kettle";
+"Oven" = "Oven";
+
+"wattHour" = "USD/kW";
+"myHome" = "My Home";
+"day" = "Day";
+"night" = "Night";
+"currency" = "USD";
+"save" = "Save";
+"cancel" = "Cancel";
+"room" = "Room";
+"addRoom" = "Add Room";
+"addDevice" = "Add Device";
+"device" = "Device";
+"powerW" = "Power (W)";
+"dailyUsageHours" = "Daily Usage Hours";
+"nightlyUsageHours" = "Nightly Usage Hours";
+"dailyUsage" = "Daily Usage";
+"nightlyUsage" = "Nightly Usage";
+"power" = "Power";
+"selectDevice" = "Select Device";
+"totalCost" = "Total Cost:";
+"nightPricing" = "Night Pricing";
+"hrs" = "hrs";
+"currencySymbol" = "$"; 
+"enterPower" = "Enter Power";
+"w" = "W";
+"list" = "List";
+"enterName" = "Enter Name";
+"enterTime" = "Enter Time";
+"selectRoom" = "Select Room";

@@ -32,11 +32,11 @@ private extension ListView {
     
     var headerView: some View {
         VStack(alignment: .leading, spacing: 30) {
-            Text("List")
+            Text(Localize.list)
                 .font(.system(size: 28, weight: .semibold))
             HStack {
-                Text("Total cost:")
-                Text(String(format: "$%.2f", totalCost))
+                Text(Localize.totalCost)
+                Text(String(format: "\(Localize.currencySymbol)%.2f", totalCost))
                     .font(.system(size: 22))
                 Spacer()
             }
@@ -57,7 +57,7 @@ private extension ListView {
                         .font(.title)
                         .foregroundColor(.black)
                     Spacer()
-                    Text(String(format: "$%.2f", room.expenses))
+                    Text(String(format: "\(Localize.currencySymbol)%.2f", room.expenses))
                         .font(.title)
                         .foregroundColor(.black)
                 }) {
@@ -66,42 +66,43 @@ private extension ListView {
                             HStack {
                                 Text(device.name)
                                 Spacer()
-                                Text(String(format: "$%.2f", device.expenses))
+                                Text(String(format: "\(Localize.currencySymbol)%.2f", device.expenses))
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
                             }
                             
-                            HStack {
+                            HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
-                                    Text("Daily usage")
-                                        .font(.system(size: 16))
+                                    Text(Localize.dailyUsage)
+                                        .font(.system(size: 13))
                                         .foregroundStyle(.gray)
-                                    Text("\(device.dayTime, specifier: "%.1f") hrs")
-                                        .font(.system(size: 16))
+                                    Text("\(device.dayTime, specifier: "%.1f") \(Localize.hrs)")
+                                        .font(.system(size: 13))
                                         .foregroundStyle(.gray)
                                 }
                                 Spacer()
                                 if UserDefaults.isNightPrice {
                                     VStack(alignment: .leading) {
-                                        Text("Nightly usage")
-                                            .font(.system(size: 16))
+                                        Text(Localize.nightlyUsage)
+                                            .font(.system(size: 13))
                                             .foregroundStyle(.gray)
-                                        Text("\(device.nightTime, specifier: "%.1f") hrs")
-                                            .font(.system(size: 16))
+                                        Text("\(device.nightTime, specifier: "%.1f") \(Localize.hrs)")
+                                            .font(.system(size: 13))
                                             .foregroundStyle(.gray)
                                     }
                                     Spacer()
                                 }
                                 
                                 VStack(alignment: .leading) {
-                                    Text("Power")
-                                        .font(.system(size: 16))
+                                    Text(Localize.power)
+                                        .font(.system(size: 13))
                                         .foregroundStyle(.gray)
-                                    Text("\(device.power) W")
-                                        .font(.system(size: 16))
+                                    Text("\(device.power) \(Localize.w)")
+                                        .font(.system(size: 13))
                                         .foregroundStyle(.gray)
                                 }
                             }
+                            .padding(.top)
                         }
                  
                     }
