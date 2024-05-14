@@ -10,6 +10,7 @@ import SwiftData
 
 struct HomeView: View {
     @State private var text = String(format: "%.2f", UserDefaults.dayPrice)
+    @State private var night = String(format: "%.2f", UserDefaults.dayPrice)
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false
@@ -34,6 +35,9 @@ struct HomeView: View {
                     }
                 .onChange(of: text) { oldValue, newValue in
                     UserDefaults.setDay(price: Double(newValue) ?? 0)
+                }
+                .onChange(of: night) { oldValue, newValue in
+                    UserDefaults.setNight(price: Double(newValue) ?? 0)
                 }
         }
     }
@@ -70,22 +74,46 @@ private extension HomeView {
             
             Text("Total cost:" + totalCostString)
             
-            HStack {
-                Text("USD")
-                    .padding(10)
-                    .background(
-                                   RoundedRectangle(cornerRadius: 10)
-                                    .fill(.white)
-                               )
-                    .frame(height: 48)
-                TextField("0,00", text: $text)
+            HStack(alignment: .bottom) {
+         
+                    Text("USD")
                         .padding(10)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .keyboardType(.numberPad)
                         .background(
                                        RoundedRectangle(cornerRadius: 10)
                                         .fill(.white)
                                    )
+//                        .frame(height: 48)
+                
+             
+                VStack {
+                    if UserDefaults.isNightPrice {
+                        Text("Day")
+                    }
+                    TextField("0,00", text: $text)
+                            .padding(10)
+                            .textFieldStyle(PlainTextFieldStyle())
+                            .keyboardType(.numberPad)
+                            .background(
+                                           RoundedRectangle(cornerRadius: 10)
+                                            .fill(.white)
+                                       )
+                }
+                
+                if UserDefaults.isNightPrice {
+                    VStack {
+                        Text("Night")
+                        TextField("0,00", text: $night)
+                                .padding(10)
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .keyboardType(.numberPad)
+                                .background(
+                                               RoundedRectangle(cornerRadius: 10)
+                                                .fill(.white)
+                                           )
+                    }
+               
+                }
+         
                 Text("per kWh")
             }
         }

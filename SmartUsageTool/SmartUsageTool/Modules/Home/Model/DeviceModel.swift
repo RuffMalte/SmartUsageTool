@@ -16,6 +16,7 @@ final class DeviceModel: Identifiable {
     var nightTime: TimeInterval
     var power: Int
     var isOn: Bool
+//    var type: DeviceType
     
     var expenses: Double {
         let powerKWT = (Double(power) / 1000)
@@ -30,5 +31,10 @@ final class DeviceModel: Identifiable {
         self.nightTime = nightTime
         self.power = power
         self.isOn = isOn
+//        self.type = type
     }
+}
+
+enum DeviceType: Codable {
+    case day, night, all
 }

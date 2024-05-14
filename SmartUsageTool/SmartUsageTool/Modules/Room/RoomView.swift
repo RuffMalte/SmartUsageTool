@@ -11,6 +11,7 @@ struct RoomView: View {
     var room: RoomModel
     @State private var selectedDevice: DeviceModel = DeviceModel(name: "Select Device", dayTime: 0, power: 0, isOn: true)
     @State private var isPresentedNewDevice = false
+    @State private var isNightPrice = UserDefaults.isNightPrice
     
     var body: some View {
         contentView
@@ -26,6 +27,9 @@ private extension RoomView {
         .sheet(isPresented: $isPresentedNewDevice) {
             NewDevice(isPresented: $isPresentedNewDevice, room: room)
         }
+        .onChange(of: isNightPrice, { oldValue, newValue in
+            UserDefaults.setNight(available: newValue)
+        })
         .navigationBarItems(
             trailing:
                 HStack {
@@ -34,11 +38,14 @@ private extension RoomView {
                     }) {
                         Image(systemName: "plus")
                     }
-                    Button(action: {
-                        // Action for the second button
-                    }) {
+                    Menu {
+                        HStack {
+                            Toggle("Night price", isOn: $isNightPrice)
+                        }
+                    } label: {
                         Image(systemName: "gear")
                     }
+
                 }
         )
         
@@ -68,6 +75,9 @@ private extension RoomView {
             }
             HStack {
                 InfoView(initialValue: selectedDevice.dayTime, type: "hrs", title: "Daily usage")
+                if UserDefaults.isNightPrice {
+                    InfoView(initialValue: selectedDevice.nightTime, type: "hrs", title: "Nightly usage")
+                }
                 Spacer()
                 InfoView(initialValue: Double(selectedDevice.power), type: "W", title: "Power")
             }
