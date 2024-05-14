@@ -38,3 +38,9 @@ final class DeviceModel: Identifiable {
 enum DeviceType: Codable {
     case day, night, all
 }
+
+extension TimeInterval {
+    var hours: Double {
+        return self / 3600
+    }
+}
