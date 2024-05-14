@@ -10,7 +10,7 @@ import SwiftData
 
 struct HomeView: View {
     @State private var text = String(format: "%.2f", UserDefaults.dayPrice)
-    @State private var night = String(format: "%.2f", UserDefaults.dayPrice)
+    @State private var night = String(format: "%.2f", UserDefaults.nightPrice)
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false

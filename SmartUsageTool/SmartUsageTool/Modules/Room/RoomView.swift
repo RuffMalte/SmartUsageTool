@@ -57,7 +57,7 @@ private extension RoomView {
             Text(room.name)
                 .font(.system(size: 28, weight: .semibold))
             Spacer()
-            Text(String(format: "$%.2f", room.expenses))
+            Text(String(format: "\(Localize.currencySymbol)%.2f", room.expenses))
                 .font(.system(size: 22))
         }
         .padding(30)
@@ -74,7 +74,7 @@ private extension RoomView {
                 Toggle("", isOn: $selectedDevice.isOn)
             }
             HStack {
-                InfoView(initialValue: selectedDevice.dayTime, type: "hrs", title: Localize.dailyUsage)
+                InfoView(initialValue: selectedDevice.dayTime, type: Localize.hrs, title: Localize.dailyUsage)
                 if UserDefaults.isNightPrice {
                     InfoView(initialValue: selectedDevice.nightTime, type: Localize.hrs, title: Localize.nightlyUsage)
                 }

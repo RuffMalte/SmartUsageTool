@@ -21,7 +21,7 @@ final class DeviceModel: Identifiable {
     var expenses: Double {
         let powerKWT = (Double(power) / 1000)
         let dayExpenses = powerKWT * dayTime * UserDefaults.dayPrice
-        let nightExpenses = powerKWT * nightTime * UserDefaults.dayPrice
+        let nightExpenses = powerKWT * nightTime * UserDefaults.nightPrice
         return (dayExpenses + nightExpenses) * 30
     }
     
