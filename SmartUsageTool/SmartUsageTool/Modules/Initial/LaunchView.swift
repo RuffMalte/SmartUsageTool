@@ -15,7 +15,7 @@ struct LaunchView: View {
         NavigationView {
             VStack {
                 Image("LaunchIcon")
-                Text("Smart Usage Tool")
+                Text("ELEKTRYKA")
                     .font(.system(size: 25, weight: .bold))
                 NavigationLink(destination: InitialView(), isActive: $isActive) {
                                EmptyView()

@@ -72,7 +72,7 @@ private extension HomeView {
                 })
             }
             
-            Text(Localize.totalCost + totalCostString)
+            Text(Localize.totalCost + " " + totalCostString)
             
             HStack(alignment: .bottom) {
                 

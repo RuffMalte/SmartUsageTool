@@ -68,11 +68,11 @@
 "Electric Kettle" = "Електрочайник";
 "Oven" = "Духовка";
 
-"wattHour" = "Грн/кВт";
+"wattHour" = "грн/кВт*год";
 "myHome" = "Мій дім";
 "day" = "День";
 "night" = "Ніч";
-"currency" = "Грн";
+"currency" = "грн";
 "save" = "Зберегти";
 "cancel" = "Скасувати";
 "room" = "Кімната";

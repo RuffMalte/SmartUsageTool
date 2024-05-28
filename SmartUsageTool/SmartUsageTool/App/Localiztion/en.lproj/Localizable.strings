@@ -68,7 +68,7 @@
 "Electric Kettle" = "Electric Kettle";
 "Oven" = "Oven";
 
-"wattHour" = "USD/kW";
+"wattHour" = "USD/kW*h";
 "myHome" = "My Home";
 "day" = "Day";
 "night" = "Night";
