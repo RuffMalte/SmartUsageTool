@@ -20,8 +20,8 @@ struct InfoView: View {
         VStack(alignment: .leading) {
             Text(title)
                 .fontWeight(.semibold)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
+//                .lineLimit(1)
+//                .minimumScaleFactor(0.5)
             HStack {
                 Text(formattedValue)
                 Spacer()

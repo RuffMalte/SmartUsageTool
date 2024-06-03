@@ -11,7 +11,7 @@ struct RoomView: View {
     var room: RoomModel
     @State private var selectedDevice: DeviceModel = DeviceModel(name: Localize.selectDevice, dayTime: 0, power: 0, isOn: true)
     @State private var isPresentedNewDevice = false
-    @State private var isNightPrice = UserDefaults.isNightPrice
+    @State private var isNightPrice = false
     
     var body: some View {
         contentView
@@ -73,9 +73,15 @@ private extension RoomView {
                 Spacer()
                 Toggle("", isOn: $selectedDevice.isOn)
             }
-            HStack {
+            VStack {
                 InfoView(initialValue: selectedDevice.dayTime, type: Localize.hrs, title: Localize.dailyUsage)
-                if UserDefaults.isNightPrice {
+                if selectedDevice.dayTime > 0  {
+                    Button("Використовувати лише вночі") {
+                        selectedDevice.nightTime += selectedDevice.dayTime
+                        selectedDevice.dayTime = 0
+                    }
+                }
+                if isNightPrice {
                     InfoView(initialValue: selectedDevice.nightTime, type: Localize.hrs, title: Localize.nightlyUsage)
                 }
                 Spacer()
@@ -98,7 +104,7 @@ private extension RoomView {
                             Text(device.name)
                                 .font(.headline)
                             Spacer()
-                            Toggle("", isOn: $selectedDevice.isOn)
+                            Toggle("", isOn: Bindable(device).isOn)
                         }
                         .padding(.vertical)
                     }
