@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class DeviceModel: Identifiable {
+final class DeviceModel: Identifiable, ObservableObject {
     let id = UUID()
     var name: String
     var dayTime: TimeInterval

@@ -11,7 +11,7 @@ struct RoomView: View {
     var room: RoomModel
     @State private var selectedDevice: DeviceModel = DeviceModel(name: Localize.selectDevice, dayTime: 0, power: 0, isOn: true)
     @State private var isPresentedNewDevice = false
-    @State private var isNightPrice = false
+    @Binding var isNightPrice: Bool
     
     var body: some View {
         contentView
@@ -30,6 +30,9 @@ private extension RoomView {
         .onChange(of: isNightPrice, { oldValue, newValue in
             UserDefaults.setNight(available: newValue)
         })
+        .onAppear {
+            selectedDevice = room.devices[0]
+        }
         .navigationBarItems(
             trailing:
                 HStack {
@@ -75,12 +78,13 @@ private extension RoomView {
             }
             VStack {
                 InfoView(initialValue: selectedDevice.dayTime, type: Localize.hrs, title: Localize.dailyUsage)
-                if selectedDevice.dayTime > 0  {
-                    Button("Використовувати лише вночі") {
-                        selectedDevice.nightTime += selectedDevice.dayTime
-                        selectedDevice.dayTime = 0
-                    }
-                }
+                    // TODO: - Add switch to the night time
+//                if selectedDevice.dayTime > 0  {
+//                    Button("Використовувати лише вночі") {
+//                        selectedDevice.nightTime += selectedDevice.dayTime
+//                        selectedDevice.dayTime = 0
+//                    }
+//                }
                 if isNightPrice {
                     InfoView(initialValue: selectedDevice.nightTime, type: Localize.hrs, title: Localize.nightlyUsage)
                 }
@@ -105,6 +109,7 @@ private extension RoomView {
                                 .font(.headline)
                             Spacer()
                             Toggle("", isOn: Bindable(device).isOn)
+                                .toggleStyle(PowerToggleStyle())
                         }
                         .padding(.vertical)
                     }
@@ -122,6 +127,24 @@ private extension RoomView {
     }
 }
 
-#Preview {
-    RoomView(room: RoomModel(type: .bathroom, name: "Bathroom"))
+//#Preview {
+//    RoomView(room: RoomModel(type: .bathroom, name: "Bathroom"), isNightPrice: .constant(true))
+//}
+
+struct PowerToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button {
+            configuration.isOn.toggle()
+        } label: {
+            Label {
+                configuration.label
+            } icon: {
+                Image(systemName: configuration.isOn ? "power" : "poweroff")
+                    .foregroundStyle(configuration.isOn ? .green : .gray)
+                    .accessibility(label: Text(configuration.isOn ? "Checked" : "Unchecked"))
+                    .imageScale(.large)
+            }
+        }
+        .buttonStyle(.plain)
+    }
 }

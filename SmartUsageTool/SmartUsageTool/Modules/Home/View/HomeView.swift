@@ -14,6 +14,7 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @Query private var items: [RoomModel]
     @State private var isPresentedNewRoom = false
+    @State private var isNightPrice = UserDefaults.isNightPrice
     private var totalCost: Double {
         let sum = items.reduce(0.0) { $0 + $1.expenses }
         return sum
@@ -86,7 +87,7 @@ private extension HomeView {
                 
                 
                 VStack {
-                    if UserDefaults.isNightPrice {
+                    if isNightPrice {
                         Text(Localize.day)
                     }
                     TextField("0,00", text: $text)
@@ -99,7 +100,7 @@ private extension HomeView {
                         )
                 }
                 
-                if UserDefaults.isNightPrice {
+                if isNightPrice {
                     VStack {
                         Text(Localize.night)
                         TextField("0,00", text: $night)
@@ -126,7 +127,7 @@ private extension HomeView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(items) { room in
                     NavigationLink(
-                        destination: RoomView(room: room),
+                        destination: RoomView(room: room, isNightPrice: $isNightPrice),
                         label: {
                             VStack {
                                 Image(room.type.rawValue)
