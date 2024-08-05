@@ -1,0 +1,98 @@
+/* 
+  Localizable.strings
+  SmartUsageTool
+
+  Created by Malte Ruff on 05.08.2024.
+  
+*/
+
+"Other" = "Andere";
+"Living Room" = "Wohnzimmer";
+"Kitchen" = "Küche";
+"Bedroom" = "Schlafzimmer";
+"Bathroom" = "Badezimmer";
+"Dining Room" = "Esszimmer";
+"Home Office" = "Arbeitszimmer";
+"Laundry Room" = "Waschküche";
+"Garage" = "Garage";
+"Basement" = "Keller";
+"Attic" = "Dachboden";
+"Guest Room" = "Gästezimmer";
+"Nursery" = "Kinderzimmer";
+"Playroom" = "Spielzimmer";
+"Library" = "Bibliothek";
+"Study Room" = "Arbeitszimmer";
+"Conservatory" = "Wintergarten";
+"Mudroom" = "Garderobe";
+"Sunroom" = "Sonnenzimmer";
+"Pantry" = "Speisekammer";
+"Hallway" = "Flur";
+"Foyer" = "Foyer";
+"Den" = "Wohnzimmer";
+"Gym" = "Fitnessraum";
+"Home Theater" = "Heimkino";
+"Workshop" = "Werkstatt";
+"Storage Room" = "Abstellraum";
+
+"Space Heater" = "Heizlüfter";
+"Heat Pump" = "Wärmepumpe";
+"Portable Heater" = "Tragbarer Heizkörper";
+"Water Heater" = "Warmwasserbereiter";
+"Dish Washer" = "Geschirrspüler";
+"Refrigerator" = "Kühlschrank";
+"Clothes Washer" = "Waschmaschine";
+"Clothes Dryer" = "Wäschetrockner";
+"Room AC" = "Raumklimaanlage";
+"Central AC" = "Zentrale Klimaanlage";
+"Coffee Maker" = "Kaffeemaschine";
+"Electric Radiator" = "Elektroheizung";
+"Humidifier" = "Luftbefeuchter";
+"Water Cooler" = "Wasserkühler";
+"Lighting" = "Beleuchtung";
+"Furnace Fan" = "Ofenventilator";
+"Fan" = "Ventilator";
+"Iron" = "Bügeleisen";
+"Toaster" = "Toaster";
+"Computer" = "Computer";
+"Vacuum Cleaner" = "Staubsauger";
+"TV" = "Fernseher";
+"Hair Dryer" = "Haartrockner";
+"Hand Drill" = "Handbohrmaschine";
+"Water Pump" = "Wasserpumpe";
+"Blender" = "Mixer";
+"Electric Stove" = "Elektroherd";
+"Pool Pump" = "Poolpumpe";
+"Electric Vehicle" = "Elektrofahrzeug";
+"Microwave Oven" = "Mikrowellenherd";
+"Rice Cooker" = "Reiskocher";
+"Electric Kettle" = "Wasserkocher";
+"Oven" = "Backofen";
+
+"wattHour" = "Euro/kW*h";
+"myHome" = "Mein Zuhause";
+"day" = "Tag";
+"night" = "Nacht";
+"currency" = "EUR";
+"save" = "Speichern";
+"cancel" = "Abbrechen";
+"room" = "Zimmer";
+"addRoom" = "Zimmer hinzufügen";
+"addDevice" = "Gerät hinzufügen";
+"device" = "Gerät";
+"powerW" = "Leistung (W)";
+"dailyUsageHours" = "Tägliche Nutzungsstunden";
+"nightlyUsageHours" = "Nächtliche Nutzungsstunden";
+"dailyUsage" = "Täglicher Verbrauch";
+"nightlyUsage" = "Nächtlicher Verbrauch";
+"power" = "Leistung";
+"selectDevice" = "Gerät auswählen";
+"totalCost" = "Gesamtkosten:";
+"nightPricing" = "Nachtpreis";
+"hrs" = "Std.";
+"currencySymbol" = "€";
+"enterPower" = "Leistung eingeben";
+"w" = "W";
+"list" = "Liste";
+"enterName" = "Name eingeben";
+"enterTime" = "Zeit eingeben";
+"selectRoom" = "Zimmer auswählen";
