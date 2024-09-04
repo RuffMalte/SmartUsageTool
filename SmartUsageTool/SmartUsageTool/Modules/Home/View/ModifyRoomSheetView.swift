@@ -29,7 +29,9 @@ struct ModifyRoomSheetView: View {
 						ForEach(roomEnums.filter { searchText.isEmpty ? true : $0.localizedName.localizedCaseInsensitiveContains(searchText) }, id: \.rawValue) { ro in
 							if ro == .other {
 								NavigationLink {
-									CustomRoomNameView(roomName: $room.name)
+									CustomRoomNameView(roomName: $room.name) { roomName in 
+										saveRoom(for: roomName)
+									}
 								} label: {
 									roomButton(for: ro)
 								}
@@ -115,7 +117,8 @@ struct ModifyRoomSheetView: View {
 struct CustomRoomNameView: View {
 	@Binding var roomName: String
 	@Environment(\.dismiss) private var dismiss
-	
+
+	var onSave: (String) -> Void
 	var body: some View {
 		Form {
 			TextField(Localize.enterName, text: $roomName)
@@ -126,7 +129,7 @@ struct CustomRoomNameView: View {
 			ToolbarItem(placement: .confirmationAction) {
 				Button(Localize.save) {
 					dismiss()
-					dismiss()
+					onSave(roomName)
 				}
 			}
 		}
