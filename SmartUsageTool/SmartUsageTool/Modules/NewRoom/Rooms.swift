@@ -94,4 +94,8 @@ enum Room: String, CaseIterable {
             return Localize.storageRoom
         }
     }
+	
+	var caseName: String {
+		return String(describing: self)
+	}
 }
