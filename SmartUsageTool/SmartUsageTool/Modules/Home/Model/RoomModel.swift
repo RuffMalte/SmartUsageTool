@@ -14,12 +14,16 @@ final class RoomModel: Identifiable {
     let type: RoomType
     var name: String
     @Relationship(deleteRule: .cascade)  var devices: [DeviceModel] = []
-    var expenses: Double {
-        devices.reduce(0.0) { $0 + $1.expenses }
-    }
+	var expenses: Double {
+		devices.filter { $0.isOn }.reduce(0.0) { $0 + $1.expenses }
+	}
     
     init(type: RoomType, name: String) {
         self.type = type
         self.name = name
     }
+}
+
+extension RoomModel {
+	static let preview = RoomModel(type: .livingRoom, name: "Living Room")
 }

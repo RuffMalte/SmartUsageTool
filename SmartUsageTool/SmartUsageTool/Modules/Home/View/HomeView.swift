@@ -9,20 +9,22 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @State private var text = String(format: "%.2f", UserDefaults.dayPrice)
-    @State private var night = String(format: "%.2f", UserDefaults.nightPrice)
+    @State private var dayPrice = String(format: "%.4f", UserDefaults.dayPrice)
+    @State private var nightPrice = String(format: "%.4f", UserDefaults.nightPrice)
+	@State private var currencyCode = UserDefaults.currency
     @ObservedObject var viewModel = HomeViewModel()
+	
+	
     @Query private var items: [RoomModel]
+	@Environment(\.modelContext) private var modelContext
+	
     @State private var isPresentedNewRoom = false
     @State private var isNightPrice = UserDefaults.isNightPrice
     private var totalCost: Double {
         let sum = items.reduce(0.0) { $0 + $1.expenses }
         return sum
     }
-    private var totalCostString: String {
-        return Localize.currencySymbol + String(format: "%.2f", totalCost)
-    }
-    
+
     let columns = [
         GridItem(.flexible(), spacing: 10),
         GridItem(.flexible(), spacing: 10)
@@ -34,12 +36,40 @@ struct HomeView: View {
                 .onTapGesture {
                     hideKeyboard()
                 }
-                .onChange(of: text) { oldValue, newValue in
+                .onChange(of: dayPrice) { oldValue, newValue in
                     UserDefaults.setDay(price: Double(newValue) ?? 0)
                 }
-                .onChange(of: night) { oldValue, newValue in
+                .onChange(of: nightPrice) { oldValue, newValue in
                     UserDefaults.setNight(price: Double(newValue) ?? 0)
                 }
+				.onAppear {
+					dayPrice = String(format: "%.4f", UserDefaults.dayPrice)
+					nightPrice = String(format: "%.4f", UserDefaults.nightPrice)
+					isNightPrice = UserDefaults.isNightPrice
+					currencyCode = UserDefaults.currency
+				}
+				.navigationBarTitleDisplayMode(.inline)
+				.toolbar {
+					ToolbarItem(placement: .principal) {
+						HStack {
+							Text(Localize.myHome)
+								.font(.system(.title3, design: .default, weight: .bold))
+							Spacer()
+						}
+					}
+					ToolbarItem(placement: .primaryAction) {
+						HStack {
+							Button(action: { isPresentedNewRoom.toggle() }) {
+								Image(systemName: "plus")
+							}
+							NavigationLink {
+								MainSettingsView()
+							} label: {
+								Image(systemName: "gearshape.fill")
+							}
+						}
+					}
+				}
         }
     }
     
@@ -54,6 +84,7 @@ private extension HomeView {
         VStack {
             headerView
             collectionView
+			Spacer()
         }
         .sheet(isPresented: $isPresentedNewRoom) {
             NewRoom(isPresented: $isPresentedNewRoom)
@@ -63,59 +94,62 @@ private extension HomeView {
     
     var headerView: some View {
         VStack(alignment: .leading, spacing: 20) {
-            HStack {
-                Text(Localize.myHome)
-                    .fontWeight(.bold)
-                Spacer()
-                Button(action: { isPresentedNewRoom.toggle() }, label: {
-                    Image(systemName: "plus")
-                        .tint(.black)
-                })
-            }
             
-            Text(Localize.totalCost + " " + totalCostString)
-            
+			HStack {
+				Text(Localize.totalCost)
+					.font(.system(.headline, design: .rounded, weight: .regular))
+				
+				Text(totalCost, format: .currency(code: currencyCode))
+					.font(.system(.headline, design: .monospaced, weight: .regular))
+			}
             HStack(alignment: .bottom) {
-                
-                Text(Localize.currency)
-                    .padding(10)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.white)
-                    )
-                //                        .frame(height: 48)
-                
-                
-                VStack {
-                    if isNightPrice {
-                        Text(Localize.day)
-                    }
-                    TextField("0,00", text: $text)
-                        .padding(10)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .keyboardType(.numberPad)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(.white)
-                        )
-                }
-                
-                if isNightPrice {
-                    VStack {
-                        Text(Localize.night)
-                        TextField("0,00", text: $night)
-                            .padding(10)
-                            .textFieldStyle(PlainTextFieldStyle())
-                            .keyboardType(.numberPad)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(.white)
-                            )
-                    }
-                    
-                }
-                
-                Text(Localize.wattPerHour)
+				HStack {
+					VStack(alignment: .leading) {
+						HStack {
+							VStack(alignment: .center) {
+								HStack {
+									if isNightPrice {
+										Label(Localize.day, systemImage: "sun.max")
+											.font(.system(.footnote, design: .rounded, weight: .light))
+										Spacer()
+									}
+								}
+								TextField("0,00", text: $dayPrice)
+									.font(.system(.body, design: .monospaced, weight: .regular))
+							}
+							Spacer()
+							VStack(alignment: .center) {
+								if isNightPrice {
+									VStack {
+										HStack {
+											Label(Localize.night, systemImage: "moon.stars")
+												.font(.system(.footnote, design: .rounded, weight: .light))
+											Spacer()
+										}
+										TextField("0,00", text: $nightPrice)
+											.font(.system(.body, design: .monospaced, weight: .regular))
+									}
+								}
+							}
+						}
+					}
+				}
+				.textFieldStyle(PlainTextFieldStyle())
+				.keyboardType(.decimalPad)
+				.padding(10)
+				.background(
+					RoundedRectangle(cornerRadius: 10)
+						.fill(.white)
+				)
+				
+				
+				Text("\(Locale(identifier: Locale.identifier(fromComponents: [NSLocale.Key.currencyCode.rawValue: currencyCode])).currencySymbol ?? "$")" + Localize.wattPerHour)
+					.font(.system(.body, design: .default, weight: .regular))
+					.padding(10)
+					.background(
+						RoundedRectangle(cornerRadius: 10)
+							.fill(.white)
+					)
             }
         }
         .padding()
@@ -126,35 +160,16 @@ private extension HomeView {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(items) { room in
-                    NavigationLink(
-                        destination: RoomView(room: room, isNightPrice: $isNightPrice),
-                        label: {
-                            VStack {
-                                Image(room.type.rawValue)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .cornerRadius(10)
-                                HStack {
-                                    Text(room.name)
-                                        .foregroundStyle(.black)
-                                    Spacer()
-                                }
-                             
-                            }
-                            .padding()
-                            .frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.lightGrayBackground)
-                            )
-                        }
-                    )
-                    //                        .buttonStyle(PlainButtonStyle())  Avoid default button style
+					NavigationLink {
+						RoomView(room: room, isNightPrice: $isNightPrice)
+					} label: {
+						RoomItemListView(room: room)
+					}
                 }
             }
             .padding(10)
         }
-        .padding(20)
+		.padding(.horizontal, 20)
     }
     
 }

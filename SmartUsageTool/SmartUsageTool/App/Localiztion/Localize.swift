@@ -16,6 +16,7 @@ struct Localize {
     static let currency = NSLocalizedString("currency", comment: "")
     static let save = NSLocalizedString("save", comment: "")
     static let cancel = NSLocalizedString("cancel", comment: "")
+	static let edit = NSLocalizedString("edit", comment: "")
     static let room = NSLocalizedString("room", comment: "")
     static let addRoom = NSLocalizedString("addRoom", comment: "")
     static let addDevice = NSLocalizedString("addDevice", comment: "")
@@ -30,6 +31,7 @@ struct Localize {
     static let totalCost = NSLocalizedString("totalCost", comment: "")
     static let nightPricing = NSLocalizedString("nightPricing", comment: "")
     static let hrs = NSLocalizedString("hrs", comment: "")
+	static let min = NSLocalizedString("min", comment: "")
     static let currencySymbol = NSLocalizedString("currencySymbol", comment: "")
     static let enterPower = NSLocalizedString("enterPower", comment: "")
     static let list = NSLocalizedString("list", comment: "")
@@ -101,5 +103,24 @@ struct Localize {
     static let riceCooker = NSLocalizedString("Rice Cooker", comment: "#bc-ignore!")
     static let electricKettle = NSLocalizedString("Electric Kettle", comment: "#bc-ignore!")
     static let oven = NSLocalizedString("Oven", comment: "#bc-ignore!")
+	
+	// UI
+	static let delete = NSLocalizedString("delete", comment: "#bc-ignore!")
+	static let canecl = NSLocalizedString("cancel", comment: "#bc-ignore!")
+	static let areYouSure = NSLocalizedString("areYouSure", comment: "#bc-ignore!")
+	static let turnOn = NSLocalizedString("turnOn", comment: "#bc-ignore!")
+	static let turnOff = NSLocalizedString("turnOff", comment: "#bc-ignore!")
+	static let deviceInfo = NSLocalizedString("deviceInfo", comment: "#bc-ignore!")
+    static let settings = NSLocalizedString("settings", comment: "#bc-ignore!")
+    static let appBy = NSLocalizedString("appBy", comment: "#bc-ignore!")
+    static let appName = NSLocalizedString("appName", comment: "#bc-ignore!")
+    static let appVersion = NSLocalizedString("appVersion", comment: "#bc-ignore!")
+    static let appIcludedLibs = NSLocalizedString("appIcludedLibs", comment: "#bc-ignore!")
+    static let about = NSLocalizedString("about", comment: "#bc-ignore!")
+    static let regionSettings = NSLocalizedString("regionSettings", comment: "#bc-ignore!")
+    static let nightlyUsageDescription = NSLocalizedString("nightlyUsageDescription", comment: "#bc-ignore!")
+    
+    static let searchCurrencies = NSLocalizedString("searchCurrencies", comment: "#bc-ignore!")
+    static let currencyExplanation = NSLocalizedString("currencyExplanation", comment: "#bc-ignore!")
 }
 

@@ -76,7 +76,7 @@ private extension ListView {
                                     Text(Localize.dailyUsage)
                                         .font(.system(size: 13))
                                         .foregroundStyle(.gray)
-                                    Text("\(device.dayTime, specifier: "%.1f") \(Localize.hrs)")
+									Text("\(device.doubleFormattedDayTime, specifier: "%.1f") \(Localize.hrs)")
                                         .font(.system(size: 13))
                                         .foregroundStyle(.gray)
                                 }
@@ -86,7 +86,7 @@ private extension ListView {
                                         Text(Localize.nightlyUsage)
                                             .font(.system(size: 13))
                                             .foregroundStyle(.gray)
-                                        Text("\(device.nightTime, specifier: "%.1f") \(Localize.hrs)")
+                                        Text("\(device.doubleFormattedNightTime, specifier: "%.1f") \(Localize.hrs)")
                                             .font(.system(size: 13))
                                             .foregroundStyle(.gray)
                                     }

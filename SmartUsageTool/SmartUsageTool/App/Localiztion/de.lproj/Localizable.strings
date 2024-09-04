@@ -68,13 +68,14 @@
 "Electric Kettle" = "Wasserkocher";
 "Oven" = "Backofen";
 
-"wattHour" = "Euro/kW*h";
+"wattHour" = "/kW*h";
 "myHome" = "Mein Zuhause";
 "day" = "Tag";
 "night" = "Nacht";
 "currency" = "EUR";
 "save" = "Speichern";
 "cancel" = "Abbrechen";
+"edit" = "Bearbeiten";
 "room" = "Zimmer";
 "addRoom" = "Zimmer hinzufügen";
 "addDevice" = "Gerät hinzufügen";
@@ -89,6 +90,7 @@
 "totalCost" = "Gesamtkosten:";
 "nightPricing" = "Nachtpreis";
 "hrs" = "Std.";
+"min" = "Min.";
 "currencySymbol" = "€";
 "enterPower" = "Leistung eingeben";
 "w" = "W";
@@ -96,3 +98,49 @@
 "enterName" = "Name eingeben";
 "enterTime" = "Zeit eingeben";
 "selectRoom" = "Zimmer auswählen";
+
+"delete" = "Löschen";
+"cancel" = "Abbrechen";
+"areYouSure" = "Sind Sie sicher?";
+"turnOff" = "Ausschalten";
+"turnOn" = "Einschalten";
+"deviceInfo" = "Das ist der Geldbetrag, den Sie für dieses Gerät bezahlen müssen. Er errechnet sich aus dem Stromverbrauch und der Zeit, in der das Gerät eingeschaltet ist.";
+"settings" = "Einstellungen";
+"appBy" = "App von Malte Ruff und Serhii Molodets";
+"appName" = "SmartUsageTool";
+"appVersion" = "Version";
+"appIcludedLibs" = "Inkludierte Bibliotheken";
+"about" = "Über diese App";
+"regionSettings" = "Regionaleinstellungen";
+"nightlyUsageDescription" = "Nächtliche Nutzungsstunden sind die Stunden, in denen Sie das Gerät nachts verwenden. In manchen Regionen ist der Strompreis nachts günstiger.";
+
+"regionSettings" = "Regionseinstellungen";
+"searchCurrencies" = "Währungen suchen";
+"Euro" = "Euro";
+"Ukrainian Hryvnia" = "Ukrainische Hrywnja";
+"British Pound" = "Britisches Pfund";
+"Swiss Franc" = "Schweizer Franken";
+"Swedish Krona" = "Schwedische Krone";
+"Norwegian Krone" = "Norwegische Krone";
+"Danish Krone" = "Dänische Krone";
+"Polish Zloty" = "Polnischer Zloty";
+"Czech Koruna" = "Tschechische Krone";
+"Hungarian Forint" = "Ungarischer Forint";
+"Russian Ruble" = "Russischer Rubel";
+"Romanian Leu" = "Rumänischer Leu";
+"Croatian Kuna" = "Kroatische Kuna";
+"Bulgarian Lev" = "Bulgarischer Lew";
+"Turkish Lira" = "Türkische Lira";
+"Icelandic Krona" = "Isländische Krone";
+"US Dollar" = "US-Dollar";
+"Japanese Yen" = "Japanischer Yen";
+"Australian Dollar" = "Australischer Dollar";
+"Canadian Dollar" = "Kanadischer Dollar";
+"Chinese Yuan" = "Chinesischer Yuan";
+"Indian Rupee" = "Indische Rupie";
+"Mexican Peso" = "Mexikanischer Peso";
+"Singapore Dollar" = "Singapur-Dollar";
+"New Zealand Dollar" = "Neuseeland-Dollar";
+"South Korean Won" = "Südkoreanischer Won";
+
+"currencyExplanation" = "Der Währungscode wird nur für die Anzeige der Gesamtkosten verwendet. Er ändert nicht die Sprache oder das Verhalten der App.";
