@@ -152,7 +152,7 @@ struct DeviceNamingSheetView: View {
 							self.device.name = device.rawValue
 						} label: {
 							HStack {
-								Text(device.rawValue.capitalized)
+								Text(NSLocalizedString(device.rawValue.capitalized, comment: ""))
 								Spacer()
 								if self.device.name == device.rawValue {
 									Image(systemName: "checkmark")
