@@ -74,6 +74,7 @@
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeviceSheetView.swift; sourceTree = "<group>"; };
 		2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursAndMinutesTimeIntervalPicker.swift; sourceTree = "<group>"; };
+		2E0DF2F62C615443005CCF4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
