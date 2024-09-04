@@ -83,7 +83,7 @@ struct ModifyDeviceSheetView: View {
 			}
 			.onAppear {
 				if isNewDevice {
-					device.name = Device.allCases[0].rawValue
+					device.name = Device.allCases[0].localizedName
 				}
 			}
 			.navigationTitle(Localize.addDevice)
@@ -119,7 +119,7 @@ struct DeviceNamingSheetView: View {
 		if searchText.isEmpty {
 			return Device.allCases
 		} else {
-			return Device.allCases.filter { $0.rawValue.lowercased().contains(searchText.lowercased()) }
+			return Device.allCases.filter { $0.localizedName.lowercased().contains(searchText.lowercased()) }
 		}
 	}
 	
@@ -148,19 +148,19 @@ struct DeviceNamingSheetView: View {
 				VStack(alignment: .leading) {
 					ForEach(filteredDevices, id: \.self) { device in
 						Button {
-							self.searchText = device.rawValue
-							self.device.name = device.rawValue
+							self.searchText = device.localizedName
+							self.device.name = device.localizedName
 						} label: {
 							HStack {
-								Text(NSLocalizedString(device.rawValue.capitalized, comment: ""))
+								Text(device.localizedName)
 								Spacer()
-								if self.device.name == device.rawValue {
+								if self.device.name == device.localizedName {
 									Image(systemName: "checkmark")
 										.foregroundStyle(.tint)
 								}
 							}
 							.padding(5)
-							.background(self.device.name == device.rawValue ? Color(.systemGray6) : .clear)
+							.background(self.device.name == device.localizedName ? Color(.systemGray6) : .clear)
 							.clipShape(.rect(cornerRadius: 5))
 						}
 						.buttonStyle(.plain)

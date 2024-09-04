@@ -26,6 +26,7 @@
 		087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B72BD0316B0033FE43 /* LaunchView.swift */; };
 		08EE27912BF3DF6900CF9AEA /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EE27902BF3DF6900CF9AEA /* Localize.swift */; };
 		08EE27952BF3E03C00CF9AEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08EE27972BF3E03C00CF9AEA /* Localizable.strings */; };
+		2E095BBB2C88C9BC006B399B /* ModifyRoomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */; };
 		2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */; };
 		2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860772C85B06D0018FAFF /* RoomItemListView.swift */; };
 		2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860792C85B9DC0018FAFF /* DeviceItemListView.swift */; };
@@ -62,6 +63,7 @@
 		08EE27902BF3DF6900CF9AEA /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		08EE27962BF3E03C00CF9AEA /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08EE27982BF3E03F00CF9AEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRoomSheetView.swift; sourceTree = "<group>"; };
 		2E0DF2F62C615443005CCF4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonWithConfirmationView.swift; sourceTree = "<group>"; };
 		2E2860772C85B06D0018FAFF /* RoomItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItemListView.swift; sourceTree = "<group>"; };
@@ -74,7 +76,6 @@
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeviceSheetView.swift; sourceTree = "<group>"; };
 		2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursAndMinutesTimeIntervalPicker.swift; sourceTree = "<group>"; };
-		2E0DF2F62C615443005CCF4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +210,7 @@
 			children = (
 				0815F18C2BACC827002B39BD /* HomeView.swift */,
 				2E2860772C85B06D0018FAFF /* RoomItemListView.swift */,
+				2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +410,7 @@
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
 				08EE27912BF3DF6900CF9AEA /* Localize.swift in Sources */,
 				2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */,
+				2E095BBB2C88C9BC006B399B /* ModifyRoomSheetView.swift in Sources */,
 				0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */,
 				087069B62BD02B690033FE43 /* Rooms.swift in Sources */,
 			);

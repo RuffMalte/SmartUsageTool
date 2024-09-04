@@ -15,26 +15,40 @@ struct RoomItemListView: View {
 	@Environment(\.modelContext) private var modelContext
 	@Environment(\.dismiss) private var dismiss
 	@State private var showingConfirmation = false
-	
-    var body: some View {
-		VStack {
-			Image(room.type.rawValue)
-				.resizable()
-				.aspectRatio(contentMode: .fit)
-				.cornerRadius(10)
+	@State private var isShowingEditSheet = false
+	var body: some View {
+		VStack(alignment: .leading) {
 			HStack {
-				Text(room.name)
-					.foregroundStyle(.black)
+				Text(NSLocalizedString(room.name.capitalized, comment: ""))
+					.font(.system(.headline, design: .rounded, weight: .bold))
+					.foregroundStyle(.foreground)
 				Spacer()
 			}
+			Group {
+				if UIImage(named: room.name) != nil {
+					Image(room.name)
+						.resizable()
+						.scaledToFit()
+				} else {
+					Image("other")
+						.resizable()
+						.scaledToFit()
+				}
+			}
+			
 		}
 		.padding()
-		.frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
+//		.frame(width: UIScreen.main.bounds.width / 2 - 40, height: UIScreen.main.bounds.width / 2 - 40)
 		.background(
 			RoundedRectangle(cornerRadius: 10)
 				.fill(Color.lightGrayBackground)
 		)
 		.contextMenu {
+			Button {
+				isShowingEditSheet.toggle()
+			} label: {
+				Label(Localize.edit, systemImage: "pencil")
+			}
 			Button(role: .destructive) {
 				showingConfirmation.toggle()
 			} label: {
@@ -52,7 +66,10 @@ struct RoomItemListView: View {
 				dismiss()
 			}
 		}
-    }
+		.sheet(isPresented: $isShowingEditSheet) {
+			ModifyRoomSheetView(room: room, isNewRoom: false)
+		}
+	}
 }
 
 #Preview {

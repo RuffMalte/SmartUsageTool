@@ -11,17 +11,17 @@
 "Kitchen" = "Кухня";
 "Bedroom" = "Спальня";
 "Bathroom" = "Ванна кімната";
-"Dining Room" = "Їдальня";
+"Diningroom" = "Їдальня";
 "Home Office" = "Домашній офіс";
-"Laundry Room" = "Пральня";
+"Laundryroom" = "Пральня";
 "Garage" = "Гараж";
 "Basement" = "Підвал";
 "Attic" = "Горище";
-"Guest Room" = "Кімната для гостей";
+"Guestroom" = "Кімната для гостей";
 "Nursery" = "Дитяча";
 "Playroom" = "Ігрова кімната";
 "Library" = "Бібліотека";
-"Study Room" = "Кабінет";
+"Studyroom" = "Кабінет";
 "Conservatory" = "Оранжерея";
 "Mudroom" = "Грязьова кімната";
 "Sunroom" = "Сонячна кімната";
@@ -30,9 +30,9 @@
 "Foyer" = "Фойє";
 "Den" = "Кабінет";
 "Gym" = "Тренажерний зал";
-"Home Theater" = "Домашній театр";
+"Hometheater" = "Домашній театр";
 "Workshop" = "Майстерня";
-"Storage Room" = "Складська кімната";
+"Storageroom" = "Складська кімната";
 
 "Space Heater" = "Обігрівач";
 "Heat Pump" = "Тепловий насос";

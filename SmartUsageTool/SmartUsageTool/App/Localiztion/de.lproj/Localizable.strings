@@ -7,21 +7,21 @@
 */
 
 "Other" = "Andere";
-"Living Room" = "Wohnzimmer";
+"Livingroom" = "Wohnzimmer";
 "Kitchen" = "Küche";
 "Bedroom" = "Schlafzimmer";
 "Bathroom" = "Badezimmer";
-"Dining Room" = "Esszimmer";
-"Home Office" = "Arbeitszimmer";
-"Laundry Room" = "Waschküche";
+"Diningroom" = "Esszimmer";
+"Homeoffice" = "Arbeitszimmer";
+"Laundryroom" = "Waschküche";
 "Garage" = "Garage";
 "Basement" = "Keller";
 "Attic" = "Dachboden";
-"Guest Room" = "Gästezimmer";
+"Guestroom" = "Gästezimmer";
 "Nursery" = "Kinderzimmer";
 "Playroom" = "Spielzimmer";
 "Library" = "Bibliothek";
-"Study Room" = "Arbeitszimmer";
+"Studyroom" = "Arbeitszimmer";
 "Conservatory" = "Wintergarten";
 "Mudroom" = "Garderobe";
 "Sunroom" = "Sonnenzimmer";
@@ -30,9 +30,9 @@
 "Foyer" = "Foyer";
 "Den" = "Wohnzimmer";
 "Gym" = "Fitnessraum";
-"Home Theater" = "Heimkino";
+"Hometheater" = "Heimkino";
 "Workshop" = "Werkstatt";
-"Storage Room" = "Abstellraum";
+"Storageroom" = "Abstellraum";
 
 "Space Heater" = "Heizlüfter";
 "Heat Pump" = "Wärmepumpe";

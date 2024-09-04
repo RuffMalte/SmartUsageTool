@@ -50,7 +50,7 @@ private extension RoomView {
 	
 	var headerView: some View {
 		HStack {
-			Text(room.name)
+			Text(NSLocalizedString(room.name.capitalized, comment: ""))
 				.font(.system(.largeTitle, weight: .bold))
 			Spacer()
 			Text(room.expenses, format: .currency(code: UserDefaults.currency))

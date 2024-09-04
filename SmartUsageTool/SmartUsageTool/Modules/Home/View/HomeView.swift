@@ -87,7 +87,8 @@ private extension HomeView {
 			Spacer()
         }
         .sheet(isPresented: $isPresentedNewRoom) {
-            NewRoom(isPresented: $isPresentedNewRoom)
+			ModifyRoomSheetView(room: RoomModel.new, isNewRoom: true)
+//            NewRoom(isPresented: $isPresentedNewRoom)
         }
         
     }
@@ -165,6 +166,7 @@ private extension HomeView {
 					} label: {
 						RoomItemListView(room: room)
 					}
+					.buttonStyle(.plain)
                 }
             }
             .padding(10)

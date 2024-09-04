@@ -25,5 +25,11 @@ final class RoomModel: Identifiable {
 }
 
 extension RoomModel {
-	static let preview = RoomModel(type: .livingRoom, name: "Living Room")
+	static let preview = RoomModel(type: .livingRoom, name: "livingRoom")
+}
+
+extension RoomModel {
+	static var new: RoomModel {
+		return RoomModel(type: .other, name: "")
+	}
 }

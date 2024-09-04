@@ -7,21 +7,21 @@
 */
 
 "Other" = "Other";
-"Living Room" = "Living Room";
+"Livingroom" = "Living Room";
 "Kitchen" = "Kitchen";
 "Bedroom" = "Bedroom";
 "Bathroom" = "Bathroom";
-"Dining Room" = "Dining Room";
+"Diningroom" = "Dining Room";
 "Home Office" = "Home Office";
-"Laundry Room" = "Laundry Room";
+"Laundryroom" = "Laundry Room";
 "Garage" = "Garage";
 "Basement" = "Basement";
 "Attic" = "Attic";
-"Guest Room" = "Guest Room";
+"Guestroom" = "Guest Room";
 "Nursery" = "Nursery";
 "Playroom" = "Playroom";
 "Library" = "Library";
-"Study Room" = "Study Room";
+"Studyroom" = "Study Room";
 "Conservatory" = "Conservatory";
 "Mudroom" = "Mudroom";
 "Sunroom" = "Sunroom";
@@ -30,9 +30,9 @@
 "Foyer" = "Foyer";
 "Den" = "Den";
 "Gym" = "Gym";
-"Home Theater" = "Home Theater";
+"Hometheater" = "Home Theater";
 "Workshop" = "Workshop";
-"Storage Room" = "Storage Room";
+"Storageroom" = "Storage Room";
 
 "Space Heater" = "Space Heater";
 "Heat Pump" = "Heat Pump";
