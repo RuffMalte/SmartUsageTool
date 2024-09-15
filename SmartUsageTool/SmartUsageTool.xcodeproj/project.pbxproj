@@ -20,13 +20,14 @@
 		0815F1912BACCA70002B39BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815F1902BACCA70002B39BD /* ListView.swift */; };
 		0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA412BBAA8AB00DB1C41 /* RoomModel.swift */; };
 		0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA432BBAA8D400DB1C41 /* RoomType.swift */; };
-		0850BA462BBAAAF000DB1C41 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */; };
 		087069B42BD01EE10033FE43 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B32BD01EE10033FE43 /* Devices.swift */; };
 		087069B62BD02B690033FE43 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B52BD02B690033FE43 /* Rooms.swift */; };
 		087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087069B72BD0316B0033FE43 /* LaunchView.swift */; };
 		08EE27912BF3DF6900CF9AEA /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EE27902BF3DF6900CF9AEA /* Localize.swift */; };
 		08EE27952BF3E03C00CF9AEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08EE27972BF3E03C00CF9AEA /* Localizable.strings */; };
 		2E095BBB2C88C9BC006B399B /* ModifyRoomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */; };
+		2E095BC72C8EF552006B399B /* ElectricityPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */; };
+		2E095BCA2C8EFC16006B399B /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E095BC92C8EFC16006B399B /* PriceResponse.swift */; };
 		2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */; };
 		2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860772C85B06D0018FAFF /* RoomItemListView.swift */; };
 		2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860792C85B9DC0018FAFF /* DeviceItemListView.swift */; };
@@ -36,6 +37,23 @@
 		2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */; };
 		2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */; };
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
+		2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */; };
+		2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */; };
+		2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */; };
+		2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD552C90742A007DF36B /* HeaderView.swift */; };
+		2EA7CD592C91C18B007DF36B /* ChartRangePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD582C91C18B007DF36B /* ChartRangePickerView.swift */; };
+		2EA7CD5B2C91C1C0007DF36B /* ElectricityPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD5A2C91C1C0007DF36B /* ElectricityPriceChartCreationView.swift */; };
+		2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD5C2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift */; };
+		2EA7CD5F2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD5E2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift */; };
+		2EA7CD632C91F57F007DF36B /* PriceFetchingSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7CD622C91F57F007DF36B /* PriceFetchingSettingsView.swift */; };
+		2EB1D4DB2C8EFE4900F2BAA8 /* withEnviromentObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1D4DA2C8EFE4900F2BAA8 /* withEnviromentObjects.swift */; };
+		2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1D4DD2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift */; };
+		2EB1D4E02C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1D4DF2C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift */; };
+		2EB383242C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB383232C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift */; };
+		2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */; };
+		2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */; };
+		2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */; };
+		2EDE63D32C95DC3400A14004 /* SummaryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */; };
 		2EF3D2DD2C8884D100D73317 /* ModifyDeviceSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */; };
 		2EF3D2DF2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +74,6 @@
 		0815F1902BACCA70002B39BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0850BA412BBAA8AB00DB1C41 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		0850BA432BBAA8D400DB1C41 /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
-		0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		087069B32BD01EE10033FE43 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		087069B52BD02B690033FE43 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		087069B72BD0316B0033FE43 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -64,6 +81,8 @@
 		08EE27962BF3E03C00CF9AEA /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08EE27982BF3E03F00CF9AEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRoomSheetView.swift; sourceTree = "<group>"; };
+		2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceController.swift; sourceTree = "<group>"; };
+		2E095BC92C8EFC16006B399B /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
 		2E0DF2F62C615443005CCF4A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonWithConfirmationView.swift; sourceTree = "<group>"; };
 		2E2860772C85B06D0018FAFF /* RoomItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItemListView.swift; sourceTree = "<group>"; };
@@ -74,6 +93,23 @@
 		2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightlyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
+		2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceHomeView.swift; sourceTree = "<group>"; };
+		2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartCreationView.swift; sourceTree = "<group>"; };
+		2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartHeaderView.swift; sourceTree = "<group>"; };
+		2EA7CD552C90742A007DF36B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2EA7CD582C91C18B007DF36B /* ChartRangePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRangePickerView.swift; sourceTree = "<group>"; };
+		2EA7CD5A2C91C1C0007DF36B /* ElectricityPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartCreationView.swift; sourceTree = "<group>"; };
+		2EA7CD5C2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartExtremePointMarkView.swift; sourceTree = "<group>"; };
+		2EA7CD5E2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartDateNavigationView.swift; sourceTree = "<group>"; };
+		2EA7CD622C91F57F007DF36B /* PriceFetchingSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFetchingSettingsView.swift; sourceTree = "<group>"; };
+		2EB1D4DA2C8EFE4900F2BAA8 /* withEnviromentObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withEnviromentObjects.swift; sourceTree = "<group>"; };
+		2EB1D4DD2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartView.swift; sourceTree = "<group>"; };
+		2EB1D4DF2C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceHomeView.swift; sourceTree = "<group>"; };
+		2EB383232C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedPriceFetchingCountryModel.swift; sourceTree = "<group>"; };
+		2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartView.swift; sourceTree = "<group>"; };
+		2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartHeaderViewView.swift; sourceTree = "<group>"; };
+		2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainView.swift; sourceTree = "<group>"; };
+		2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryItemListView.swift; sourceTree = "<group>"; };
 		2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDeviceSheetView.swift; sourceTree = "<group>"; };
 		2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursAndMinutesTimeIntervalPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,21 +125,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0804AB202BC91D7A00E1636C /* NewRoom */ = {
+		0804AB202BC91D7A00E1636C /* Legacy */ = {
 			isa = PBXGroup;
 			children = (
 				0804AB212BC91D9700E1636C /* NewRoom.swift */,
-				087069B52BD02B690033FE43 /* Rooms.swift */,
 			);
-			path = NewRoom;
+			path = Legacy;
 			sourceTree = "<group>";
 		};
 		0804AB7E2BCB2A8E00E1636C /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				0804AB862BCC209D00E1636C /* DeviceInfoView.swift */,
+				2E095BC52C8EEFE9006B399B /* Modify */,
 				2E28607D2C86298A0018FAFF /* DeviceDetail */,
-				087069B32BD01EE10033FE43 /* Devices.swift */,
-				2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -112,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				0804AB802BCB367000E1636C /* RoomView.swift */,
-				0804AB862BCC209D00E1636C /* DeviceInfoView.swift */,
+				2E095BC32C8EEFB5006B399B /* List */,
+				2E095BC42C8EEFCB006B399B /* Modify */,
+				0804AB202BC91D7A00E1636C /* Legacy */,
 			);
 			path = Room;
 			sourceTree = "<group>";
@@ -121,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				0804AB832BCC0D4300E1636C /* UserDefaults+Keys.swift */,
+				2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,9 +182,10 @@
 		0815F1772BACC524002B39BD /* SmartUsageTool */ = {
 			isa = PBXGroup;
 			children = (
-				0804AB822BCC0D3300E1636C /* Extensions */,
-				0815F1882BACC69F002B39BD /* Modules */,
 				0815F1872BACC651002B39BD /* App */,
+				0804AB822BCC0D3300E1636C /* Extensions */,
+				2E095BBD2C8EEE59006B399B /* Models */,
+				2E095BBC2C8EEE48006B399B /* Views */,
 				0815F17E2BACC525002B39BD /* Preview Content */,
 			);
 			path = SmartUsageTool;
@@ -156,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				0815F17F2BACC525002B39BD /* Preview Assets.xcassets */,
+				2EB1D4DA2C8EFE4900F2BAA8 /* withEnviromentObjects.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -171,21 +211,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		0815F1882BACC69F002B39BD /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				2E2860802C86FA140018FAFF /* Settings */,
-				2E2860732C85AB6F0018FAFF /* Helper */,
-				0804AB7F2BCB365500E1636C /* Room */,
-				0804AB7E2BCB2A8E00E1636C /* Devices */,
-				0804AB202BC91D7A00E1636C /* NewRoom */,
-				0815F18E2BACC9E5002B39BD /* List */,
-				0815F18A2BACC6C2002B39BD /* Home */,
-				0815F1892BACC6B5002B39BD /* Initial */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		0815F1892BACC6B5002B39BD /* Initial */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,58 +220,12 @@
 			path = Initial;
 			sourceTree = "<group>";
 		};
-		0815F18A2BACC6C2002B39BD /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0850BA3F2BBAA87600DB1C41 /* Model */,
-				0815F18B2BACC806002B39BD /* View */,
-				0850BA402BBAA87C00DB1C41 /* ViewModel */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		0815F18B2BACC806002B39BD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0815F18C2BACC827002B39BD /* HomeView.swift */,
-				2E2860772C85B06D0018FAFF /* RoomItemListView.swift */,
-				2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0815F18E2BACC9E5002B39BD /* List */ = {
-			isa = PBXGroup;
-			children = (
-				0815F18F2BACCA5A002B39BD /* View */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		0815F18F2BACCA5A002B39BD /* View */ = {
+		0815F18E2BACC9E5002B39BD /* HomeList */ = {
 			isa = PBXGroup;
 			children = (
 				0815F1902BACCA70002B39BD /* ListView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0850BA3F2BBAA87600DB1C41 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0850BA412BBAA8AB00DB1C41 /* RoomModel.swift */,
-				0850BA432BBAA8D400DB1C41 /* RoomType.swift */,
-				0804AB7A2BCB274600E1636C /* DeviceModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0850BA402BBAA87C00DB1C41 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0850BA452BBAAAF000DB1C41 /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
+			path = HomeList;
 			sourceTree = "<group>";
 		};
 		08EE27922BF3DFF800CF9AEA /* Localiztion */ = {
@@ -258,22 +237,123 @@
 			path = Localiztion;
 			sourceTree = "<group>";
 		};
+		2E095BBC2C8EEE48006B399B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EDE63CF2C95CCB700A14004 /* Summary */,
+				0815F1892BACC6B5002B39BD /* Initial */,
+				2E095BC22C8EEFA2006B399B /* Home */,
+				0815F18E2BACC9E5002B39BD /* HomeList */,
+				0804AB7E2BCB2A8E00E1636C /* Devices */,
+				0804AB7F2BCB365500E1636C /* Room */,
+				2E2860732C85AB6F0018FAFF /* Helper */,
+				2E2860802C86FA140018FAFF /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E095BBD2C8EEE59006B399B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E095BC82C8EFC04006B399B /* EnergyPrice */,
+				2E095BC02C8EEF4E006B399B /* Room */,
+				2E095BBE2C8EEE78006B399B /* Device */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E095BBE2C8EEE78006B399B /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				0804AB7A2BCB274600E1636C /* DeviceModel.swift */,
+				2E095BBF2C8EEF0B006B399B /* Extension */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		2E095BBF2C8EEF0B006B399B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				087069B32BD01EE10033FE43 /* Devices.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2E095BC02C8EEF4E006B399B /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				0850BA412BBAA8AB00DB1C41 /* RoomModel.swift */,
+				2E095BC12C8EEF54006B399B /* Extension */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		2E095BC12C8EEF54006B399B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0850BA432BBAA8D400DB1C41 /* RoomType.swift */,
+				087069B52BD02B690033FE43 /* Rooms.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2E095BC22C8EEFA2006B399B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0815F18C2BACC827002B39BD /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2E095BC32C8EEFB5006B399B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2E2860772C85B06D0018FAFF /* RoomItemListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2E095BC42C8EEFCB006B399B /* Modify */ = {
+			isa = PBXGroup;
+			children = (
+				2E095BBA2C88C9BC006B399B /* ModifyRoomSheetView.swift */,
+			);
+			path = Modify;
+			sourceTree = "<group>";
+		};
+		2E095BC52C8EEFE9006B399B /* Modify */ = {
+			isa = PBXGroup;
+			children = (
+				2EF3D2DC2C8884D100D73317 /* ModifyDeviceSheetView.swift */,
+			);
+			path = Modify;
+			sourceTree = "<group>";
+		};
+		2E095BC82C8EFC04006B399B /* EnergyPrice */ = {
+			isa = PBXGroup;
+			children = (
+				2E095BC92C8EFC16006B399B /* PriceResponse.swift */,
+				2EB383232C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift */,
+			);
+			path = EnergyPrice;
+			sourceTree = "<group>";
+		};
 		2E2860732C85AB6F0018FAFF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				2E28608C2C8767800018FAFF /* ViewModel */,
-				2E2860742C85AB740018FAFF /* View */,
+				2E2860742C85AB740018FAFF /* Views */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		2E2860742C85AB740018FAFF /* View */ = {
+		2E2860742C85AB740018FAFF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EA7CD542C90741D007DF36B /* HeaderView */,
 				2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */,
 				2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2E28607D2C86298A0018FAFF /* DeviceDetail */ = {
@@ -288,8 +368,8 @@
 		2E2860802C86FA140018FAFF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				2E2860832C8712740018FAFF /* SubSettingsView */,
 				2E2860812C86FA500018FAFF /* MainSettingsView.swift */,
+				2E2860832C8712740018FAFF /* SubSettingsView */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -301,15 +381,77 @@
 				2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */,
 				2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */,
 				2E28608A2C873A320018FAFF /* RegionSettingsView.swift */,
+				2EA7CD622C91F57F007DF36B /* PriceFetchingSettingsView.swift */,
 			);
 			path = SubSettingsView;
 			sourceTree = "<group>";
 		};
-		2E28608C2C8767800018FAFF /* ViewModel */ = {
+		2E99FE4E2C96ECB20048B153 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
+				2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */,
+				2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */,
+				2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */,
 			);
-			path = ViewModel;
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		2E99FE512C96EDB50048B153 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2EA7CD582C91C18B007DF36B /* ChartRangePickerView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2EA7CD542C90741D007DF36B /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2EA7CD552C90742A007DF36B /* HeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		2EA7CD572C91C155007DF36B /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				2EB1D4DD2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift */,
+				2EA7CD5A2C91C1C0007DF36B /* ElectricityPriceChartCreationView.swift */,
+				2EA7CD5C2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift */,
+				2EA7CD5E2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift */,
+				2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		2EB1D4DC2C8F040400F2BAA8 /* ElectricityPriceChart */ = {
+			isa = PBXGroup;
+			children = (
+				2EA7CD572C91C155007DF36B /* ChartView */,
+				2EB1D4DF2C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift */,
+			);
+			path = ElectricityPriceChart;
+			sourceTree = "<group>";
+		};
+		2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */ = {
+			isa = PBXGroup;
+			children = (
+				2E99FE4E2C96ECB20048B153 /* ChartView */,
+				2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */,
+			);
+			path = DevicePricesChart;
+			sourceTree = "<group>";
+		};
+		2EDE63CF2C95CCB700A14004 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */,
+				2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */,
+				2E99FE512C96EDB50048B153 /* Helper */,
+				2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */,
+				2EB1D4DC2C8F040400F2BAA8 /* ElectricityPriceChart */,
+			);
+			path = Summary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +482,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					0815F1742BACC524002B39BD = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -388,31 +530,49 @@
 				2E28607C2C85CF430018FAFF /* DeviceDetailView.swift in Sources */,
 				2EF3D2DD2C8884D100D73317 /* ModifyDeviceSheetView.swift in Sources */,
 				2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */,
+				2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */,
+				2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */,
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
 				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,
+				2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */,
 				2E2860822C86FA500018FAFF /* MainSettingsView.swift in Sources */,
+				2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */,
 				2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */,
 				0815F1912BACCA70002B39BD /* ListView.swift in Sources */,
+				2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */,
 				2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */,
 				0815F18D2BACC827002B39BD /* HomeView.swift in Sources */,
-				0850BA462BBAAAF000DB1C41 /* HomeViewModel.swift in Sources */,
 				0804AB872BCC209D00E1636C /* DeviceInfoView.swift in Sources */,
+				2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */,
 				0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */,
+				2E095BCA2C8EFC16006B399B /* PriceResponse.swift in Sources */,
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,
+				2EDE63D32C95DC3400A14004 /* SummaryItemListView.swift in Sources */,
 				0804AB7B2BCB274600E1636C /* DeviceModel.swift in Sources */,
+				2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */,
+				2EA7CD5B2C91C1C0007DF36B /* ElectricityPriceChartCreationView.swift in Sources */,
+				2EB1D4E02C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift in Sources */,
+				2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */,
 				2EF3D2DF2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift in Sources */,
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */,
+				2EB1D4DB2C8EFE4900F2BAA8 /* withEnviromentObjects.swift in Sources */,
 				0804AB812BCB367000E1636C /* RoomView.swift in Sources */,
 				087069B42BD01EE10033FE43 /* Devices.swift in Sources */,
+				2EA7CD592C91C18B007DF36B /* ChartRangePickerView.swift in Sources */,
 				2E2860852C8712890018FAFF /* SettingsAboutAppView.swift in Sources */,
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
 				08EE27912BF3DF6900CF9AEA /* Localize.swift in Sources */,
 				2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */,
 				2E095BBB2C88C9BC006B399B /* ModifyRoomSheetView.swift in Sources */,
+				2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */,
 				0804AB222BC91D9700E1636C /* NewRoom.swift in Sources */,
+				2E095BC72C8EF552006B399B /* ElectricityPriceController.swift in Sources */,
+				2EB383242C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift in Sources */,
+				2EA7CD632C91F57F007DF36B /* PriceFetchingSettingsView.swift in Sources */,
 				087069B62BD02B690033FE43 /* Rooms.swift in Sources */,
+				2EA7CD5F2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +597,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -500,6 +661,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -567,7 +729,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,7 +759,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

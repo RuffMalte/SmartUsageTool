@@ -144,3 +144,29 @@
 "South Korean Won" = "South Korean Won";
 
 "currencyExplanation" = "The currency code is only used for the display of the total costs. It will not change the Apps language or behavoir.";
+
+"priceFetchingSettings" = "Price Fetching Settings";
+"useDailyFetching" = "Use daily price";
+"useDailyFetchingDescription" = "The price per kW*h is used for the calculation of the electricity costs. It can be set manually or fetched automatically.";
+"selectCountry" = "Select Country";
+"forcePriceUpdate" = "Force price update";
+"none" = "None";
+"nightPricingFetchingDescription" = "The price per kW*h is used for the calculation of the electricity costs. It can be set manually or fetched automatically.";
+"nightStart" = "Night Start";
+"nightEnd" = "Night End";
+"nightPricingDescription" = "The price per kW*h is used for the calculation of the electricity costs. It can be set manually or fetched automatically.";
+
+"appIncludedAPIs" = "Included APIs";
+"energyChartsAPI" = "Energy Charts API";
+
+"summary" = "Summary";
+"electricityPrice" = "Electricity Price";
+"latest" = "Latest";
+"devicePrices" = "Device Prices";
+"showMoreData" = "Show More Data";
+"range" = "Range";
+"devicePrice" = "Device Price";
+
+"week" = "Week";
+"month" = "Month";
+"year" = "Year";

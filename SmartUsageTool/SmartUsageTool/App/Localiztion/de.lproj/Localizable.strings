@@ -144,3 +144,29 @@
 "South Korean Won" = "Südkoreanischer Won";
 
 "currencyExplanation" = "Der Währungscode wird nur für die Anzeige der Gesamtkosten verwendet. Er ändert nicht die Sprache oder das Verhalten der App.";
+
+"priceFetchingSettings" = "Preisabruf-Einstellungen";
+"useDailyFetching" = "Tagespreis verwenden";
+"useDailyFetchingDescription" = "Der Preis pro kWh wird zur Berechnung der Stromkosten verwendet. Er kann manuell festgelegt oder automatisch abgerufen werden.";
+"selectCountry" = "Land auswählen";
+"forcePriceUpdate" = "Preisaktualisierung erzwingen";
+"none" = "Keine";
+"nightPricingFetchingDescription" = "Der Preis pro kWh wird zur Berechnung der Stromkosten verwendet. Er kann manuell festgelegt oder automatisch abgerufen werden.";
+"nightStart" = "Nachtbeginn";
+"nightEnd" = "Nachtende";
+"nightPricingDescription" = "Der Preis pro kWh wird zur Berechnung der Stromkosten verwendet. Er kann manuell festgelegt oder automatisch abgerufen werden.";
+
+"appIncludedAPIs" = "Inkludierte APIs";
+"energyChartsAPI" = "Energy Charts API";
+
+"summary" = "Zusammenfassung";
+"electricityPrice" = "Strompreis";
+"latest" = "Aktuell";
+"devicePrices" = "Gerätepreise";
+"showMoreData" = "Mehr Daten anzeigen";
+"range" = "Bereich";
+"devicePrice" = "Gerätepreis";
+
+"week" = "Woche";
+"month" = "Monat";
+"year" = "Jahr";

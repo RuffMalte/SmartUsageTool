@@ -8,6 +8,7 @@
 import Foundation
 
 extension UserDefaults {
+	// getter
     static var currency: String {
         Self.standard.string(forKey: Key.currency.rawValue) ?? "USD"
     }
@@ -23,7 +24,20 @@ extension UserDefaults {
     static var isNightPrice: Bool {
         Self.standard.bool(forKey: Key.isNightPrice.rawValue)
     }
-
+	
+	static var nightPriceStartTimeslot: Int {
+		Self.standard.integer(forKey: Key.nightPriceStartTimeslot.rawValue)
+	}
+	
+	static var nightPriceStoppTimeslot: Int {
+		Self.standard.integer(forKey: Key.nightPriceStoppTimeslot.rawValue)
+	}
+	
+	static var useDailyFetching: Bool {
+		Self.standard.bool(forKey: Key.useDailyFetching.rawValue)
+	}
+	
+	// setter
     static func setCurrency(_ currency: String) {
         Self.standard.setValue(currency, forKey: Key.currency.rawValue)
     }
@@ -39,6 +53,37 @@ extension UserDefaults {
     static func setNight(available: Bool) {
         Self.standard.setValue(available, forKey: Key.isNightPrice.rawValue)
     }
+	
+	
+	static func setNightPriceStartTimeslot(_ value: Int) {
+		Self.standard.setValue(value, forKey: Key.nightPriceStartTimeslot.rawValue)
+	}
+	
+	static func setNightPriceStoppTimeslot(_ value: Int) {
+		Self.standard.setValue(value, forKey: Key.nightPriceStoppTimeslot.rawValue)
+	}
+	
+	static func setUseDailyFetching(_ value: Bool) {
+		Self.standard.setValue(value, forKey: Key.useDailyFetching.rawValue)
+	}
+	
+	
+	
+	var selectedDailPriceFetchingCountry: SupportedPriceFetchingCountryModel? {
+		get {
+			if let data = data(forKey: Key.selectedDailPriceFetchingCountry.rawValue) {
+				return try? JSONDecoder().decode(SupportedPriceFetchingCountryModel.self, from: data)
+			}
+			return nil
+		}
+		set {
+			if let newValue = newValue, let data = try? JSONEncoder().encode(newValue) {
+				set(data, forKey: Key.selectedDailPriceFetchingCountry.rawValue)
+			} else {
+				removeObject(forKey: Key.selectedDailPriceFetchingCountry.rawValue)
+			}
+		}
+	}
 }
 
 
@@ -48,5 +93,9 @@ private extension UserDefaults {
         case dayPrice
         case nightPrice
         case isNightPrice
+		case nightPriceStartTimeslot
+		case nightPriceStoppTimeslot
+		case useDailyFetching
+		case selectedDailPriceFetchingCountry
     }
 }

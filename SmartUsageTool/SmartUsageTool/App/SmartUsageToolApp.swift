@@ -23,11 +23,14 @@ struct SmartUsageToolApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+	
+	@StateObject private var electricityPriceController = ElectricityPriceController()
     
     var body: some Scene {
         WindowGroup {
             LaunchView()
                 .modelContainer(sharedModelContainer)
+				.environmentObject(electricityPriceController)
         }
     }
 }

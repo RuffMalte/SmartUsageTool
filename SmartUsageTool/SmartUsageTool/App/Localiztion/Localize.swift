@@ -122,5 +122,32 @@ struct Localize {
     
     static let searchCurrencies = NSLocalizedString("searchCurrencies", comment: "#bc-ignore!")
     static let currencyExplanation = NSLocalizedString("currencyExplanation", comment: "#bc-ignore!")
+
+    static let priceFetchingSettings = NSLocalizedString("priceFetchingSettings", comment: "#bc-ignore!")
+    static let useDailyFetching = NSLocalizedString("useDailyFetching", comment: "#bc-ignore!")
+    static let useDailyFetchingDescription = NSLocalizedString("useDailyFetchingDescription", comment: "#bc-ignore!")
+    static let selectCountry = NSLocalizedString("selectCountry", comment: "#bc-ignore!")
+    static let forcePriceUpdate = NSLocalizedString("forcePriceUpdate", comment: "#bc-ignore!")
+    static let none = NSLocalizedString("none", comment: "#bc-ignore!")
+
+    static let nightPricingFetchingDescription = NSLocalizedString("nightPricingFetchingDescription", comment: "#bc-ignore!")
+    static let nightStart = NSLocalizedString("nightStart", comment: "#bc-ignore!")
+    static let nightEnd = NSLocalizedString("nightEnd", comment: "#bc-ignore!")
+    static let nightPricingDescription = NSLocalizedString("nightPricingDescription", comment: "#bc-ignore!")
+
+    static let appIncludedAPIs = NSLocalizedString("appIncludedAPIs", comment: "#bc-ignore!")
+    static let energyChartsAPI = NSLocalizedString("energyChartsAPI", comment: "#bc-ignore!")
+
+    static let summary = NSLocalizedString("summary", comment: "#bc-ignore!")
+    static let electricityPrice = NSLocalizedString("electricityPrice", comment: "#bc-ignore!")
+    static let latest = NSLocalizedString("latest", comment: "#bc-ignore!")
+    static let devicePrices = NSLocalizedString("devicePrices", comment: "#bc-ignore!")
+    static let showMoreData = NSLocalizedString("showMoreData", comment: "#bc-ignore!")
+    static let range = NSLocalizedString("range", comment: "#bc-ignore!")
+    static let devicePrice = NSLocalizedString("devicePrice", comment: "#bc-ignore!")
+
+    static let week = NSLocalizedString("week", comment: "#bc-ignore!")
+    static let month = NSLocalizedString("month", comment: "#bc-ignore!")
+    static let year = NSLocalizedString("year", comment: "#bc-ignore!")
 }
 
