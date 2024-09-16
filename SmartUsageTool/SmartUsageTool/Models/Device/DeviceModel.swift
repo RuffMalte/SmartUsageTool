@@ -21,13 +21,13 @@ final class DeviceModel: Identifiable, ObservableObject {
 	// Computed property for day expenses
 	var dayExpenses: Double {
 		let powerKWT = Double(power) / 1000
-		return powerKWT * doubleFormattedDayTime * UserDefaults.dayPrice * 30
+		return powerKWT * doubleFormattedDayTime * UserDefaults.dayPrice
 	}
 	
 	// Computed property for night expenses
 	var nightExpenses: Double {
 		let powerKWT = Double(power) / 1000
-		return powerKWT * doubleFormattedNightTime * UserDefaults.nightPrice * 30
+		return powerKWT * doubleFormattedNightTime * UserDefaults.nightPrice
 	}
 	
 	// Total expenses combining day and night expenses

@@ -55,7 +55,6 @@ private extension ListView {
                 Section(header: HStack {
                     Text(room.name)
                         .font(.title)
-                        .foregroundColor(.black)
                     Spacer()
                     Text(String(format: "\(Localize.currencySymbol)%.2f", room.dailyExpenses))
                         .font(.title)
