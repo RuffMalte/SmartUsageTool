@@ -24,6 +24,11 @@ struct InitialView: View {
                 .tabItem {
                     Label(Localize.list, systemImage: "tablecells")
                 }
+			
+			ArticleHomeView()
+				.tabItem {
+					Label(Localize.articles, systemImage: "newspaper.fill")
+				}
         }
 		.navigationBarBackButtonHidden(true)
     }

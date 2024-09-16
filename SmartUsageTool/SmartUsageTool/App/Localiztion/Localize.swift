@@ -149,5 +149,7 @@ struct Localize {
     static let week = NSLocalizedString("week", comment: "#bc-ignore!")
     static let month = NSLocalizedString("month", comment: "#bc-ignore!")
     static let year = NSLocalizedString("year", comment: "#bc-ignore!")
+
+    static let articles = NSLocalizedString("articles", comment: "#bc-ignore!")
 }
 

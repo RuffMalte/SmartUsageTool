@@ -50,6 +50,11 @@
 		2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1D4DD2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift */; };
 		2EB1D4E02C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1D4DF2C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift */; };
 		2EB383242C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB383232C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift */; };
+		2EC6F1232C985C2800FF12E5 /* ArticleHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F1222C985C2800FF12E5 /* ArticleHomeView.swift */; };
+		2EC6F1262C985C8800FF12E5 /* GermanArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F1252C985C8800FF12E5 /* GermanArticles.swift */; };
+		2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F1272C985C9300FF12E5 /* EnglishArticles.swift */; };
+		2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F12A2C985CC800FF12E5 /* ArticleModel.swift */; };
+		2EC6F12E2C98670100FF12E5 /* ArticleItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F12D2C98670100FF12E5 /* ArticleItemListView.swift */; };
 		2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */; };
 		2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */; };
 		2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */; };
@@ -106,6 +111,11 @@
 		2EB1D4DD2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartView.swift; sourceTree = "<group>"; };
 		2EB1D4DF2C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceHomeView.swift; sourceTree = "<group>"; };
 		2EB383232C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedPriceFetchingCountryModel.swift; sourceTree = "<group>"; };
+		2EC6F1222C985C2800FF12E5 /* ArticleHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleHomeView.swift; sourceTree = "<group>"; };
+		2EC6F1252C985C8800FF12E5 /* GermanArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanArticles.swift; sourceTree = "<group>"; };
+		2EC6F1272C985C9300FF12E5 /* EnglishArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishArticles.swift; sourceTree = "<group>"; };
+		2EC6F12A2C985CC800FF12E5 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		2EC6F12D2C98670100FF12E5 /* ArticleItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItemListView.swift; sourceTree = "<group>"; };
 		2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartView.swift; sourceTree = "<group>"; };
 		2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartHeaderViewView.swift; sourceTree = "<group>"; };
 		2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainView.swift; sourceTree = "<group>"; };
@@ -240,6 +250,7 @@
 		2E095BBC2C8EEE48006B399B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EC6F1212C985C0400FF12E5 /* Articles */,
 				2EDE63CF2C95CCB700A14004 /* Summary */,
 				0815F1892BACC6B5002B39BD /* Initial */,
 				2E095BC22C8EEFA2006B399B /* Home */,
@@ -255,6 +266,7 @@
 		2E095BBD2C8EEE59006B399B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EC6F1292C985C9C00FF12E5 /* Article */,
 				2E095BC82C8EFC04006B399B /* EnergyPrice */,
 				2E095BC02C8EEF4E006B399B /* Room */,
 				2E095BBE2C8EEE78006B399B /* Device */,
@@ -433,6 +445,33 @@
 			path = ElectricityPriceChart;
 			sourceTree = "<group>";
 		};
+		2EC6F1212C985C0400FF12E5 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6F1242C985C7B00FF12E5 /* Articles */,
+				2EC6F1222C985C2800FF12E5 /* ArticleHomeView.swift */,
+				2EC6F12D2C98670100FF12E5 /* ArticleItemListView.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		2EC6F1242C985C7B00FF12E5 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6F1252C985C8800FF12E5 /* GermanArticles.swift */,
+				2EC6F1272C985C9300FF12E5 /* EnglishArticles.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		2EC6F1292C985C9C00FF12E5 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				2EC6F12A2C985CC800FF12E5 /* ArticleModel.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,7 +570,9 @@
 				2EF3D2DD2C8884D100D73317 /* ModifyDeviceSheetView.swift in Sources */,
 				2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */,
 				2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */,
+				2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */,
 				2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */,
+				2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */,
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
 				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,
@@ -547,6 +588,8 @@
 				2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */,
 				0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */,
 				2E095BCA2C8EFC16006B399B /* PriceResponse.swift in Sources */,
+				2EC6F12E2C98670100FF12E5 /* ArticleItemListView.swift in Sources */,
+				2EC6F1232C985C2800FF12E5 /* ArticleHomeView.swift in Sources */,
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,
 				2EDE63D32C95DC3400A14004 /* SummaryItemListView.swift in Sources */,
 				0804AB7B2BCB274600E1636C /* DeviceModel.swift in Sources */,
@@ -558,6 +601,7 @@
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */,
 				2EB1D4DB2C8EFE4900F2BAA8 /* withEnviromentObjects.swift in Sources */,
+				2EC6F1262C985C8800FF12E5 /* GermanArticles.swift in Sources */,
 				0804AB812BCB367000E1636C /* RoomView.swift in Sources */,
 				087069B42BD01EE10033FE43 /* Devices.swift in Sources */,
 				2EA7CD592C91C18B007DF36B /* ChartRangePickerView.swift in Sources */,
