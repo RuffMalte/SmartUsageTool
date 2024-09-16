@@ -12,7 +12,7 @@ struct ListView: View {
     @Query private var items: [RoomModel]
     
     private var totalCost: Double {
-       let sum = items.reduce(0.0) { $0 + $1.expenses }
+       let sum = items.reduce(0.0) { $0 + $1.dailyExpenses }
         return sum
     }
     var body: some View {
@@ -57,7 +57,7 @@ private extension ListView {
                         .font(.title)
                         .foregroundColor(.black)
                     Spacer()
-                    Text(String(format: "\(Localize.currencySymbol)%.2f", room.expenses))
+                    Text(String(format: "\(Localize.currencySymbol)%.2f", room.dailyExpenses))
                         .font(.title)
                         .foregroundColor(.black)
                 }) {

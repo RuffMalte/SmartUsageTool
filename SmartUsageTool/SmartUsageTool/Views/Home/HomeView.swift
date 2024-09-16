@@ -22,7 +22,7 @@ struct HomeView: View {
     @State private var isPresentedNewRoom = false
     @State private var isNightPrice = UserDefaults.isNightPrice
     private var totalCost: Double {
-        let sum = items.reduce(0.0) { $0 + $1.expenses }
+		let sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
         return sum
     }
 

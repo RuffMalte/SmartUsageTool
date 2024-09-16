@@ -18,10 +18,29 @@ struct ModifyRoomSheetView: View {
 	@State private var isCustomNamingActive = false
 	let roomEnums: [Room] = Room.allCases
 	
+	@State private var isShowingConfirmation = false
+	
 	var body: some View {
 		NavigationStack {
 			VStack {
 				ScrollView(.vertical, showsIndicators: false) {
+					if !isNewRoom {
+						Button(role: .destructive) {
+							isShowingConfirmation.toggle()
+						} label: {
+							HStack {
+								Spacer()
+								Label(Localize.delete, systemImage: "trash")
+									.font(.system(.body, design: .rounded, weight: .bold))
+								Spacer()
+							}
+							
+						}
+						.padding()
+						.background(.red.opacity(0.1))
+						.clipShape(.rect(cornerRadius: 10))
+					}
+					
 					LazyVGrid(columns: [
 						GridItem(.adaptive(minimum: 100)),
 						GridItem(.adaptive(minimum: 100))
@@ -43,10 +62,11 @@ struct ModifyRoomSheetView: View {
 								}
 							}
 						}
+						.buttonStyle(.plain)
+
 					}
 					.animation(.default, value: searchText)
 				}
-				.buttonStyle(.plain)
 			}
 			.overlay {
 				VStack {
@@ -76,6 +96,18 @@ struct ModifyRoomSheetView: View {
 					Button(Localize.cancel) {
 						dismiss()
 					}
+				}
+			}
+			.confirmationDialog(Localize.areYouSure, isPresented: $isShowingConfirmation, titleVisibility: .visible) {
+				Button(Localize.delete, role: .destructive) {
+					withAnimation {
+						modelContext.delete(room)
+						try? modelContext.save()
+						dismiss()
+					}
+				}
+				Button(Localize.cancel, role: .cancel) {
+					isShowingConfirmation.toggle()
 				}
 			}
 		}

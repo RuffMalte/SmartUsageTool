@@ -12,6 +12,7 @@ struct RoomView: View {
 	@Bindable var room: RoomModel
 	//    @State private var selectedDevice: DeviceModel = DeviceModel(name: Localize.selectDevice, dayTime: 0, power: 0, isOn: true)
 	@State private var isPresentedNewDevice = false
+	@State private var isPresentedEditRoom = false
 	@Binding var isNightPrice: Bool
 	
 	var body: some View {
@@ -43,6 +44,16 @@ private extension RoomView {
 						Image(systemName: "plus")
 					}
 				}
+				ToolbarItem(placement: .primaryAction) {
+					Button {
+						isPresentedEditRoom.toggle()
+					} label: {
+						Image(systemName: "pencil")
+					}
+				}
+			}
+			.sheet(isPresented: $isPresentedEditRoom) {
+				ModifyRoomSheetView(room: room, isNewRoom: false)
 			}
 		}
 	}
@@ -53,7 +64,7 @@ private extension RoomView {
 			Text(NSLocalizedString(room.name.capitalized, comment: ""))
 				.font(.system(.largeTitle, weight: .bold))
 			Spacer()
-			Text(room.expenses, format: .currency(code: UserDefaults.currency))
+			Text(room.dailyExpenses, format: .currency(code: UserDefaults.currency))
 				.font(.system(.title3, design: .monospaced, weight: .regular))
 			
 		}
@@ -61,37 +72,8 @@ private extension RoomView {
 		.background(Color.background)
 	}
 	
-	//    var detailView: some View {
-	//        VStack {
-	//            HStack {
-	//                Text(selectedDevice.name)
-	//                    .font(.system(size: 22, weight: .semibold))
-	//                Spacer()
-	//                Toggle("", isOn: $selectedDevice.isOn)
-	//            }
-	//            VStack {
-	//                InfoView(initialValue: selectedDevice.dayTime, type: Localize.hrs, title: Localize.dailyUsage)
-	//                    // TODO: - Add switch to the night time
-	////                if selectedDevice.dayTime > 0  {
-	////                    Button("Використовувати лише вночі") {
-	////                        selectedDevice.nightTime += selectedDevice.dayTime
-	////                        selectedDevice.dayTime = 0
-	////                    }
-	////                }
-	//                if isNightPrice {
-	//                    InfoView(initialValue: selectedDevice.nightTime, type: Localize.hrs, title: Localize.nightlyUsage)
-	//                }
-	//                Spacer()
-	//                InfoView(initialValue: Double(selectedDevice.power), type: Localize.w, title: Localize.power)
-	//            }
-	//        }
-	//        .padding(30)
-	////        .background(Color.background)
-	//    }
-	
 	var listView: some View {
 		Group {
-			//            detailView
 			List {
 				ForEach(room.devices) { device in
 					NavigationLink {
@@ -100,15 +82,9 @@ private extension RoomView {
 						DeviceItemListView(device: device)
 					}
 				}
-				.onDelete(perform: deleteDevice)
 			}
 			.listStyle(PlainListStyle())
 		}
-	}
-	
-	
-	func deleteDevice(at offsets: IndexSet) {
-		room.devices.remove(atOffsets: offsets)
 	}
 }
 

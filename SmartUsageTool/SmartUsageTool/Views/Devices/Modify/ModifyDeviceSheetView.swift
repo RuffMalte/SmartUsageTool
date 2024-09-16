@@ -18,7 +18,7 @@ struct ModifyDeviceSheetView: View {
 	@Environment(\.dismiss) private var dismiss
 	
 	@State private var isShowingNamingSheet = false
-	
+	@State private var isShowingConfirmation = false
 	var body: some View {
 		NavigationStack {
 			ScrollView(.vertical) {
@@ -75,6 +75,22 @@ struct ModifyDeviceSheetView: View {
 								label: Localize.nightlyUsage,
 								systemImage: "moon.stars")
 						}
+						if !isNewDevice {
+							Button(role: .destructive) {
+								isShowingConfirmation.toggle()
+							} label: {
+								HStack {
+									Spacer()
+									Label(Localize.delete, systemImage: "trash")
+										.font(.system(.body, design: .rounded, weight: .bold))
+									Spacer()
+								}
+								
+							}
+							.padding()
+							.background(.red.opacity(0.1))
+							.clipShape(.rect(cornerRadius: 10))
+						}
 					}
 					.padding()
 					
@@ -103,6 +119,18 @@ struct ModifyDeviceSheetView: View {
 					Button(Localize.cancel) {
 						dismiss()
 					}
+				}
+			}
+			.confirmationDialog(Localize.areYouSure, isPresented: $isShowingConfirmation, titleVisibility: .visible) {
+				Button(Localize.delete, role: .destructive) {
+					withAnimation {
+						modelContext.delete(device)
+						try? modelContext.save()
+						dismiss()
+					}
+				}
+				Button(Localize.cancel, role: .cancel) {
+					isShowingConfirmation.toggle()
 				}
 			}
 		}

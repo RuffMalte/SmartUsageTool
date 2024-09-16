@@ -66,7 +66,7 @@ struct SummaryMainView: View {
 					}
 					
 					Section {
-						if let currentPricePricePoint = viewModel.currentPricePricePoint {
+						if let lastDevicePrice = viewModel.calculateDevicePrices(for: devices, range: .week).last?.price {
 							NavigationLink {
 								DevicesPriceHomeView()
 							} label: {
@@ -82,7 +82,7 @@ struct SummaryMainView: View {
 												.foregroundStyle(.secondary)
 											
 											HStack(alignment: .firstTextBaseline) {
-												Text(viewModel.calculateDevicePrices(for: devices, range: .week).last?.price ?? 0, format: .number.precision(.fractionLength(2)))
+												Text(lastDevicePrice, format: .number.precision(.fractionLength(2)))
 													.font(.system(.title2, design: .monospaced, weight: .bold))
 												
 												Text(UserDefaults.currency)

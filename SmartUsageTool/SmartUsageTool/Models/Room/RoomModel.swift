@@ -14,7 +14,12 @@ final class RoomModel: Identifiable {
     let type: RoomType
     var name: String
     @Relationship(deleteRule: .cascade)  var devices: [DeviceModel] = []
-	var expenses: Double {
+	
+	var dailyExpenses: Double {
+		devices.filter { $0.isOn }.reduce(0.0) { $0 + $1.expenses / 30 }
+	}
+	
+	var monthlyExpenses: Double {
 		devices.filter { $0.isOn }.reduce(0.0) { $0 + $1.expenses }
 	}
     
