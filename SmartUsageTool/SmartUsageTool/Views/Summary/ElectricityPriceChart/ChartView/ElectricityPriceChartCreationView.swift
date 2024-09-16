@@ -27,7 +27,7 @@ struct ElectricityPriceChartCreationView: View {
 					.lineStyle(StrokeStyle(lineWidth: 3))
 					.foregroundStyle(.yellow)
 					
-					if let (maxPoint, minPoint) = viewModel.findExtremePoints(for: selectedRange, in: viewModel.pricePoints) {
+					if let (maxPoint, minPoint) = getextremePoints() {
 						ForEach([maxPoint, minPoint], id: \.id) { point in
 							PointMark(
 								x: .value("Time", point.timestamp),
@@ -102,6 +102,15 @@ struct ElectricityPriceChartCreationView: View {
 		case .month: return .month
 		case .year: return .year
 		}
+	}
+	
+	func getextremePoints() -> (max: PricePoint, min: PricePoint)? {
+		let points = viewModel.aggregatedPricePoints(for: selectedRange)
+		guard let maxPoint = points.max(by: { $0.price < $1.price }),
+			  let minPoint = points.min(by: { $0.price < $1.price }) else {
+			return nil
+		}
+		return (maxPoint, minPoint)
 	}
 }
 

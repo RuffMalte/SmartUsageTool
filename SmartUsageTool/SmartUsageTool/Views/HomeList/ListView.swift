@@ -58,7 +58,6 @@ private extension ListView {
                     Spacer()
                     Text(String(format: "\(Localize.currencySymbol)%.2f", room.dailyExpenses))
                         .font(.title)
-                        .foregroundColor(.black)
                 }) {
                     ForEach(room.devices) { device in
                         VStack {
