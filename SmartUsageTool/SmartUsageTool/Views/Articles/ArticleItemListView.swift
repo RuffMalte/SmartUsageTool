@@ -41,11 +41,11 @@ struct ArticleItemListView: View {
 			VStack {
 				Spacer()
 				LinearGradient(
-					gradient: Gradient(colors: [.clear, .accentColor]),
+					gradient: Gradient(colors: [.clear, .accentColor, .accentColor, .accentColor]),
 					startPoint: .top,
 					endPoint: .bottom
 				)
-				.frame(height: geometry.size.height / 2.3)
+				.frame(height: geometry.size.height / 2)
 			}
 			
 			VStack(alignment: .leading) {

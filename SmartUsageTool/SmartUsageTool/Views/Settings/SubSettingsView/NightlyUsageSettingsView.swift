@@ -82,7 +82,7 @@ struct NightlyUsageSettingsView: View {
 				CustomHourMinutePicker(selection: $nightStartTime, label: Localize.nightStart, systemImage: "moonrise")
 				CustomHourMinutePicker(selection: $nightEndTime, label: Localize.nightEnd, systemImage: "moonset")
 			} footer: {
-				Text(Localize.nightPricingDescription)
+//				Text(Localize.nightPricingDescription)
 			}
 			.disabled(!isNightPrice)
 			.onChange(of: nightStartTime) { oldValue, newValue in
