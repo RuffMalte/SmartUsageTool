@@ -13,9 +13,9 @@ struct PriceFetchingSettingsView: View {
 	@EnvironmentObject private var viewModel: ElectricityPriceController
 	
 	@State private var selectedCountry: SupportedPriceFetchingCountryModel?
-
-    var body: some View {
-		Form {			
+	
+	var body: some View {
+		Form {
 			Section {
 				Toggle(isOn: $useDailyFetching) {
 					Label(Localize.useDailyFetching, systemImage: "bolt.fill")
@@ -48,6 +48,26 @@ struct PriceFetchingSettingsView: View {
 			}
 			.onAppear {
 				selectedCountry = UserDefaults.standard.selectedDailPriceFetchingCountry
+				if selectedCountry == nil {
+					let currentLocale = Locale.current
+					let languageCode = currentLocale.language.languageCode?.identifier
+					let regionCode = currentLocale.region?.identifier
+					
+					selectedCountry = SupportedPriceFetchingCountryModel.supportedCountries.first { country in
+						if languageCode == "de" {
+							return country.code == "DE-LU"
+						} else if languageCode == "uk" {
+							return country.code == "PL"
+						} else if let regionCode = regionCode {
+							return country.code.hasPrefix(regionCode)
+						}
+						return false
+					}
+					
+					selectedCountry = selectedCountry ?? SupportedPriceFetchingCountryModel.supportedCountries.first { $0.code == "DE-LU" }
+					
+					UserDefaults.standard.selectedDailPriceFetchingCountry = selectedCountry
+				}
 			}
 			
 			Button {
@@ -63,12 +83,12 @@ struct PriceFetchingSettingsView: View {
 			}
 			.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 			.listRowBackground(EmptyView())
-				
+			
 			
 			
 			.navigationTitle(Localize.priceFetchingSettings)
 		}
-    }
+	}
 }
 
 #Preview {
@@ -82,7 +102,7 @@ struct CountrySelectionView: View {
 	@Binding var selectedCountry: SupportedPriceFetchingCountryModel?
 	@Environment(\.presentationMode) var presentationMode
 	@EnvironmentObject private var viewModel: ElectricityPriceController
-
+	
 	var body: some View {
 		List {
 			Button(Localize.none) {
