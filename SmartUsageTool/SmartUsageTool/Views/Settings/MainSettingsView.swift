@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainSettingsView: View {
-	
+	@AppStorage("selectedTintColor") var selectedTintColor: ColorEnum = .blue
+
 	var body: some View {
 		VStack {
 			settingsScrollView
@@ -45,6 +46,10 @@ struct MainSettingsView: View {
 				} label: {
 					SettingsItemListView(icon: "moon.stars", iconBackground: .green, title: Localize.nightlyUsage)
 				}
+			}
+			
+			Section {
+				ColorPicker(selectedColor: $selectedTintColor)
 			}
 			
 			Section {

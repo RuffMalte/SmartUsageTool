@@ -55,6 +55,8 @@
 		2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F1272C985C9300FF12E5 /* EnglishArticles.swift */; };
 		2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F12A2C985CC800FF12E5 /* ArticleModel.swift */; };
 		2EC6F12E2C98670100FF12E5 /* ArticleItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6F12D2C98670100FF12E5 /* ArticleItemListView.swift */; };
+		2ECA0D632C9A15DC00D0899D /* ColorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D622C9A15DC00D0899D /* ColorEnum.swift */; };
+		2ECA0D662C9A15FF00D0899D /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D652C9A15FF00D0899D /* ColorPicker.swift */; };
 		2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */; };
 		2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */; };
 		2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */; };
@@ -116,6 +118,8 @@
 		2EC6F1272C985C9300FF12E5 /* EnglishArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishArticles.swift; sourceTree = "<group>"; };
 		2EC6F12A2C985CC800FF12E5 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		2EC6F12D2C98670100FF12E5 /* ArticleItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItemListView.swift; sourceTree = "<group>"; };
+		2ECA0D622C9A15DC00D0899D /* ColorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEnum.swift; sourceTree = "<group>"; };
+		2ECA0D652C9A15FF00D0899D /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartView.swift; sourceTree = "<group>"; };
 		2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartHeaderViewView.swift; sourceTree = "<group>"; };
 		2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainView.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		2E095BBD2C8EEE59006B399B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2ECA0D612C9A15D700D0899D /* Helper */,
 				2EC6F1292C985C9C00FF12E5 /* Article */,
 				2E095BC82C8EFC04006B399B /* EnergyPrice */,
 				2E095BC02C8EEF4E006B399B /* Room */,
@@ -361,9 +366,9 @@
 		2E2860742C85AB740018FAFF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2ECA0D642C9A15E500D0899D /* Picker */,
 				2EA7CD542C90741D007DF36B /* HeaderView */,
 				2E2860752C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift */,
-				2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,6 +477,23 @@
 			path = Article;
 			sourceTree = "<group>";
 		};
+		2ECA0D612C9A15D700D0899D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2ECA0D622C9A15DC00D0899D /* ColorEnum.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2ECA0D642C9A15E500D0899D /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				2ECA0D652C9A15FF00D0899D /* ColorPicker.swift */,
+				2EF3D2DE2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +590,7 @@
 			files = (
 				2E28607C2C85CF430018FAFF /* DeviceDetailView.swift in Sources */,
 				2EF3D2DD2C8884D100D73317 /* ModifyDeviceSheetView.swift in Sources */,
+				2ECA0D662C9A15FF00D0899D /* ColorPicker.swift in Sources */,
 				2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */,
 				2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */,
 				2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */,
@@ -576,6 +599,7 @@
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
 				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,
+				2ECA0D632C9A15DC00D0899D /* ColorEnum.swift in Sources */,
 				2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */,
 				2E2860822C86FA500018FAFF /* MainSettingsView.swift in Sources */,
 				2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */,
