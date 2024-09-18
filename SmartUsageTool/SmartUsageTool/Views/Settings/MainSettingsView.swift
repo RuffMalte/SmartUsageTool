@@ -58,6 +58,7 @@ struct MainSettingsView: View {
 				} label: {
 					SettingsItemListView(icon: "info.circle", iconBackground: .blue, title: Localize.about)
 				}
+				ContactUsView()
 			}
 		}
 	}

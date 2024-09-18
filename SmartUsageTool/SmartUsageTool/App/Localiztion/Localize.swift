@@ -151,5 +151,7 @@ struct Localize {
     static let year = NSLocalizedString("year", comment: "#bc-ignore!")
 
     static let articles = NSLocalizedString("articles", comment: "#bc-ignore!")
+
+    static let feedback = NSLocalizedString("feedback", comment: "#bc-ignore!")
 }
 
