@@ -39,6 +39,11 @@ struct PricePoint: Identifiable {
 	let timestamp: Date
 	let price: Double
 }
+extension PricePoint: Equatable {
+	static func == (lhs: PricePoint, rhs: PricePoint) -> Bool {
+		lhs.id == rhs.id
+	}
+}
 
 // MARK: - API Error
 enum APIError: Error, LocalizedError {
