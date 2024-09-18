@@ -173,3 +173,7 @@
 "articles" = "Статті";
 
 "feedback" = "Зворотній зв'язок";
+"dangerousSettings" = "Небезпечні налаштування";
+"deleteAllData" = "Видалити всі дані";
+"deleteAllDevices" = "Видалити всі пристрої";
+"deleteAllRoomAndDevices" = "Видалити всі кімнати та пристрої";

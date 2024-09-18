@@ -174,3 +174,7 @@
 "articles" = "Articles";
 
 "feedback" = "Feedback";
+"dangerousSettings" = "Dangerous Settings";
+"deleteAll" = "Delete All";
+"deleteAllDevices" = "Delete All Devices";
+"deleteAllRoomAndDevices" = "Delete All Rooms and Devices";

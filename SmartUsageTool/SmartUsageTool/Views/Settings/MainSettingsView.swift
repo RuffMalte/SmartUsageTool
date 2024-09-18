@@ -60,6 +60,16 @@ struct MainSettingsView: View {
 				}
 				ContactUsView()
 			}
+			
+			Section {
+				NavigationLink {
+					DangerousSettingsView()
+				} label: {
+					SettingsItemListView(icon: "trash", iconBackground: .red, title: Localize.dangerousSettings)
+						.foregroundStyle(.red)
+				}
+
+			}
 		}
 	}
 }

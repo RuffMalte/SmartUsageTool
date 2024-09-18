@@ -173,3 +173,7 @@
 "articles" = "Artikel";
 
 "feedback" = "Feedback";
+"dangerousSettings" = "Gefährliche Einstellungen";
+"deleteAllData" = "Alle Daten löschen";
+"deleteAllDevices" = "Alle Geräte löschen";
+"deleteAllRoomAndDevices" = "Alle Räume und Geräte löschen";
