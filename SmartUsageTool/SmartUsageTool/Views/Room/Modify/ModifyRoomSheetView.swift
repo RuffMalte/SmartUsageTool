@@ -138,6 +138,7 @@ struct ModifyRoomSheetView: View {
 	
 	func saveRoom(for roomName: String) {
 		room.name = roomName
+		playNotificationHaptic(.success)
 		if isNewRoom {
 			modelContext.insert(room)
 		}

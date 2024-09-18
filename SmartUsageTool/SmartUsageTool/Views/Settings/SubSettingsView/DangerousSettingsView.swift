@@ -104,17 +104,20 @@ struct DangerousSettingsView: View {
 	
 	private func deleteAllDevices() {
 		deleteItems(modelContext, type: DeviceModel.self)
+		playNotificationHaptic(.success)
 	}
 	
 	private func deleteAllRoomAndDevices() {
 		deleteItems(modelContext, type: DeviceModel.self)
 		deleteItems(modelContext, type: RoomModel.self)
+		playNotificationHaptic(.success)
 	}
 	
 	private func deleteAllData() {
 		deleteItems(modelContext, type: DeviceModel.self)
 		deleteItems(modelContext, type: RoomModel.self)
 		UserDefaults.resetToDefaults()
+		playNotificationHaptic(.success)
 		showNextScreen = true
 	}
 	

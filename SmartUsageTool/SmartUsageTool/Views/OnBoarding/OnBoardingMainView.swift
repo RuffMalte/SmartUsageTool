@@ -103,6 +103,7 @@ struct OnBoardingMainView: View {
 						UserDefaults.setHasSeenOnboarding(true)
 						
 						isLoading = false
+						playNotificationHaptic(.success)
 						withAnimation {
 							showNextScreen = true
 						}

@@ -104,6 +104,7 @@ private extension HomeView {
 				withAnimation(.snappy) {
 					UserDefaults.setCurrency(code)
 					currencyCode = code
+					playNotificationHaptic(.success)
 				}
 			}
 			.presentationDetents([.fraction(0.3), .medium])

@@ -71,6 +71,7 @@ struct CurrencySelectionPickerView: View {
 				.onChange(of: selectedCurrency, { oldValue, newValue in
 					if let selectedCurrency = newValue {
 						withAnimation {
+							playNotificationHaptic(.success)
 							UserDefaults.setCurrency(selectedCurrency.code)
 							onCurrencySelected?(selectedCurrency.code)
 						}

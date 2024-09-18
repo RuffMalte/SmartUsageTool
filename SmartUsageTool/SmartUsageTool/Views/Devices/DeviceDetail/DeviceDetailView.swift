@@ -29,6 +29,7 @@ struct DeviceDetailView: View {
 					withAnimation(.bouncy) {
 						device.isOn.toggle()
 					}
+					playFeedbackHaptic(.medium)
 				} label: {
 					Image(systemName: device.isOn ? "power" : "poweroff")
 						.foregroundStyle(device.isOn ? .green : .secondary)

@@ -18,6 +18,7 @@ struct ColorPicker: View {
 				ForEach(ColorEnum.allCases) { color in
 					Button {
 						withAnimation(.easeInOut(duration: 0.1)) {
+							playNotificationHaptic(.success)
 							selectedColor = color
 						}
 					} label: {

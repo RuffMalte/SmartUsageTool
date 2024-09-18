@@ -107,6 +107,7 @@ struct ModifyDeviceSheetView: View {
 			.toolbar {
 				ToolbarItem(placement: .primaryAction) {
 					Button(Localize.save) {
+						playNotificationHaptic(.success)
 						if isNewDevice {
 							roomToAddto.devices.append(device)
 						}
@@ -126,6 +127,7 @@ struct ModifyDeviceSheetView: View {
 					withAnimation {
 						modelContext.delete(device)
 						try? modelContext.save()
+						playNotificationHaptic(.success)
 						dismiss()
 					}
 				}

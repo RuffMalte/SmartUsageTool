@@ -100,6 +100,7 @@ struct PowerToggleStyle: ToggleStyle {
 			withAnimation {
 				configuration.isOn.toggle()
 			}
+			playFeedbackHaptic(.medium)
 		} label: {
 			Label {
 				configuration.label
