@@ -43,6 +43,7 @@ private extension RoomView {
 					}) {
 						Image(systemName: "plus")
 					}
+					.popoverTip(AddNewDeviceTip())
 				}
 				ToolbarItem(placement: .primaryAction) {
 					Button {
@@ -50,6 +51,7 @@ private extension RoomView {
 					} label: {
 						Image(systemName: "pencil")
 					}
+					.popoverTip(EditRoomTip())
 				}
 			}
 			.sheet(isPresented: $isPresentedEditRoom) {

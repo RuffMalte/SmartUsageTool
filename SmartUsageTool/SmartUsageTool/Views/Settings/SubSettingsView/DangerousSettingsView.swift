@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 struct DangerousSettingsView: View {
 	
@@ -16,6 +17,7 @@ struct DangerousSettingsView: View {
 		case deleteAllData
 		case deleteAllRoomAndDevices
 		case deleteAllDevices
+		case resetAllTips
 	}
 	
 	@State private var selected: selection?
@@ -60,6 +62,17 @@ struct DangerousSettingsView: View {
 					}
 				}
 				
+				Section {
+					Button(role: .destructive) {
+						selected = selection.resetAllTips
+						isShowingConfirmationAlert.toggle()
+					} label: {
+						Label(Localize.resetAllTips, systemImage: "lightbulb")
+							.foregroundStyle(.red)
+					}
+
+				}
+				
 			}
 			.alert(getDeleteLocalizeString(), isPresented: $isShowingConfirmationAlert) {
 				Button(Localize.cancel, role: .cancel) {}
@@ -97,6 +110,8 @@ struct DangerousSettingsView: View {
 			return deleteAllRoomAndDevices
 		case .deleteAllDevices:
 			return deleteAllDevices
+		case .resetAllTips:
+			return resetAllTips
 		default:
 			return {}
 		}
@@ -121,6 +136,12 @@ struct DangerousSettingsView: View {
 		showNextScreen = true
 	}
 	
+	private func resetAllTips() {
+		Task {
+			try? Tips.resetDatastore()
+		}
+		playNotificationHaptic(.success)
+	}
 	private func deleteItems<T: PersistentModel>(_ modelContext: ModelContext, type: T.Type) {
 		do {
 			let fetchDescriptor = FetchDescriptor<T>()

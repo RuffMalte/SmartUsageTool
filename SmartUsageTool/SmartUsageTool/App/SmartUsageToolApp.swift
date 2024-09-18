@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 @main
 struct SmartUsageToolApp: App {
@@ -23,6 +24,13 @@ struct SmartUsageToolApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+	
+	init () {
+		try? Tips.configure([
+			.displayFrequency(.immediate),
+			.datastoreLocation(.applicationDefault)
+		])
+	}
 	
 	@StateObject private var electricityPriceController = ElectricityPriceController()
 	@AppStorage("selectedTintColor") var selectedTintColor: ColorEnum = .blue

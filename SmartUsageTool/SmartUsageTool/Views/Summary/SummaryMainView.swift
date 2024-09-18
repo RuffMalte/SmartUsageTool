@@ -62,6 +62,7 @@ struct SummaryMainView: View {
 									)
 								)
 							}
+							.popoverTip(CurrentEnergyPriceTip())
 						}
 					}
 					
@@ -108,6 +109,7 @@ struct SummaryMainView: View {
 									)
 								)
 							}
+							.popoverTip(CurrentDevicePricesTip())
 						}
 					}
 				}

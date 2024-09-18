@@ -47,6 +47,7 @@ struct ArticleHomeView: View {
 						} label: {
 							Image(systemName: "globe")
 						}
+						.popoverTip(ChangeArticleLanguageTip())
 					}
 					
 					ToolbarItem(placement: .primaryAction) {

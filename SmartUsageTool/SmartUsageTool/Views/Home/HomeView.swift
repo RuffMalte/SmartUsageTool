@@ -69,11 +69,14 @@ struct HomeView: View {
 							Button(action: { isPresentedNewRoom.toggle() }) {
 								Image(systemName: "plus")
 							}
+							.popoverTip(AddNewRoomTip())
+
 							NavigationLink {
 								MainSettingsView()
 							} label: {
 								Image(systemName: "gearshape.fill")
 							}
+							.popoverTip(SettingsTip())
 						}
 					}
 				}
@@ -148,6 +151,8 @@ private extension HomeView {
 				Text(totalCost, format: .currency(code: currencyCode))
 					.font(.system(.headline, design: .monospaced, weight: .regular))
 			}
+			.popoverTip(DailyCostTip())
+
 			HStack(alignment: .bottom) {
 				HStack {
 					VStack(alignment: .leading) {
@@ -182,6 +187,7 @@ private extension HomeView {
 					if useDailyFetching {
 						Image(systemName: "globe")
 							.foregroundStyle(.secondary)
+							.popoverTip(isFetchingLivePricesTip())
 					}
 				}
 				.textFieldStyle(PlainTextFieldStyle())
@@ -203,6 +209,7 @@ private extension HomeView {
 					.onTapGesture {
 						isPresentedCurrencySelectionSettings.toggle()
 					}
+					.popoverTip(currentPricePerKwhTip())
 			}
 		}
 		.padding()

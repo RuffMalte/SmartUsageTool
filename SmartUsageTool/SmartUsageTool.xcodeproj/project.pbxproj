@@ -40,6 +40,7 @@
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
+		2E715FF12C9B1E75004B2A77 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FF02C9B1E75004B2A77 /* Tips.swift */; };
 		2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */; };
 		2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */; };
 		2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */; };
@@ -109,6 +110,7 @@
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		2E715FF02C9B1E75004B2A77 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceHomeView.swift; sourceTree = "<group>"; };
 		2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartCreationView.swift; sourceTree = "<group>"; };
 		2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartHeaderView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				0804AB832BCC0D4300E1636C /* UserDefaults+Keys.swift */,
 				2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */,
 				2E715FEE2C9B19CE004B2A77 /* Haptics.swift */,
+				2E715FF02C9B1E75004B2A77 /* Tips.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				2EF3D2DF2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift in Sources */,
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */,
+				2E715FF12C9B1E75004B2A77 /* Tips.swift in Sources */,
 				2EB1D4DB2C8EFE4900F2BAA8 /* withEnviromentObjects.swift in Sources */,
 				2EC6F1262C985C8800FF12E5 /* GermanArticles.swift in Sources */,
 				0804AB812BCB367000E1636C /* RoomView.swift in Sources */,
