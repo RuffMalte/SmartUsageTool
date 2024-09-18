@@ -22,7 +22,7 @@ struct MainSettingsView: View {
 		List {
 			Section {
 				NavigationLink {
-					RegionSettingsView()
+					CurrencySelectionPickerView()
 				} label: {
 					SettingsItemListView(icon: "globe.asia.australia", iconBackground: .orange, title: Localize.regionSettings)
 				}
