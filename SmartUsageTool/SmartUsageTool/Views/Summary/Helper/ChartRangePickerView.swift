@@ -19,6 +19,9 @@ struct ChartRangePickerView: View {
 			}
 		}
 		.pickerStyle(.segmented)
+		.onChange(of: selectedRange) {
+			playFeedbackHaptic(.medium)
+		}
 	}
 }
 

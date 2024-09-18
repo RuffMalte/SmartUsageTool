@@ -29,6 +29,7 @@ struct DeviceDetailView: View {
 					withAnimation(.bouncy) {
 						device.isOn.toggle()
 					}
+					playFeedbackHaptic(.medium)
 				} label: {
 					Image(systemName: device.isOn ? "power" : "poweroff")
 						.foregroundStyle(device.isOn ? .green : .secondary)
@@ -161,7 +162,12 @@ struct DeviceDetailView: View {
 			Spacer()
 		}
 		.padding()
-		.background(Color.background)
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
 	}
 	private func dismissKeyboard() {
 		UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

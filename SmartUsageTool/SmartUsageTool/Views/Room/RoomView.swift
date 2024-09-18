@@ -43,6 +43,7 @@ private extension RoomView {
 					}) {
 						Image(systemName: "plus")
 					}
+					.popoverTip(AddNewDeviceTip())
 				}
 				ToolbarItem(placement: .primaryAction) {
 					Button {
@@ -50,6 +51,7 @@ private extension RoomView {
 					} label: {
 						Image(systemName: "pencil")
 					}
+					.popoverTip(EditRoomTip())
 				}
 			}
 			.sheet(isPresented: $isPresentedEditRoom) {
@@ -69,7 +71,12 @@ private extension RoomView {
 			
 		}
 		.padding()
-		.background(Color.background)
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
 	}
 	
 	var listView: some View {
@@ -100,6 +107,7 @@ struct PowerToggleStyle: ToggleStyle {
 			withAnimation {
 				configuration.isOn.toggle()
 			}
+			playFeedbackHaptic(.medium)
 		} label: {
 			Label {
 				configuration.label

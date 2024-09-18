@@ -16,7 +16,7 @@ struct SummaryMainView: View {
 	@Query private var devices: [DeviceModel]
     var body: some View {
 		NavigationView {
-			VStack(spacing: 0) {
+			VStack(spacing: 10) {
 				headerView
 				Form {
 					Section {
@@ -62,6 +62,7 @@ struct SummaryMainView: View {
 									)
 								)
 							}
+							.popoverTip(CurrentEnergyPriceTip())
 						}
 					}
 					
@@ -108,6 +109,7 @@ struct SummaryMainView: View {
 									)
 								)
 							}
+							.popoverTip(CurrentDevicePricesTip())
 						}
 					}
 				}
@@ -134,7 +136,12 @@ struct SummaryMainView: View {
 			Spacer()
 		}
 		.padding()
-		.background(Color.background)
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
 	}
 }
 

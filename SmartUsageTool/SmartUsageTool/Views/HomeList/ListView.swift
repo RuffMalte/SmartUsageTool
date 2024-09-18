@@ -9,109 +9,109 @@ import SwiftUI
 import SwiftData
 
 struct ListView: View {
-    @Query private var items: [RoomModel]
-    
-    private var totalCost: Double {
-       let sum = items.reduce(0.0) { $0 + $1.dailyExpenses }
-        return sum
-    }
-    var body: some View {
-contentView
-    }
+	@Query private var items: [RoomModel]
+	
+	private var totalCost: Double {
+		let sum = items.reduce(0.0) { $0 + $1.dailyExpenses }
+		return sum
+	}
+	var body: some View {
+		contentView
+	}
 }
 
 private extension ListView {
-    
-    var contentView: some View {
-        VStack {
-            headerView
-//            Spacer()
-            listView
-        }
-    }
-    
-    var headerView: some View {
-        VStack(alignment: .leading, spacing: 30) {
-            Text(Localize.list)
-                .font(.system(size: 28, weight: .semibold))
-            HStack {
-                Text(Localize.totalCost)
-                Text(String(format: "\(Localize.currencySymbol)%.2f", totalCost))
-                    .font(.system(size: 22))
-                Spacer()
-            }
-            
-   
-        }
-        .padding(30)
-        .padding(.bottom, 10)
-
-        .background(Color.background)
-    }
-    
-    var listView: some View {
-        List {
-            ForEach(items) { room in
-                Section(header: HStack {
-                    Text(room.name)
-                        .font(.title)
-                    Spacer()
-                    Text(String(format: "\(Localize.currencySymbol)%.2f", room.dailyExpenses))
-                        .font(.title)
-                }) {
-                    ForEach(room.devices) { device in
-                        VStack {
-                            HStack {
-                                Text(device.name)
-                                Spacer()
-                                Text(String(format: "\(Localize.currencySymbol)%.2f", device.expenses))
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                            }
-                            
-                            HStack(alignment: .top) {
-                                VStack(alignment: .leading) {
-                                    Text(Localize.dailyUsage)
-                                        .font(.system(size: 13))
-                                        .foregroundStyle(.gray)
+	
+	var contentView: some View {
+		VStack {
+			headerView
+			//            Spacer()
+			listView
+		}
+	}
+	
+	var headerView: some View {
+		VStack(alignment: .leading, spacing: 10) {
+			HStack {
+				Text(Localize.list)
+					.font(.system(.largeTitle, weight: .semibold))
+				
+				Spacer()
+				Text(totalCost, format: .currency(code: UserDefaults.currency))
+					.font(.system(.title2, design: .monospaced, weight: .semibold))
+				
+			}
+		}
+		.padding()
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
+	}
+	
+	var listView: some View {
+		List {
+			ForEach(items) { room in
+				Section {
+					ForEach(room.devices) { device in
+						VStack {
+							HStack {
+								Text(device.name)
+									.font(.headline)
+								Spacer()
+								Text(device.expenses, format: .currency(code: UserDefaults.currency))
+									.fontDesign(.monospaced)
+							}
+							.font(.subheadline)
+							.foregroundColor(.secondary)
+							
+							HStack(alignment: .top) {
+								VStack(alignment: .leading) {
+									Text(Localize.dailyUsage)
 									Text("\(device.doubleFormattedDayTime, specifier: "%.1f") \(Localize.hrs)")
-                                        .font(.system(size: 13))
-                                        .foregroundStyle(.gray)
-                                }
-                                Spacer()
-                                if UserDefaults.isNightPrice {
-                                    VStack(alignment: .leading) {
-                                        Text(Localize.nightlyUsage)
-                                            .font(.system(size: 13))
-                                            .foregroundStyle(.gray)
-                                        Text("\(device.doubleFormattedNightTime, specifier: "%.1f") \(Localize.hrs)")
-                                            .font(.system(size: 13))
-                                            .foregroundStyle(.gray)
-                                    }
-                                    Spacer()
-                                }
-                                
-                                VStack(alignment: .leading) {
-                                    Text(Localize.power)
-                                        .font(.system(size: 13))
-                                        .foregroundStyle(.gray)
-                                    Text("\(device.power) \(Localize.w)")
-                                        .font(.system(size: 13))
-                                        .foregroundStyle(.gray)
-                                }
-                            }
-                            .padding(.top)
-                        }
-                 
-                    }
-                }
-            }
-        }
-        .listStyle(.plain)
-        
-    }
+										.fontDesign(.monospaced)
+								}
+								Spacer()
+								if UserDefaults.isNightPrice {
+									VStack(alignment: .leading) {
+										Text(Localize.nightlyUsage)
+										Text("\(device.doubleFormattedNightTime, specifier: "%.1f") \(Localize.hrs)")
+											.fontDesign(.monospaced)
+									}
+									Spacer()
+								}
+								
+								VStack(alignment: .leading) {
+									Text(Localize.power)
+									Text("\(device.power) \(Localize.w)")
+										.fontDesign(.monospaced)
+								}
+							}
+							.font(.subheadline)
+							.foregroundStyle(.tertiary)
+							.padding([.top, .leading])
+						}
+						
+					}
+				} header: {
+					HStack {
+						Text(NSLocalizedString(room.name.capitalized, comment: ""))
+							.font(.title)
+						Spacer()
+						Text(room.dailyExpenses, format: .currency(code: UserDefaults.currency))
+							.font(.system(.headline, design: .monospaced, weight: .regular))
+					}
+					.foregroundStyle(.primary)
+				}
+			}
+		}
+		.listStyle(.plain)
+		
+	}
 }
 
 #Preview {
-    ListView()
+	ListView()
 }

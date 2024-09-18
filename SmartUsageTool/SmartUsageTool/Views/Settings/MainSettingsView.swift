@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainSettingsView: View {
-	
+	@AppStorage("selectedTintColor") var selectedTintColor: ColorEnum = .blue
+
 	var body: some View {
 		VStack {
 			settingsScrollView
@@ -21,7 +22,7 @@ struct MainSettingsView: View {
 		List {
 			Section {
 				NavigationLink {
-					RegionSettingsView()
+					CurrencySelectionPickerView()
 				} label: {
 					SettingsItemListView(icon: "globe.asia.australia", iconBackground: .orange, title: Localize.regionSettings)
 				}
@@ -48,11 +49,26 @@ struct MainSettingsView: View {
 			}
 			
 			Section {
+				ColorPicker(selectedColor: $selectedTintColor)
+			}
+			
+			Section {
 				NavigationLink {
 					SettingsAboutAppView()
 				} label: {
 					SettingsItemListView(icon: "info.circle", iconBackground: .blue, title: Localize.about)
 				}
+				ContactUsView()
+			}
+			
+			Section {
+				NavigationLink {
+					DangerousSettingsView()
+				} label: {
+					SettingsItemListView(icon: "trash", iconBackground: .red, title: Localize.dangerousSettings)
+						.foregroundStyle(.red)
+				}
+
 			}
 		}
 	}

@@ -58,17 +58,17 @@ struct DailyUsageSettingsView: View {
 			.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 			
 			
-			Section {
-				Button {
-					viewModel.fetchCurrentPrice()
-				} label: {
-					if viewModel.isLoading {
-						ProgressView()
-					} else {
-						Text("Fetch")
-					}
-				}
-			}
+//			Section {
+//				Button {
+//					viewModel.fetchCurrentPrice()
+//				} label: {
+//					if viewModel.isLoading {
+//						ProgressView()
+//					} else {
+//						Text("Fetch")
+//					}
+//				}
+//			}
 		}
 		.onAppear {
 			dayPrice = UserDefaults.dayPrice

@@ -30,6 +30,7 @@ struct ElectricityPriceChartView: View {
 				Group {
 					if let (maxPoint, minPoint) = viewModel.findExtremePoints(for: selectedRange, in: viewModel.pricePoints) {
 						ElectricityPriceChartHeaderViewView(maxPoint: maxPoint, minPoint: minPoint, selectedRange: $selectedRange)
+							.popoverTip(selectedTimeRangeHighAndLowTip())
 					}
 				}
 				ElectricityPriceChartCreationView(selectedRange: $selectedRange)

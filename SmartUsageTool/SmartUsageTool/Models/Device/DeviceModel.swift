@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 final class DeviceModel: Identifiable, ObservableObject {
-	let id = UUID()
+	var id = UUID()
 	var name: String
 	var dayTime: Date
 	var nightTime: Date

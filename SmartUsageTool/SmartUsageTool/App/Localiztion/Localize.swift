@@ -151,5 +151,42 @@ struct Localize {
     static let year = NSLocalizedString("year", comment: "#bc-ignore!")
 
     static let articles = NSLocalizedString("articles", comment: "#bc-ignore!")
+
+    static let feedback = NSLocalizedString("feedback", comment: "#bc-ignore!")
+    static let dangerousSettings = NSLocalizedString("dangerousSettings", comment: "#bc-ignore!")
+    static let deleteAllData = NSLocalizedString("deleteAllData", comment: "#bc-ignore!")
+    static let deleteAllDevices = NSLocalizedString("deleteAllDevices", comment: "#bc-ignore!")
+    static let deleteAllRoomAndDevices = NSLocalizedString("deleteAllRoomAndDevices", comment: "#bc-ignore!")
+
+    static let onboarding = NSLocalizedString("onboarding", comment: "#bc-ignore!")
+    static let finishOnboarding = NSLocalizedString("finishOnboarding", comment: "#bc-ignore!")
+
+
+    static let resetAllTips = NSLocalizedString("resetAllTips", comment: "#bc-ignore!")
+
+    static let addNewRoom = NSLocalizedString("addNewRoom", comment: "#bc-ignore!")
+    static let addNewRoomMessage = NSLocalizedString("addNewRoomMessage", comment: "#bc-ignore!")
+    static let settingsMessage = NSLocalizedString("settingsMessage", comment: "#bc-ignore!")
+    static let dailyCost = NSLocalizedString("dailyCost", comment: "#bc-ignore!")
+    static let dailyCostMessage = NSLocalizedString("dailyCostMessage", comment: "#bc-ignore!")
+    static let fetchingLivePrices = NSLocalizedString("fetchingLivePrices", comment: "#bc-ignore!")
+    static let fetchingLivePricesMessage = NSLocalizedString("fetchingLivePricesMessage", comment: "#bc-ignore!")
+    static let currentPricePerKwh = NSLocalizedString("currentPricePerKwh", comment: "#bc-ignore!")
+    static let currentPricePerKwhMessage = NSLocalizedString("currentPricePerKwhMessage", comment: "#bc-ignore!")
+    static let addNewDevice = NSLocalizedString("addNewDevice", comment: "#bc-ignore!")
+    static let addNewDeviceMessage = NSLocalizedString("addNewDeviceMessage", comment: "#bc-ignore!")
+    static let editRoom = NSLocalizedString("editRoom", comment: "#bc-ignore!")
+    static let editRoomMessage = NSLocalizedString("editRoomMessage", comment: "#bc-ignore!")
+    static let toggleDeviceState = NSLocalizedString("toggleDeviceState", comment: "#bc-ignore!")
+    static let toggleDeviceStateMessage = NSLocalizedString("toggleDeviceStateMessage", comment: "#bc-ignore!")
+    static let currentEnergyPrice = NSLocalizedString("currentEnergyPrice", comment: "#bc-ignore!")
+    static let currentEnergyPriceMessage = NSLocalizedString("currentEnergyPriceMessage", comment: "#bc-ignore!")
+    static let currentDevicePrices = NSLocalizedString("currentDevicePrices", comment: "#bc-ignore!")
+    static let currentDevicePricesMessage = NSLocalizedString("currentDevicePricesMessage", comment: "#bc-ignore!")
+    static let selectedTimeRangeHighAndLow = NSLocalizedString("selectedTimeRangeHighAndLow", comment: "#bc-ignore!")
+    static let selectedTimeRangeHighAndLowMessage = NSLocalizedString("selectedTimeRangeHighAndLowMessage", comment: "#bc-ignore!")
+    static let changeArticleLanguage = NSLocalizedString("changeArticleLanguage", comment: "#bc-ignore!")
+    static let changeArticleLanguageMessage = NSLocalizedString("changeArticleLanguageMessage", comment: "#bc-ignore!")
+
 }
 

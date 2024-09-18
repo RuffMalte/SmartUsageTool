@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 @main
 struct SmartUsageToolApp: App {
@@ -24,11 +25,20 @@ struct SmartUsageToolApp: App {
         }
     }()
 	
+	init () {
+		try? Tips.configure([
+			.displayFrequency(.immediate),
+			.datastoreLocation(.applicationDefault)
+		])
+	}
+	
 	@StateObject private var electricityPriceController = ElectricityPriceController()
-    
+	@AppStorage("selectedTintColor") var selectedTintColor: ColorEnum = .blue
+
     var body: some Scene {
         WindowGroup {
             LaunchView()
+				.tint(selectedTintColor.toColor)
                 .modelContainer(sharedModelContainer)
 				.environmentObject(electricityPriceController)
         }

@@ -30,6 +30,7 @@ struct DevicesPriceChartView: View {
 				Group {
 					if let (maxPoint, minPoint) = viewModel.findExtremePoints(for: selectedRange, in: viewModel.calculateDevicePrices(for: devices, range: selectedRange)) {
 						DevicesPriceChartHeaderView(maxPoint: maxPoint, minPoint: minPoint, selectedRange: $selectedRange)
+							.popoverTip(selectedTimeRangeHighAndLowTip())
 					}
 				}
 				

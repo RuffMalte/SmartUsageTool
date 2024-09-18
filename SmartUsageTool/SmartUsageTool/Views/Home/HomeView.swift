@@ -9,40 +9,45 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @State private var dayPrice = String(format: "%.5f", UserDefaults.dayPrice)
-    @State private var nightPrice = String(format: "%.5f", UserDefaults.nightPrice)
+	@State private var dayPrice = String(format: "%.5f", UserDefaults.dayPrice)
+	@State private var nightPrice = String(format: "%.5f", UserDefaults.nightPrice)
 	@State private var currencyCode = UserDefaults.currency
 	@State private var useDailyFetching = UserDefaults.useDailyFetching
 	
 	@EnvironmentObject private var viewModel: ElectricityPriceController
 	
-    @Query private var items: [RoomModel]
+	@Query private var items: [RoomModel]
 	@Environment(\.modelContext) private var modelContext
 	
-    @State private var isPresentedNewRoom = false
-    @State private var isNightPrice = UserDefaults.isNightPrice
-    private var totalCost: Double {
+	@State private var isPresentedNewRoom = false
+	@State private var isNightPrice = UserDefaults.isNightPrice
+	private var totalCost: Double {
 		let sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
-        return sum
-    }
-
-    let columns = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10)
-    ]
-    
-    var body: some View {
-        NavigationView {
-            contentView
-                .onTapGesture {
-                    hideKeyboard()
-                }
-                .onChange(of: dayPrice) { oldValue, newValue in
-                    UserDefaults.setDay(price: Double(newValue) ?? 0)
-                }
-                .onChange(of: nightPrice) { oldValue, newValue in
-                    UserDefaults.setNight(price: Double(newValue) ?? 0)
-                }
+		return sum
+	}
+	
+	let columns = [
+		GridItem(.flexible(), spacing: 10),
+		GridItem(.flexible(), spacing: 10)
+	]
+	
+	@State private var isPresentedCurrencySelectionSettings = false
+	
+	var body: some View {
+		NavigationView {
+			contentView
+				.onTapGesture {
+					hideKeyboard()
+				}
+				.onChange(of: dayPrice) { oldValue, newValue in
+					UserDefaults.setDay(price: Double(newValue) ?? 0)
+				}
+				.onChange(of: nightPrice) { oldValue, newValue in
+					UserDefaults.setNight(price: Double(newValue) ?? 0)
+				}
+				.onChange(of: currencyCode, { oldValue, newValue in
+					currencyCode = newValue
+				})
 				.onAppear {
 					dayPrice = String(format: "%.5f", UserDefaults.dayPrice)
 					nightPrice = String(format: "%.5f", UserDefaults.nightPrice)
@@ -64,20 +69,23 @@ struct HomeView: View {
 							Button(action: { isPresentedNewRoom.toggle() }) {
 								Image(systemName: "plus")
 							}
+							.popoverTip(AddNewRoomTip())
+
 							NavigationLink {
 								MainSettingsView()
 							} label: {
 								Image(systemName: "gearshape.fill")
 							}
+							.popoverTip(SettingsTip())
 						}
 					}
 				}
-        }
-    }
-    
-    private func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
+		}
+	}
+	
+	private func hideKeyboard() {
+		UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+	}
 	
 	@State private var currentTime = Date()
 	@State private var lastFetchTime: Date?
@@ -85,16 +93,25 @@ struct HomeView: View {
 }
 
 private extension HomeView {
-    var contentView: some View {
-        VStack {
-            headerView
-            collectionView
+	var contentView: some View {
+		VStack {
+			headerView
+			collectionView
 			Spacer()
-        }
-        .sheet(isPresented: $isPresentedNewRoom) {
+		}
+		.sheet(isPresented: $isPresentedNewRoom) {
 			ModifyRoomSheetView(room: RoomModel.new, isNewRoom: true)
-//            NewRoom(isPresented: $isPresentedNewRoom)
-        }
+		}
+		.sheet(isPresented: $isPresentedCurrencySelectionSettings) {
+			CurrencySelectionPickerView() { code in
+				withAnimation(.snappy) {
+					UserDefaults.setCurrency(code)
+					currencyCode = code
+					playNotificationHaptic(.success)
+				}
+			}
+			.presentationDetents([.fraction(0.3), .medium])
+		}
 		.onReceive(timer) { _ in
 			currentTime = Date()
 			checkAndFetch()
@@ -102,8 +119,8 @@ private extension HomeView {
 		.onAppear {
 			checkAndFetch()
 		}
-    }
-    
+	}
+	
 	func checkAndFetch() {
 		let calendar = Calendar.current
 		let components = calendar.dateComponents([.minute], from: currentTime)
@@ -124,9 +141,9 @@ private extension HomeView {
 	}
 	
 	
-    var headerView: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            
+	var headerView: some View {
+		VStack(alignment: .leading, spacing: 20) {
+			
 			HStack {
 				Text(Localize.totalCost)
 					.font(.system(.headline, design: .rounded, weight: .regular))
@@ -134,7 +151,9 @@ private extension HomeView {
 				Text(totalCost, format: .currency(code: currencyCode))
 					.font(.system(.headline, design: .monospaced, weight: .regular))
 			}
-            HStack(alignment: .bottom) {
+			.popoverTip(DailyCostTip())
+
+			HStack(alignment: .bottom) {
 				HStack {
 					VStack(alignment: .leading) {
 						HStack {
@@ -168,6 +187,7 @@ private extension HomeView {
 					if useDailyFetching {
 						Image(systemName: "globe")
 							.foregroundStyle(.secondary)
+							.popoverTip(isFetchingLivePricesTip())
 					}
 				}
 				.textFieldStyle(PlainTextFieldStyle())
@@ -186,31 +206,41 @@ private extension HomeView {
 						RoundedRectangle(cornerRadius: 10)
 							.fill(.windowBackground)
 					)
-            }
-        }
-        .padding()
-        .background(Color.background)
-    }
-    
-    var collectionView: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(items) { room in
+					.onTapGesture {
+						isPresentedCurrencySelectionSettings.toggle()
+					}
+					.popoverTip(currentPricePerKwhTip())
+			}
+		}
+		.padding()
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
+	}
+	
+	var collectionView: some View {
+		ScrollView {
+			LazyVGrid(columns: columns, spacing: 20) {
+				ForEach(items) { room in
 					NavigationLink {
 						RoomView(room: room, isNightPrice: $isNightPrice)
 					} label: {
 						RoomItemListView(room: room)
 					}
 					.buttonStyle(.plain)
-                }
-            }
-            .padding(10)
-        }
+				}
+			}
+			.padding(10)
+		}
 		.padding(.horizontal, 20)
-    }
-    
+	}
+	
 }
 
 #Preview {
-    HomeView()
+	HomeView()
+		.withEnvironmentObjects()
 }
