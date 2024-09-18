@@ -21,12 +21,12 @@ struct ArticleHomeView: View {
 					ForEach(selectedArticles) { article in
 						ArticleItemListView(article: article)
 					}
-					
 				}
 				.clipShape(RoundedRectangle(cornerRadius: 20))
 				.padding()
 				.tabViewStyle(.page)
 				.indexViewStyle(.page(backgroundDisplayMode: .always))
+				.shadow(radius: 5)
 				.toolbar {
 					ToolbarItem(placement: .primaryAction) {
 						Menu {
@@ -84,7 +84,12 @@ struct ArticleHomeView: View {
 			Spacer()
 		}
 		.padding()
-		.background(Color.background)
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
 	}
 	
 }

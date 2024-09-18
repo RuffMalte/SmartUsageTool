@@ -213,7 +213,12 @@ private extension HomeView {
 			}
 		}
 		.padding()
-		.background(Color.background)
+		.background {
+			RoundedRectangle(cornerRadius: 20)
+				.ignoresSafeArea()
+				.foregroundStyle(Color.background)
+				.shadow(radius: 10)
+		}
 	}
 	
 	var collectionView: some View {
