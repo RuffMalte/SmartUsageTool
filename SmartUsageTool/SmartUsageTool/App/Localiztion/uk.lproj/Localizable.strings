@@ -177,3 +177,5 @@
 "deleteAllData" = "Видалити всі дані";
 "deleteAllDevices" = "Видалити всі пристрої";
 "deleteAllRoomAndDevices" = "Видалити всі кімнати та пристрої";
+"onboarding" = "Онбординг";
+"finishOnboarding" = "Завершити онбординг";

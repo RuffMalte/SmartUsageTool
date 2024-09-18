@@ -157,5 +157,8 @@ struct Localize {
     static let deleteAllData = NSLocalizedString("deleteAllData", comment: "#bc-ignore!")
     static let deleteAllDevices = NSLocalizedString("deleteAllDevices", comment: "#bc-ignore!")
     static let deleteAllRoomAndDevices = NSLocalizedString("deleteAllRoomAndDevices", comment: "#bc-ignore!")
+
+    static let onboarding = NSLocalizedString("onboarding", comment: "#bc-ignore!")
+    static let finishOnboarding = NSLocalizedString("finishOnboarding", comment: "#bc-ignore!")
 }
 

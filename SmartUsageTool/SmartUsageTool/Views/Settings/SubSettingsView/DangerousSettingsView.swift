@@ -22,6 +22,7 @@ struct DangerousSettingsView: View {
 	
 	@Environment(\.modelContext) var modelContext
 	
+	@State var showNextScreen = false
 	
 	var body: some View {
 		NavigationStack {
@@ -67,6 +68,10 @@ struct DangerousSettingsView: View {
 				}
 			}
 			.navigationTitle(Localize.dangerousSettings)
+		}
+		.navigationDestination(isPresented: $showNextScreen) {
+			OnBoardingMainView()
+				.navigationBarBackButtonHidden()
 			
 		}
 	}
@@ -110,6 +115,7 @@ struct DangerousSettingsView: View {
 		deleteItems(modelContext, type: DeviceModel.self)
 		deleteItems(modelContext, type: RoomModel.self)
 		UserDefaults.resetToDefaults()
+		showNextScreen = true
 	}
 	
 	private func deleteItems<T: PersistentModel>(_ modelContext: ModelContext, type: T.Type) {

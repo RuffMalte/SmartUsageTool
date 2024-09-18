@@ -178,3 +178,5 @@
 "deleteAll" = "Delete All";
 "deleteAllDevices" = "Delete All Devices";
 "deleteAllRoomAndDevices" = "Delete All Rooms and Devices";
+"onboarding" = "Onboarding";
+"finishOnboarding" = "Finish Onboarding";

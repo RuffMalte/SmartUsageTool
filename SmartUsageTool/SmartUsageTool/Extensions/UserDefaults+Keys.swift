@@ -37,6 +37,10 @@ extension UserDefaults {
 		Self.standard.bool(forKey: Key.useDailyFetching.rawValue)
 	}
 	
+	static var hasSeenOnboarding: Bool {
+		Self.standard.bool(forKey: Key.hasSeenOnboarding.rawValue)
+	}
+	
 	// setter
 	static func setCurrency(_ currency: String) {
 		Self.standard.setValue(currency, forKey: Key.currency.rawValue)
@@ -65,6 +69,10 @@ extension UserDefaults {
 	
 	static func setUseDailyFetching(_ value: Bool) {
 		Self.standard.setValue(value, forKey: Key.useDailyFetching.rawValue)
+	}
+	
+	static func setHasSeenOnboarding(_ value: Bool) {
+		Self.standard.setValue(value, forKey: Key.hasSeenOnboarding.rawValue)
 	}
 	
 	
@@ -97,6 +105,7 @@ private extension UserDefaults {
 		case nightPriceStoppTimeslot
 		case useDailyFetching
 		case selectedDailPriceFetchingCountry
+		case hasSeenOnboarding
 	}
 }
 
@@ -111,7 +120,8 @@ extension UserDefaults {
 			.nightPriceStartTimeslot: 0,
 			.nightPriceStoppTimeslot: 0,
 			.useDailyFetching: false,
-			.selectedDailPriceFetchingCountry: nil as SupportedPriceFetchingCountryModel? as Any
+			.selectedDailPriceFetchingCountry: nil as SupportedPriceFetchingCountryModel? as Any,
+			.hasSeenOnboarding: false
 		]
 		
 		for (key, value) in defaults {

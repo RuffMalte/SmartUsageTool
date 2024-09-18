@@ -38,6 +38,7 @@
 		2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */; };
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
+		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */; };
 		2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */; };
 		2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */; };
@@ -105,6 +106,7 @@
 		2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
+		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceHomeView.swift; sourceTree = "<group>"; };
 		2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartCreationView.swift; sourceTree = "<group>"; };
 		2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartHeaderView.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		2E095BBC2C8EEE48006B399B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E715FE92C9B0C32004B2A77 /* OnBoarding */,
 				2EC6F1212C985C0400FF12E5 /* Articles */,
 				2EDE63CF2C95CCB700A14004 /* Summary */,
 				0815F1892BACC6B5002B39BD /* Initial */,
@@ -411,6 +414,14 @@
 				2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */,
 			);
 			path = SubSettingsView;
+			sourceTree = "<group>";
+		};
+		2E715FE92C9B0C32004B2A77 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		2E99FE4E2C96ECB20048B153 /* ChartView */ = {
@@ -630,6 +641,7 @@
 				2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */,
 				2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */,
 				0815F18D2BACC827002B39BD /* HomeView.swift in Sources */,
+				2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */,
 				0804AB872BCC209D00E1636C /* DeviceInfoView.swift in Sources */,
 				2ECA0D6B2C9AF9E600D0899D /* CurrencySelectionPickerView.swift in Sources */,
 				2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */,

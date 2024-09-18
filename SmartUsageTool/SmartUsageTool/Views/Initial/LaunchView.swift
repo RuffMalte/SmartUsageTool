@@ -28,13 +28,18 @@ struct LaunchView: View {
 				}
 			}
 			.navigationDestination(isPresented: $isActive) {
-				InitialView()
+				if UserDefaults.hasSeenOnboarding {
+					InitialView()
+				} else {
+					OnBoardingMainView()
+						.navigationBarBackButtonHidden()
+				}
 			}
 		}
 	}
+	
 }
-
 #Preview {
-    LaunchView()
+	LaunchView()
 		.withEnvironmentObjects()
 }

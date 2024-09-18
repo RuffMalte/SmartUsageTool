@@ -22,6 +22,7 @@ extension View {
 	func withEnvironmentObjects() -> some View {
 		UserDefaults.setUseDailyFetching(true)
 		UserDefaults.standard.selectedDailPriceFetchingCountry = SupportedPriceFetchingCountryModel.supportedCountries[0]
+		UserDefaults.setHasSeenOnboarding(false)
 		return self.modifier(withEnviromentObjects())
 	}
 }
