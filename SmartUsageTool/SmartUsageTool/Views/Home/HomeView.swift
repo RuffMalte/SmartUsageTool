@@ -138,7 +138,7 @@ private extension HomeView {
 			ModifyRoomSheetView(room: RoomModel.new, isNewRoom: true)
 		}
 		.sheet(isPresented: $isPresentedCurrencySelectionSettings) {
-			CurrencySelectionPickerView() { code in
+			CurrencySelectionPickerView(useCompactView: true) { code in
 				withAnimation(.snappy) {
 					UserDefaults.setCurrency(code)
 					currencyCode = code
