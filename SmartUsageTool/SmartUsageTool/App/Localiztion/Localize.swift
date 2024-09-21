@@ -193,5 +193,11 @@ struct Localize {
     static let yearly = NSLocalizedString("yearly", comment: "#bc-ignore!")
 
     static let timeRange = NSLocalizedString("timeRange", comment: "#bc-ignore!")
+    static let contractMangement = NSLocalizedString("contractMangement", comment: "#bc-ignore!")
+    static let alertOnContractEndTime = NSLocalizedString("alertOnContractEndTime", comment: "#bc-ignore!")
+    static let selectDate = NSLocalizedString("selectDate", comment: "#bc-ignore!")
+    static let alertOnContractEndTimeDescription = NSLocalizedString("alertOnContractEndTimeDescription", comment: "#bc-ignore!")
+    static let yourContractEndsSoon = NSLocalizedString("yourContractEndsSoon", comment: "#bc-ignore!")
+    static let yourContractEndsInTheNextFewDays = NSLocalizedString("yourContractEndsInTheNextFewDays", comment: "#bc-ignore!")
 }
 

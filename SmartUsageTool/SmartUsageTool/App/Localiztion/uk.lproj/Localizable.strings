@@ -211,3 +211,9 @@
 "yearly" = "Щорічно";
 
 "timeRange" = "Діапазон часу";
+"contractMangement" = "Управління контрактами";
+"alertOnContractEndTime" = "Час закінчення контракту";
+"selectDate" = "Виберіть дату";
+"alertOnContractEndTimeDescription" = "Ви отримаєте сповіщення за день до закінчення контракту.";
+"yourContractEndsSoon" = "Ваш контракт закінчується незабаром!";
+"yourContractEndsInTheNextFewDays" = "Ваш контракт закінчується в найближчі дні!";

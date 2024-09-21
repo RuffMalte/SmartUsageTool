@@ -212,3 +212,9 @@
 "yearly" = "Yearly";
 
 "timeRange" = "Time Range";
+"contractMangement" = "Contract Management";
+"alertOnContractEndTime" = "Contract End Time";
+"selectDate" = "Select Date";
+"alertOnContractEndTimeDescription" = "Alert on contract end time";
+"yourContractEndsSoon" = "Your contract ends soon!";
+"yourContractEndsInTheNextFewDays" = "Your contract ends in the next few days!";

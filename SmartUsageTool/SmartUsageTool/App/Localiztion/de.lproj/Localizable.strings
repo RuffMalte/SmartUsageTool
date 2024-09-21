@@ -210,3 +210,9 @@
 "yearly" = "Jährlich";
 
 "timeRange" = "Zeitbereich";
+"contractMangement" = "Vertragsverwaltung";
+"alertOnContractEndTime" = "Am Vertragsende benachrichtigen";
+"selectDate" = "Datum auswählen";
+"alertOnContractEndTimeDescription" = "Erhalten Sie eine Benachrichtigung, wenn Ihr Stromvertrag endet.";
+"yourContractEndsSoon" = "Ihr Vertrag endet bald!";
+"yourContractEndsInTheNextFewDays" = "Ihr Vertrag endet in den nächsten Tagen!";

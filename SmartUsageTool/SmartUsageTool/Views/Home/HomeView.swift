@@ -14,6 +14,9 @@ struct HomeView: View {
 	@State private var currencyCode = UserDefaults.currency
 	@State private var useDailyFetching = UserDefaults.useDailyFetching
 	
+	@State var useContractEndTime = UserDefaults.useContractEndTime
+	@State var contractEndTime: Date = (UserDefaults.currentContractEndTime ?? Date())
+	
 	@EnvironmentObject private var viewModel: ElectricityPriceController
 	
 	@Query private var items: [RoomModel]
@@ -67,6 +70,8 @@ struct HomeView: View {
 					currencyCode = UserDefaults.currency
 					useDailyFetching = UserDefaults.useDailyFetching
 					selectedTimeRange = UserDefaults.selectedTimePeriod
+					useContractEndTime = UserDefaults.useContractEndTime
+					contractEndTime = UserDefaults.currentContractEndTime ?? Date()
 				}
 				.navigationBarTitleDisplayMode(.inline)
 				.toolbar {
@@ -154,7 +159,7 @@ private extension HomeView {
 			}
 		}
 		.onAppear {
-			if UserDefaults.useDailyFetching {	
+			if UserDefaults.useDailyFetching {
 				checkAndFetch()
 			}
 		}
@@ -184,6 +189,15 @@ private extension HomeView {
 		VStack(alignment: .leading, spacing: 20) {
 			
 			HStack {
+				if useContractEndTime {
+					if Calendar.current.isDateInTomorrow(contractEndTime) || Calendar.current.isDateInToday(contractEndTime) {
+						Text(Localize.yourContractEndsInTheNextFewDays)
+							.font(.system(.subheadline, design: .rounded, weight: .regular))
+					} else if isDate(contractEndTime, withinMonthOf: .now) {
+						Text(Localize.yourContractEndsSoon)
+							.font(.system(.subheadline, design: .rounded, weight: .regular))
+					}
+				}
 				
 				Text(Localize.totalCost)
 					.font(.system(.headline, design: .rounded, weight: .regular))
@@ -267,6 +281,15 @@ private extension HomeView {
 				.foregroundStyle(Color.background)
 				.shadow(radius: 10)
 		}
+	}
+	
+	func isDate(_ date: Date, withinMonthOf referenceDate: Date) -> Bool {
+		let calendar = Calendar.current
+		
+		let dateComponents = calendar.dateComponents([.year, .month], from: date)
+		let referenceComponents = calendar.dateComponents([.year, .month], from: referenceDate)
+		
+		return dateComponents.year == referenceComponents.year && dateComponents.month == referenceComponents.month
 	}
 	
 	var collectionView: some View {

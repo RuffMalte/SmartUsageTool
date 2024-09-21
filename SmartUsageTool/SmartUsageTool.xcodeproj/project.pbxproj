@@ -37,6 +37,7 @@
 		2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */; };
 		2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */; };
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
+		2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
@@ -118,6 +119,7 @@
 		2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightlyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
+		2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLengthSettingsView.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				2E28608A2C873A320018FAFF /* RegionSettingsView.swift */,
 				2EA7CD622C91F57F007DF36B /* PriceFetchingSettingsView.swift */,
 				2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */,
+				2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */,
 			);
 			path = SubSettingsView;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				2EB383242C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift in Sources */,
 				2EA7CD632C91F57F007DF36B /* PriceFetchingSettingsView.swift in Sources */,
 				087069B62BD02B690033FE43 /* Rooms.swift in Sources */,
+				2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */,
 				2EA7CD5F2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
