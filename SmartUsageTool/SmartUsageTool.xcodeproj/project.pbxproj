@@ -38,6 +38,7 @@
 		2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */; };
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
 		2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */; };
+		2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
@@ -120,6 +121,7 @@
 		2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLengthSettingsView.swift; sourceTree = "<group>"; };
+		2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCalculationInformationView.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECA0D682C9AF55F00D0899D /* ContactUsView.swift */,
+				2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				2ECA0D6D2C9AFAB900D0899D /* Currency.swift in Sources */,
 				2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */,
 				2E2860822C86FA500018FAFF /* MainSettingsView.swift in Sources */,
+				2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */,
 				2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */,
 				2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */,
 				0815F1912BACCA70002B39BD /* ListView.swift in Sources */,

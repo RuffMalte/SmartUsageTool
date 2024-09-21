@@ -218,3 +218,25 @@
 "alertOnContractEndTimeDescription" = "Alert on contract end time";
 "yourContractEndsSoon" = "Your contract ends soon!";
 "yourContractEndsInTheNextFewDays" = "Your contract ends in the next few days!";
+
+"introduction" = "Introduction";
+"energyUseTutorial" = "Energy Use Tutorial";
+"energyUseCalculationDefinition" = "Definition";
+"energyUseCalculationDefinitionText" = "Consumers are often unaware of the cost of the energy used by electronic devices. In fact, electricity costs often exceed the purchase price of the device within a year! Simple calculations reveal the energy costs of a device and encourage conservation. This application note explains how to calculate energy costs accurately and shows how this app automates the process.";
+
+"energyMonitoringImportance" = "Importance of Energy Monitoring";
+"energyMonitoringImportanceText" = "Monitoring energy use is crucial for addressing climate change and reducing energy consumption. Awareness of energy usage is the first step towards conservation. Many small devices that run continuously can consume significant amounts of energy, often unnoticed.";
+
+"understandingEnergyCosts" = "Understanding Energy Costs";
+"understandingEnergyCostsText" = "Energy costs can often exceed the purchase price of a device within a year. Being aware of these costs can drive conservation efforts and lead to more energy-efficient choices.";
+
+"factorsAffectingConsumption" = "Factors Affecting Energy Consumption";
+"factorsAffectingConsumptionText" = "Several factors influence energy consumption and costs: varying electric rates, differences between labeled and actual power usage, operating hours, and different operating modes (e.g., active and standby).";
+
+"calculatingEnergyCosts" = "Calculating Energy Costs";
+"calculatingEnergyCostsText" = "Energy cost calculation is straightforward: multiply the power use (in kilowatts) by the number of hours of operation and the cost per kilowatt-hour. This app simplifies this calculation process for you.";
+
+"tipsForReducingConsumption" = "Tips for Reducing Energy Consumption";
+"tipsForReducingConsumptionText" = "To reduce energy consumption: turn off unused devices, use power strips or timers, replace old equipment with energy-efficient models, and be mindful of devices that consume power even when 'off'.";
+"Source" = "Source";
+"moreInformation" = "More Information";

@@ -47,6 +47,7 @@ struct HomeView: View {
 	]
 	
 	@State private var isPresentedCurrencySelectionSettings = false
+	@State private var isShowingHelpExplainationSheet = false
 	
 	var body: some View {
 		NavigationView {
@@ -105,6 +106,11 @@ struct HomeView: View {
 									}
 								}
 								
+								Button {
+									isShowingHelpExplainationSheet.toggle()
+								} label: {
+									Label(Localize.moreInformation, systemImage: "info.circle")
+								}
 								
 							} label: {
 								Image(systemName: "ellipsis.circle")
@@ -151,6 +157,9 @@ private extension HomeView {
 				}
 			}
 			.presentationDetents([.fraction(0.3), .medium])
+		}
+		.sheet(isPresented: $isShowingHelpExplainationSheet) {
+			EnergyCalculationInformationView()
 		}
 		.onReceive(timer) { _ in
 			currentTime = Date()

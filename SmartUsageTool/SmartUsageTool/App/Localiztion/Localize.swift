@@ -199,5 +199,23 @@ struct Localize {
     static let alertOnContractEndTimeDescription = NSLocalizedString("alertOnContractEndTimeDescription", comment: "#bc-ignore!")
     static let yourContractEndsSoon = NSLocalizedString("yourContractEndsSoon", comment: "#bc-ignore!")
     static let yourContractEndsInTheNextFewDays = NSLocalizedString("yourContractEndsInTheNextFewDays", comment: "#bc-ignore!")
+
+    static let introduction = NSLocalizedString("introduction", comment: "#bc-ignore!")
+    static let energyUseTutorial = NSLocalizedString("energyUseTutorial", comment: "#bc-ignore!")
+    static let energyUseCalculationDefinition = NSLocalizedString("energyUseCalculationDefinition", comment: "#bc-ignore!")
+    static let energyUseCalculationDefinitionText = NSLocalizedString("energyUseCalculationDefinitionText", comment: "#bc-ignore!")
+    static let energyMonitoringImportance = NSLocalizedString("energyMonitoringImportance", comment: "#bc-ignore!")
+    static let energyMonitoringImportanceText = NSLocalizedString("energyMonitoringImportanceText", comment: "#bc-ignore!")
+    static let understandingEnergyCosts = NSLocalizedString("understandingEnergyCosts", comment: "#bc-ignore!")
+    static let understandingEnergyCostsText = NSLocalizedString("understandingEnergyCostsText", comment: "#bc-ignore!")
+    static let factorsAffectingConsumption = NSLocalizedString("factorsAffectingConsumption", comment: "#bc-ignore!")
+    static let factorsAffectingConsumptionText = NSLocalizedString("factorsAffectingConsumptionText", comment: "#bc-ignore!")
+    static let calculatingEnergyCosts = NSLocalizedString("calculatingEnergyCosts", comment: "#bc-ignore!")
+    static let calculatingEnergyCostsText = NSLocalizedString("calculatingEnergyCostsText", comment: "#bc-ignore!")
+    static let tipsForReducingConsumption = NSLocalizedString("tipsForReducingConsumption", comment: "#bc-ignore!")
+    static let tipsForReducingConsumptionText = NSLocalizedString("tipsForReducingConsumptionText", comment: "#bc-ignore!")
+
+    static let Source = NSLocalizedString("Source", comment: "#bc-ignore!")
+    static let moreInformation = NSLocalizedString("moreInformation", comment: "#bc-ignore!")
 }
 

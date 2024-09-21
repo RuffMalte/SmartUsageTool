@@ -216,3 +216,25 @@
 "alertOnContractEndTimeDescription" = "Erhalten Sie eine Benachrichtigung, wenn Ihr Stromvertrag endet.";
 "yourContractEndsSoon" = "Ihr Vertrag endet bald!";
 "yourContractEndsInTheNextFewDays" = "Ihr Vertrag endet in den nächsten Tagen!";
+
+"introduction" = "Einführung";
+"energyUseTutorial" = "Energieverbrauchstutorial";
+"energyUseCalculationDefinition" = "Definition";
+"energyUseCalculationDefinitionText" = "Verbraucher sind sich oft nicht der Kosten für die von elektronischen Geräten verbrauchte Energie bewusst. Tatsächlich übersteigen die Stromkosten häufig den Kaufpreis des Geräts innerhalb eines Jahres! Einfache Berechnungen zeigen die Energiekosten eines Geräts auf und fördern den sparsamen Umgang. Dieser Anwendungshinweis erläutert, wie man Energiekosten genau berechnet, und zeigt wie diese App diesen vorgang automatisiert.";
+
+"energyMonitoringImportance" = "Bedeutung der Energieüberwachung";
+"energyMonitoringImportanceText" = "Die Überwachung des Energieverbrauchs ist entscheidend für den Klimaschutz und die Reduzierung des Energieverbrauchs. Das Bewusstsein für den Energieverbrauch ist der erste Schritt zur Energieeinsparung. Viele kleine Geräte, die kontinuierlich laufen, können erhebliche Mengen an Energie verbrauchen, oft unbemerkt.";
+
+"understandingEnergyCosts" = "Verständnis der Energiekosten";
+"understandingEnergyCostsText" = "Die Energiekosten können oft den Kaufpreis eines Geräts innerhalb eines Jahres übersteigen. Das Bewusstsein für diese Kosten kann Einsparungsbemühungen vorantreiben und zu energieeffizienteren Entscheidungen führen.";
+
+"factorsAffectingConsumption" = "Faktoren, die den Energieverbrauch beeinflussen";
+"factorsAffectingConsumptionText" = "Mehrere Faktoren beeinflussen den Energieverbrauch und die Kosten: variierende Stromtarife, Unterschiede zwischen angegebener und tatsächlicher Leistungsaufnahme, Betriebsstunden und verschiedene Betriebsmodi (z.B. aktiv und Standby).";
+
+"calculatingEnergyCosts" = "Berechnung der Energiekosten";
+"calculatingEnergyCostsText" = "Die Berechnung der Energiekosten ist einfach: Multiplizieren Sie die Leistungsaufnahme (in Kilowatt) mit der Anzahl der Betriebsstunden und den Kosten pro Kilowattstunde. Diese App vereinfacht diesen Berechnungsprozess für Sie.";
+
+"tipsForReducingConsumption" = "Tipps zur Reduzierung des Energieverbrauchs";
+"tipsForReducingConsumptionText" = "Um den Energieverbrauch zu reduzieren: Schalten Sie ungenutzte Geräte aus, verwenden Sie Steckerleisten oder Zeitschaltuhren, ersetzen Sie alte Geräte durch energieeffiziente Modelle und achten Sie auf Geräte, die auch im 'ausgeschalteten' Zustand Strom verbrauchen.";
+"Source" = "Quelle";
+"moreInformation" = "Mehr Informationen";
