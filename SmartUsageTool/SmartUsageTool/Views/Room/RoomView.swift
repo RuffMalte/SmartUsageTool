@@ -25,6 +25,7 @@ private extension RoomView {
 		VStack {
 			VStack(spacing: 0) {
 				headerView
+					.padding(.bottom)
 				listView
 			}
 			.sheet(isPresented: $isPresentedNewDevice) {
@@ -74,8 +75,8 @@ private extension RoomView {
 		.background {
 			RoundedRectangle(cornerRadius: 20)
 				.ignoresSafeArea()
-				.foregroundStyle(Color.background)
-				.shadow(radius: 10)
+				.foregroundStyle(Color.background.gradient)
+				.shadow(radius: 5)
 		}
 	}
 	
