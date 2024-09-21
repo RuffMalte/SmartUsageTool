@@ -149,10 +149,14 @@ private extension HomeView {
 		}
 		.onReceive(timer) { _ in
 			currentTime = Date()
-			checkAndFetch()
+			if UserDefaults.useDailyFetching {
+				checkAndFetch()
+			}
 		}
 		.onAppear {
-			checkAndFetch()
+			if UserDefaults.useDailyFetching {	
+				checkAndFetch()
+			}
 		}
 	}
 	
