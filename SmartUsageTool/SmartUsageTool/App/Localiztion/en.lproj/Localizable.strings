@@ -206,3 +206,9 @@
 "selectedTimeRangeHighAndLowMessage" = "The selected time range high and low";
 "changeArticleLanguage" = "Change Article Language";
 "changeArticleLanguageMessage" = "Change the language of the articles";
+
+"daily" = "Daily";
+"monthly" = "Monthly";
+"yearly" = "Yearly";
+
+"timeRange" = "Time Range";

@@ -205,3 +205,8 @@
 "selectedTimeRangeHighAndLowMessage" = "Der ausgewählte Zeitbereich hoch und niedrig";
 "changeArticleLanguage" = "Artikelsprache ändern";
 "changeArticleLanguageMessage" = "Ändern Sie die Sprache der Artikel";
+"daily" = "Täglich";
+"monthly" = "Monatlich";
+"yearly" = "Jährlich";
+
+"timeRange" = "Zeitbereich";

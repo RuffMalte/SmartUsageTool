@@ -188,5 +188,10 @@ struct Localize {
     static let changeArticleLanguage = NSLocalizedString("changeArticleLanguage", comment: "#bc-ignore!")
     static let changeArticleLanguageMessage = NSLocalizedString("changeArticleLanguageMessage", comment: "#bc-ignore!")
 
+    static let daily = NSLocalizedString("daily", comment: "#bc-ignore!")
+    static let monthly = NSLocalizedString("monthly", comment: "#bc-ignore!")
+    static let yearly = NSLocalizedString("yearly", comment: "#bc-ignore!")
+
+    static let timeRange = NSLocalizedString("timeRange", comment: "#bc-ignore!")
 }
 

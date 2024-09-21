@@ -65,6 +65,7 @@
 		2ECA0D6B2C9AF9E600D0899D /* CurrencySelectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D6A2C9AF9E600D0899D /* CurrencySelectionPickerView.swift */; };
 		2ECA0D6D2C9AFAB900D0899D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D6C2C9AFAB900D0899D /* Currency.swift */; };
 		2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */; };
+		2EDA973D2C9EC2A800B4A7DD /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */; };
 		2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */; };
 		2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */; };
 		2EDE63D32C95DC3400A14004 /* SummaryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */; };
@@ -147,6 +148,7 @@
 		2ECA0D6A2C9AF9E600D0899D /* CurrencySelectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectionPickerView.swift; sourceTree = "<group>"; };
 		2ECA0D6C2C9AFAB900D0899D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartView.swift; sourceTree = "<group>"; };
+		2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartHeaderViewView.swift; sourceTree = "<group>"; };
 		2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainView.swift; sourceTree = "<group>"; };
 		2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryItemListView.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		2ECA0D612C9A15D700D0899D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */,
 				2ECA0D6C2C9AFAB900D0899D /* Currency.swift */,
 				2ECA0D622C9A15DC00D0899D /* ColorEnum.swift */,
 			);
@@ -709,6 +712,7 @@
 				2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */,
 				0815F18D2BACC827002B39BD /* HomeView.swift in Sources */,
 				2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */,
+				2EDA973D2C9EC2A800B4A7DD /* TimePeriod.swift in Sources */,
 				0804AB872BCC209D00E1636C /* DeviceInfoView.swift in Sources */,
 				2ECA0D6B2C9AF9E600D0899D /* CurrencySelectionPickerView.swift in Sources */,
 				2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */,

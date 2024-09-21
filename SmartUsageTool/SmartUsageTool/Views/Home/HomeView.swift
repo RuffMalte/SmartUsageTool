@@ -22,9 +22,21 @@ struct HomeView: View {
 	@State private var isPresentedNewRoom = false
 	@State private var isNightPrice = UserDefaults.isNightPrice
 	private var totalCost: Double {
-		let sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		var sum = 0.0
+		switch selectedTimeRange {
+		case .daily:
+			sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		case .monthly:
+			sum = items.reduce(0.0) { $0 + $1.monthlyExpenses}
+		case .yearly:
+			sum = items.reduce(0.0) { $0 + $1.yearlyExpenses}
+		case nil:
+			sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		}
 		return sum
 	}
+	
+	@State private var selectedTimeRange: TimePeriod?
 	
 	let columns = [
 		GridItem(.flexible(), spacing: 10),
@@ -54,6 +66,7 @@ struct HomeView: View {
 					isNightPrice = UserDefaults.isNightPrice
 					currencyCode = UserDefaults.currency
 					useDailyFetching = UserDefaults.useDailyFetching
+					selectedTimeRange = UserDefaults.selectedTimePeriod
 				}
 				.navigationBarTitleDisplayMode(.inline)
 				.toolbar {
@@ -70,7 +83,29 @@ struct HomeView: View {
 								Image(systemName: "plus")
 							}
 							.popoverTip(AddNewRoomTip())
+							
+							Menu {
+								Picker(selection: $selectedTimeRange) {
+									ForEach(TimePeriod.allCases, id: \.self) { time in
+										Label(time.localizedString, systemImage: time.icon)
+											.tag(time)
+									}
+								} label: {
+									Label(Localize.timeRange, systemImage: "clock")
+								}
+								.pickerStyle(.menu)
+								.onChange(of: selectedTimeRange) { oldValue, newValue in
+									if let new = newValue {
+										UserDefaults.setSelectedTimePeriod(new)
+									}
+								}
+								
+								
+							} label: {
+								Image(systemName: "ellipsis.circle")
+							}
 
+							
 							NavigationLink {
 								MainSettingsView()
 							} label: {
@@ -145,11 +180,20 @@ private extension HomeView {
 		VStack(alignment: .leading, spacing: 20) {
 			
 			HStack {
+				
 				Text(Localize.totalCost)
 					.font(.system(.headline, design: .rounded, weight: .regular))
 				
 				Text(totalCost, format: .currency(code: currencyCode))
 					.font(.system(.headline, design: .monospaced, weight: .regular))
+				
+				if let selectedTimeRangeIcon = selectedTimeRange?.icon {
+					Spacer()
+					
+					Image(systemName: selectedTimeRangeIcon)
+						.foregroundStyle(.primary)
+						.font(.subheadline)
+				}
 			}
 			.popoverTip(DailyCostTip())
 
