@@ -56,6 +56,14 @@ struct MainSettingsView: View {
 			}
 			
 			Section {
+				NavigationLink {
+					StatisticsSettingsView()
+				} label: {
+					SettingsItemListView(icon: "chart.bar", iconBackground: .blue, title: Localize.statisticSettings)
+				}
+			}
+			
+			Section {
 				ColorPicker(selectedColor: $selectedTintColor)
 			}
 			

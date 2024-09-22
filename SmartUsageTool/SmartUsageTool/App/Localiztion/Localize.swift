@@ -217,5 +217,24 @@ struct Localize {
 
     static let Source = NSLocalizedString("Source", comment: "#bc-ignore!")
     static let moreInformation = NSLocalizedString("moreInformation", comment: "#bc-ignore!")
+    static let statisticSettings = NSLocalizedString("statisticSettings", comment: "#bc-ignore!")
+
+    static let EnergyMapsAPIKey = NSLocalizedString("EnergyMapsAPIKey", comment: "#bc-ignore!")
+    static let EnterAPIKey = NSLocalizedString("EnterAPIKey", comment: "#bc-ignore!")
+    static let apiTestResult = NSLocalizedString("apiTestResult", comment: "#bc-ignore!")
+    static let apiTestSuccess = NSLocalizedString("apiTestSuccess", comment: "#bc-ignore!")
+    static let apiTestFailed = NSLocalizedString("apiTestFailed", comment: "#bc-ignore!")
+    static let ok = NSLocalizedString("ok", comment: "#bc-ignore!")
+	static let whatIsAnAPIKey = NSLocalizedString("whatIsAnAPIKey", comment: "#bc-ignore!")
+    static let getYourOwnAPIKey = NSLocalizedString("getYourOwnAPIKey", comment: "#bc-ignore!")
+
+    static let devicesCarbonFootprint = NSLocalizedString("devicesCarbonFootprint", comment: "#bc-ignore!")
+    static let deviceName = NSLocalizedString("deviceName", comment: "#bc-ignore!")
+
+    static let info = NSLocalizedString("info", comment: "#bc-ignore!")
+    static let UnderstandingYourCarbonFootprint = NSLocalizedString("UnderstandingYourCarbonFootprint", comment: "#bc-ignore!")
+
+    static let getMoreStats = NSLocalizedString("getMoreStats", comment: "#bc-ignore!")
+    static let getMoreStatsInTheSettingsAndGetYourOwnAPIkey = NSLocalizedString("getMoreStatsInTheSettingsAndGetYourOwnAPIkey", comment: "#bc-ignore!")
 }
 

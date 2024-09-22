@@ -46,6 +46,9 @@ struct HomeView: View {
 		GridItem(.flexible(), spacing: 10)
 	]
 	
+	@EnvironmentObject private var apiKeyController: ElectricityMapsAPIKeyController
+	@EnvironmentObject private var apiController: ElectricityMapsAPIController
+	
 	@State private var isPresentedCurrencySelectionSettings = false
 	@State private var isShowingHelpExplainationSheet = false
 	
@@ -170,6 +173,9 @@ private extension HomeView {
 		.onAppear {
 			if UserDefaults.useDailyFetching {
 				checkAndFetch()
+			}
+			if !apiKeyController.apiKey.isEmpty {
+				apiController.getCurrentCarbonIntensityData(for: Locale.current.region?.identifier ?? "DE", authToken: apiKeyController.apiKey)
 			}
 		}
 	}

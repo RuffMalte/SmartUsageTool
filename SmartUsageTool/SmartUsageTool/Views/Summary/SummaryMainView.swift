@@ -8,10 +8,12 @@
 import SwiftUI
 import Charts
 import SwiftData
+import TipKit
 
 struct SummaryMainView: View {
 	
 	@EnvironmentObject private var viewModel: ElectricityPriceController
+	@EnvironmentObject private var electricityMapsApiController: ElectricityMapsAPIController
 	
 	@Query private var devices: [DeviceModel]
     var body: some View {
@@ -110,6 +112,58 @@ struct SummaryMainView: View {
 								)
 							}
 							.popoverTip(CurrentDevicePricesTip())
+						}
+					}
+					
+					Section {
+						TipView(getMoreStatistics())
+							.tipBackground(Color.clear)
+					}
+					.listRowInsets(EdgeInsets())
+					
+					
+					Section {
+						if let currentCarbonIntensityData = electricityMapsApiController.currentCarbonIntensityData {
+							NavigationLink {
+								DevicesCarbonFootPrintChartView()
+							} label: {
+								SummaryItemListView(
+									title: Localize.devicesCarbonFootprint,
+									icon: "carbon.dioxide.cloud",
+									titleColor: .purple,
+									latestDate: currentCarbonIntensityData.datetimeAsDate ?? Date(),
+									latestValueView: AnyView(
+										VStack(alignment: .leading) {
+											Text(Localize.latest)
+												.font(.system(.subheadline, design: .rounded, weight: .semibold))
+												.foregroundStyle(.secondary)
+											
+											HStack(alignment: .firstTextBaseline) {
+												Text(currentCarbonIntensityData.carbonIntensity, format: .number.precision(.fractionLength(2)))
+													.font(.system(.title2, design: .monospaced, weight: .bold))
+												
+												Text("gCO2eq/kWh")
+													.foregroundStyle(.secondary)
+													.font(.system(.footnote))
+											}
+										}
+									),
+									chartView: AnyView(
+										VStack {
+											Chart(electricityMapsApiController.calculateDevicesCarbonIntensity(devices: devices)) { point in
+												SectorMark(
+													angle: .value("Amount", point.calculatedCarbonIntensity),
+													angularInset: 3.0
+												)
+												.cornerRadius(2)
+												.foregroundStyle(by: .value("device", point.device.name))
+											}
+											.chartLegend(.hidden)
+											
+										}
+									)
+								)
+							}
 						}
 					}
 				}

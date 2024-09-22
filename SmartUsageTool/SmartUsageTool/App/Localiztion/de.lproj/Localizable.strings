@@ -238,3 +238,42 @@
 "tipsForReducingConsumptionText" = "Um den Energieverbrauch zu reduzieren: Schalten Sie ungenutzte Geräte aus, verwenden Sie Steckerleisten oder Zeitschaltuhren, ersetzen Sie alte Geräte durch energieeffiziente Modelle und achten Sie auf Geräte, die auch im 'ausgeschalteten' Zustand Strom verbrauchen.";
 "Source" = "Quelle";
 "moreInformation" = "Mehr Informationen";
+"statisticSettings" = "Statistik-Einstellungen";
+
+"EnergyMapsAPIKey" = "Energy Maps API-Schlüssel";
+"EnterAPIKey" = "API-Schlüssel eingeben";
+"apiTestResult" = "API-Testergebnis";
+"apiTestSuccess" = "API-Test erfolgreich";
+"apiTestFailed" = "API-Test fehlgeschlagen";
+"ok" = "OK";
+"whatIsAnAPIKey" = "Ein API-Schlüssel ist ein eindeutiger Identifikator zur Authentifizierung und Autorisierung des Zugriffs auf eine Programmierschnittstelle (API). Er fungiert als digitale Zugangsberechtigung, die es Entwicklern ermöglicht, sicher mit einem Dienst oder einer Plattform zu interagieren, während der API-Anbieter den Zugriff kontrollieren und überwachen kann.";
+"getYourOwnAPIKey" = "Holen Sie sich Ihren eigenen API-Schlüssel";
+"devicesCarbonFootprint" = "Geräte-Fußabdruck";
+"deviceName" = "Gerätename";
+
+"info" = "Info";
+"UnderstandingYourCarbonFootprint" = "Wenn wir über die Umweltauswirkungen unseres Energieverbrauchs sprechen, stoßen wir oft auf die Einheit gCO2eq/kWh. Aber was bedeutet das und wie hängt es mit unserem täglichen Leben zusammen?
+
+gCO2eq/kWh steht für Gramm CO2-Äquivalent pro Kilowattstunde. Es ist ein Maß dafür, wie viele Treibhausgasemissionen bei der Erzeugung einer Kilowattstunde Strom entstehen. Je niedriger die Zahl, desto sauberer die Energiequelle.
+
+Um dies in Perspektive zu setzen, betrachten wir einige gängige Haushaltsgeräte und ihren typischen Energieverbrauch:
+
+1. Kühlschrank: Ein moderner, energieeffizienter Kühlschrank verbraucht etwa 1-2 kWh pro Tag.
+2. Waschmaschine: Eine Ladung verbraucht ungefähr 0,6-1,5 kWh.
+3. LED-Fernseher: 4 Stunden Fernsehen verbrauchen etwa 0,4 kWh.
+4. Laptop: Die Nutzung für 8 Stunden verbraucht etwa 0,5 kWh.
+
+Betrachten wir nun die Kohlenstoffintensität des Stroms. In den USA liegt der Durchschnitt bei etwa 400 gCO2eq/kWh. Das bedeutet:
+
+- Der Betrieb Ihres Kühlschranks für einen Tag produziert 400-800 gCO2eq.
+- Eine Ladung Wäsche erzeugt 240-600 gCO2eq.
+- Ihre Fernsehzeit erzeugt 160 gCO2eq.
+- Die tägliche Laptopnutzung führt zu 200 gCO2eq.
+
+Eine durchschnittliche Familie verbraucht etwa 30 kWh pro Tag, was zu täglichen CO2-Äquivalentemissionen von 12 kg führt.
+
+Denken Sie daran, dass diese Zahlen je nach Standort und Energiequelle variieren. Die Nutzung erneuerbarer Energien kann Ihren CO2-Fußabdruck erheblich reduzieren, manchmal auf bis zu 4 gCO2eq/kWh bei Windenergie.
+
+Durch das Verständnis dieser Zahlen können wir fundiertere Entscheidungen über unseren Energieverbrauch und dessen Auswirkungen auf die Umwelt treffen.";
+"getMoreStats" = "Mehr Statistiken erhalten";
+"getMoreStatsInTheSettingsAndGetYourOwnAPIkey" = "Erhalten Sie mehr Statistiken in den Einstellungen und holen Sie sich Ihren eigenen API-Schlüssel";
