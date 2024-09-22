@@ -44,6 +44,13 @@ struct SettingsAboutAppView: View {
 						Image(systemName: "bolt.fill")
 					}
 				})
+				Link(destination: URL(string: "https://www.electricitymaps.com/")!, label: {
+					Label {
+						Text("Energy Maps")
+					} icon: {
+						Image(systemName: "map.fill")
+					}
+				})
 			} header: {
 				Text(Localize.appIncludedAPIs)
 					.font(.system(.caption, design: .rounded, weight: .semibold))

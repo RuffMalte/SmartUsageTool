@@ -236,5 +236,9 @@ struct Localize {
 
     static let getMoreStats = NSLocalizedString("getMoreStats", comment: "#bc-ignore!")
     static let getMoreStatsInTheSettingsAndGetYourOwnAPIkey = NSLocalizedString("getMoreStatsInTheSettingsAndGetYourOwnAPIkey", comment: "#bc-ignore!")
+
+    static let mostExpensive = NSLocalizedString("mostExpensive", comment: "#bc-ignore!")
+    static let mostExpensiveRooms = NSLocalizedString("mostExpensiveRooms", comment: "#bc-ignore!")
+    static let rooms = NSLocalizedString("rooms", comment: "#bc-ignore!")
 }
 

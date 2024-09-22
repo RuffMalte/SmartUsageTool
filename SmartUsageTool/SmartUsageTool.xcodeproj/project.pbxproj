@@ -39,6 +39,8 @@
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
 		2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */; };
 		2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */; };
+		2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */; };
+		2E414FC12CA04C890024A876 /* RoomPricesTableViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
@@ -51,6 +53,7 @@
 		2E7B376D2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B376C2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift */; };
 		2E7B37722CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37712CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift */; };
 		2E7B37742CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37732CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift */; };
+		2E7B37762CA039F900B52B04 /* HomeCalculationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */; };
 		2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */; };
 		2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */; };
 		2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */; };
@@ -130,6 +133,8 @@
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
 		2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLengthSettingsView.swift; sourceTree = "<group>"; };
 		2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCalculationInformationView.swift; sourceTree = "<group>"; };
+		2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPricesChartView.swift; sourceTree = "<group>"; };
+		2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPricesTableViewSmall.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 		2E7B376C2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCarbonIntensityModel.swift; sourceTree = "<group>"; };
 		2E7B37712CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCarbonFootPrintChartView.swift; sourceTree = "<group>"; };
 		2E7B37732CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCarbonFootPrintTableView.swift; sourceTree = "<group>"; };
+		2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalculationsController.swift; sourceTree = "<group>"; };
 		2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceHomeView.swift; sourceTree = "<group>"; };
 		2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartCreationView.swift; sourceTree = "<group>"; };
 		2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartHeaderView.swift; sourceTree = "<group>"; };
@@ -474,6 +480,15 @@
 			path = SubSettingsView;
 			sourceTree = "<group>";
 		};
+		2E414FBD2CA049240024A876 /* RoomsPricesChart */ = {
+			isa = PBXGroup;
+			children = (
+				2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */,
+				2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */,
+			);
+			path = RoomsPricesChart;
+			sourceTree = "<group>";
+		};
 		2E715FE92C9B0C32004B2A77 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +502,7 @@
 			children = (
 				2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */,
 				2E7543C92C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift */,
+				2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,6 +651,7 @@
 			children = (
 				2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */,
 				2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */,
+				2E414FBD2CA049240024A876 /* RoomsPricesChart */,
 				2E7B376E2CA0087100B52B04 /* DevicesCarbonFootprint */,
 				2E99FE512C96EDB50048B153 /* Helper */,
 				2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */,
@@ -761,6 +778,7 @@
 				2E7B37742CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift in Sources */,
 				2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */,
 				2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */,
+				2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */,
 				2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */,
 				2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */,
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
@@ -771,6 +789,7 @@
 				2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */,
 				2E2860822C86FA500018FAFF /* MainSettingsView.swift in Sources */,
 				2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */,
+				2E7B37762CA039F900B52B04 /* HomeCalculationsController.swift in Sources */,
 				2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */,
 				2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */,
 				0815F1912BACCA70002B39BD /* ListView.swift in Sources */,
@@ -785,6 +804,7 @@
 				2E7B376B2C9F4E4E00B52B04 /* StatisticsSettingsView.swift in Sources */,
 				0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */,
 				2E095BCA2C8EFC16006B399B /* PriceResponse.swift in Sources */,
+				2E414FC12CA04C890024A876 /* RoomPricesTableViewSmall.swift in Sources */,
 				2EC6F12E2C98670100FF12E5 /* ArticleItemListView.swift in Sources */,
 				2EC6F1232C985C2800FF12E5 /* ArticleHomeView.swift in Sources */,
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,

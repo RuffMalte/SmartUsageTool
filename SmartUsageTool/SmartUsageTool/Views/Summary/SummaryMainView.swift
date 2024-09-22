@@ -16,6 +16,8 @@ struct SummaryMainView: View {
 	@EnvironmentObject private var electricityMapsApiController: ElectricityMapsAPIController
 	
 	@Query private var devices: [DeviceModel]
+	@Query private var rooms: [RoomModel]
+
     var body: some View {
 		NavigationView {
 			VStack(spacing: 10) {
@@ -112,6 +114,42 @@ struct SummaryMainView: View {
 								)
 							}
 							.popoverTip(CurrentDevicePricesTip())
+						}
+					}
+					
+					
+					Section {
+						if let mostExpensiveRoom = HomeCalculationsController().getMostExpensiveRoom(rooms: rooms) {
+							NavigationLink {
+								RoomsPricesChartView()
+							} label: {
+								SummaryItemListView(
+									title: Localize.mostExpensiveRooms,
+									icon: "square.split.bottomrightquarter",
+									titleColor: .mint,
+									latestDate: Date(),
+									latestValueView: AnyView(
+										VStack(alignment: .leading) {
+											Text(Localize.mostExpensive)
+												.font(.system(.subheadline, design: .rounded, weight: .semibold))
+												.foregroundStyle(.secondary)
+											
+											HStack(alignment: .firstTextBaseline) {
+												Text(NSLocalizedString(mostExpensiveRoom.name.capitalized, comment: ""))
+													.font(.system(.title2, design: .monospaced, weight: .bold))
+											}
+										}
+									),
+									chartView: AnyView(
+										VStack(alignment: .trailing) {
+											HStack(alignment: .lastTextBaseline) {
+												Text(HomeCalculationsController().getRoomPriceBasedOnTimePeriod(room: mostExpensiveRoom), format: .currency(code: UserDefaults.currency))
+													.font(.system(.title2, design: .monospaced, weight: .semibold))
+											}
+										}
+									)
+								)
+							}
 						}
 					}
 					

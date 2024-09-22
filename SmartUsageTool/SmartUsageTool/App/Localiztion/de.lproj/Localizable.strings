@@ -277,3 +277,6 @@ Denken Sie daran, dass diese Zahlen je nach Standort und Energiequelle variieren
 Durch das Verständnis dieser Zahlen können wir fundiertere Entscheidungen über unseren Energieverbrauch und dessen Auswirkungen auf die Umwelt treffen.";
 "getMoreStats" = "Mehr Statistiken erhalten";
 "getMoreStatsInTheSettingsAndGetYourOwnAPIkey" = "Erhalten Sie mehr Statistiken in den Einstellungen und holen Sie sich Ihren eigenen API-Schlüssel";
+"mostExpensive" = "Teuerste";
+"mostExpensiveRooms" = "Teuerste Räume";
+"rooms" = "Räume";

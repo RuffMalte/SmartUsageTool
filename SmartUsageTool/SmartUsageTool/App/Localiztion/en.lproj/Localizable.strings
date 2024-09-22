@@ -278,3 +278,6 @@ Remember, these figures vary depending on your location and energy source. Using
 By understanding these numbers, we can make more informed choices about our energy use and its impact on the environment.";
 "getMoreStats" = "Get More Stats";
 "getMoreStatsInTheSettingsAndGetYourOwnAPIkey" = "Get more stats in the settings and get your own API";
+"mostExpensive" = "Most Expensive";
+"mostExpensiveRooms" = "Most Expensive Rooms";
+"rooms" = "Rooms";
