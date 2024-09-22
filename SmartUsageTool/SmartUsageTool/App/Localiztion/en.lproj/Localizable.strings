@@ -206,3 +206,83 @@
 "selectedTimeRangeHighAndLowMessage" = "The selected time range high and low";
 "changeArticleLanguage" = "Change Article Language";
 "changeArticleLanguageMessage" = "Change the language of the articles";
+
+"daily" = "Daily";
+"monthly" = "Monthly";
+"yearly" = "Yearly";
+
+"timeRange" = "Time Range";
+"contractMangement" = "Contract Management";
+"alertOnContractEndTime" = "Contract End Time";
+"selectDate" = "Select Date";
+"alertOnContractEndTimeDescription" = "Alert on contract end time";
+"yourContractEndsSoon" = "Your contract ends soon!";
+"yourContractEndsInTheNextFewDays" = "Your contract ends in the next few days!";
+
+"introduction" = "Introduction";
+"energyUseTutorial" = "Energy Use Tutorial";
+"energyUseCalculationDefinition" = "Definition";
+"energyUseCalculationDefinitionText" = "Consumers are often unaware of the cost of the energy used by electronic devices. In fact, electricity costs often exceed the purchase price of the device within a year! Simple calculations reveal the energy costs of a device and encourage conservation. This application note explains how to calculate energy costs accurately and shows how this app automates the process.";
+
+"energyMonitoringImportance" = "Importance of Energy Monitoring";
+"energyMonitoringImportanceText" = "Monitoring energy use is crucial for addressing climate change and reducing energy consumption. Awareness of energy usage is the first step towards conservation. Many small devices that run continuously can consume significant amounts of energy, often unnoticed.";
+
+"understandingEnergyCosts" = "Understanding Energy Costs";
+"understandingEnergyCostsText" = "Energy costs can often exceed the purchase price of a device within a year. Being aware of these costs can drive conservation efforts and lead to more energy-efficient choices.";
+
+"factorsAffectingConsumption" = "Factors Affecting Energy Consumption";
+"factorsAffectingConsumptionText" = "Several factors influence energy consumption and costs: varying electric rates, differences between labeled and actual power usage, operating hours, and different operating modes (e.g., active and standby).";
+
+"calculatingEnergyCosts" = "Calculating Energy Costs";
+"calculatingEnergyCostsText" = "Energy cost calculation is straightforward: multiply the power use (in kilowatts) by the number of hours of operation and the cost per kilowatt-hour. This app simplifies this calculation process for you.";
+
+"tipsForReducingConsumption" = "Tips for Reducing Energy Consumption";
+"tipsForReducingConsumptionText" = "To reduce energy consumption: turn off unused devices, use power strips or timers, replace old equipment with energy-efficient models, and be mindful of devices that consume power even when 'off'.";
+"Source" = "Source";
+"moreInformation" = "More Information";
+"statisticSettings" = "Statistic Settings";
+"EnergyMapsAPIKey" = "Energy Maps API Key";
+"EnterAPIKey" = "Enter API Key";
+"apiTestResult" = "API Test Result";
+"apiTestSuccess" = "API Test Success";
+"apiTestFailed" = "API Test Failed";
+"ok" = "OK";
+"whatIsAnAPIKey" = "An API key is a unique identifier used to authenticate and authorize access to an application programming interface (API). It acts as a digital credential, allowing developers to securely interact with a service or platform programmatically while enabling the API provider to control and monitor access.";
+"getYourOwnAPIKey" = "Get your own API key";
+"devicesCarbonFootprint" = "Devices Footprint";
+"deviceName" = "Device Name";
+
+"info" = "Info";
+"UnderstandingYourCarbonFootprint" = "When we talk about the environmental impact of our energy use, you'll often see the unit gCO2eq/kWh. But what does this mean, and how does it relate to our daily lives?
+
+gCO2eq/kWh stands for grams of carbon dioxide equivalent per kilowatt-hour. It's a measure of how much greenhouse gas emissions are produced by generating one kilowatt-hour of electricity. The lower the number, the cleaner the energy source.
+
+To put this in perspective, let's look at some common household appliances and their typical energy use:
+
+1. Refrigerator: A modern, energy-efficient fridge uses about 1-2 kWh per day.
+2. Washing Machine: One load uses approximately 0.6-1.5 kWh.
+3. LED TV: Watching for 4 hours consumes roughly 0.4 kWh.
+4. Laptop: Using it for 8 hours uses about 0.5 kWh.
+
+Now, let's consider the carbon intensity of electricity. In the US, the average is about 400 gCO2eq/kWh. This means:
+
+- Running your fridge for a day produces 400-800 gCO2eq.
+- A load of laundry generates 240-600 gCO2eq.
+- Your TV time creates 160 gCO2eq.
+- A day's laptop use results in 200 gCO2eq.
+
+An average family might use around 30 kWh per day, resulting in 12 kg of CO2 equivalent emissions daily.
+
+Remember, these figures vary depending on your location and energy source. Using renewable energy can significantly reduce your carbon footprint, sometimes to as low as 4 gCO2eq/kWh for wind power.
+
+By understanding these numbers, we can make more informed choices about our energy use and its impact on the environment.";
+"getMoreStats" = "Get More Stats";
+"getMoreStatsInTheSettingsAndGetYourOwnAPIkey" = "Get more stats in the settings and get your own API";
+"mostExpensive" = "Most Expensive";
+"mostExpensiveRooms" = "Most Expensive Rooms";
+"rooms" = "Rooms";
+"wattageAndUseTime" = "Wattage and Use Time";
+"howToGetWattageAndUseTime" = "When entering the runtime, please note that this represents the actual operating time of the device, not the total time it is plugged in. For devices like refrigerators that work cyclically, you need to calculate the effective runtime - for example, a refrigerator that is active for 12 minutes per hour would run for 4.8 hours in a full day (12 minutes x 24 hours / 60 minutes).";
+"projectedYearlyCost" = "Yearly Cost";
+"allRooms" = "All Rooms";
+"monthlyCost" = "Monthly Cost";

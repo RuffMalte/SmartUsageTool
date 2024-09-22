@@ -14,6 +14,9 @@ struct HomeView: View {
 	@State private var currencyCode = UserDefaults.currency
 	@State private var useDailyFetching = UserDefaults.useDailyFetching
 	
+	@State var useContractEndTime = UserDefaults.useContractEndTime
+	@State var contractEndTime: Date = (UserDefaults.currentContractEndTime ?? Date())
+	
 	@EnvironmentObject private var viewModel: ElectricityPriceController
 	
 	@Query private var items: [RoomModel]
@@ -22,16 +25,32 @@ struct HomeView: View {
 	@State private var isPresentedNewRoom = false
 	@State private var isNightPrice = UserDefaults.isNightPrice
 	private var totalCost: Double {
-		let sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		var sum = 0.0
+		switch selectedTimeRange {
+		case .daily:
+			sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		case .monthly:
+			sum = items.reduce(0.0) { $0 + $1.monthlyExpenses}
+		case .yearly:
+			sum = items.reduce(0.0) { $0 + $1.yearlyExpenses}
+		case nil:
+			sum = items.reduce(0.0) { $0 + $1.dailyExpenses}
+		}
 		return sum
 	}
+	
+	@State private var selectedTimeRange: TimePeriod?
 	
 	let columns = [
 		GridItem(.flexible(), spacing: 10),
 		GridItem(.flexible(), spacing: 10)
 	]
 	
+	@EnvironmentObject private var apiKeyController: ElectricityMapsAPIKeyController
+	@EnvironmentObject private var apiController: ElectricityMapsAPIController
+	
 	@State private var isPresentedCurrencySelectionSettings = false
+	@State private var isShowingHelpExplainationSheet = false
 	
 	var body: some View {
 		NavigationView {
@@ -54,6 +73,9 @@ struct HomeView: View {
 					isNightPrice = UserDefaults.isNightPrice
 					currencyCode = UserDefaults.currency
 					useDailyFetching = UserDefaults.useDailyFetching
+					selectedTimeRange = UserDefaults.selectedTimePeriod
+					useContractEndTime = UserDefaults.useContractEndTime
+					contractEndTime = UserDefaults.currentContractEndTime ?? Date()
 				}
 				.navigationBarTitleDisplayMode(.inline)
 				.toolbar {
@@ -70,7 +92,34 @@ struct HomeView: View {
 								Image(systemName: "plus")
 							}
 							.popoverTip(AddNewRoomTip())
+							
+							Menu {
+								Picker(selection: $selectedTimeRange) {
+									ForEach(TimePeriod.allCases, id: \.self) { time in
+										Label(time.localizedString, systemImage: time.icon)
+											.tag(time)
+									}
+								} label: {
+									Label(Localize.timeRange, systemImage: "clock")
+								}
+								.pickerStyle(.menu)
+								.onChange(of: selectedTimeRange) { oldValue, newValue in
+									if let new = newValue {
+										UserDefaults.setSelectedTimePeriod(new)
+									}
+								}
+								
+								Button {
+									isShowingHelpExplainationSheet.toggle()
+								} label: {
+									Label(Localize.moreInformation, systemImage: "info.circle")
+								}
+								
+							} label: {
+								Image(systemName: "ellipsis.circle")
+							}
 
+							
 							NavigationLink {
 								MainSettingsView()
 							} label: {
@@ -103,7 +152,7 @@ private extension HomeView {
 			ModifyRoomSheetView(room: RoomModel.new, isNewRoom: true)
 		}
 		.sheet(isPresented: $isPresentedCurrencySelectionSettings) {
-			CurrencySelectionPickerView() { code in
+			CurrencySelectionPickerView(useCompactView: true) { code in
 				withAnimation(.snappy) {
 					UserDefaults.setCurrency(code)
 					currencyCode = code
@@ -112,12 +161,22 @@ private extension HomeView {
 			}
 			.presentationDetents([.fraction(0.3), .medium])
 		}
+		.sheet(isPresented: $isShowingHelpExplainationSheet) {
+			EnergyCalculationInformationView()
+		}
 		.onReceive(timer) { _ in
 			currentTime = Date()
-			checkAndFetch()
+			if UserDefaults.useDailyFetching {
+				checkAndFetch()
+			}
 		}
 		.onAppear {
-			checkAndFetch()
+			if UserDefaults.useDailyFetching {
+				checkAndFetch()
+			}
+			if !apiKeyController.apiKey.isEmpty {
+				apiController.getCurrentCarbonIntensityData(for: Locale.current.region?.identifier ?? "DE", authToken: apiKeyController.apiKey)
+			}
 		}
 	}
 	
@@ -145,11 +204,29 @@ private extension HomeView {
 		VStack(alignment: .leading, spacing: 20) {
 			
 			HStack {
+				if useContractEndTime {
+					if Calendar.current.isDateInTomorrow(contractEndTime) || Calendar.current.isDateInToday(contractEndTime) {
+						Text(Localize.yourContractEndsInTheNextFewDays)
+							.font(.system(.subheadline, design: .rounded, weight: .regular))
+					} else if isDate(contractEndTime, withinMonthOf: .now) {
+						Text(Localize.yourContractEndsSoon)
+							.font(.system(.subheadline, design: .rounded, weight: .regular))
+					}
+				}
+				
 				Text(Localize.totalCost)
 					.font(.system(.headline, design: .rounded, weight: .regular))
 				
 				Text(totalCost, format: .currency(code: currencyCode))
 					.font(.system(.headline, design: .monospaced, weight: .regular))
+				
+				if let selectedTimeRangeIcon = selectedTimeRange?.icon {
+					Spacer()
+					
+					Image(systemName: selectedTimeRangeIcon)
+						.foregroundStyle(.primary)
+						.font(.subheadline)
+				}
 			}
 			.popoverTip(DailyCostTip())
 
@@ -216,9 +293,18 @@ private extension HomeView {
 		.background {
 			RoundedRectangle(cornerRadius: 20)
 				.ignoresSafeArea()
-				.foregroundStyle(Color.background)
+				.foregroundStyle(Color.background.gradient)
 				.shadow(radius: 10)
 		}
+	}
+	
+	func isDate(_ date: Date, withinMonthOf referenceDate: Date) -> Bool {
+		let calendar = Calendar.current
+		
+		let dateComponents = calendar.dateComponents([.year, .month], from: date)
+		let referenceComponents = calendar.dateComponents([.year, .month], from: referenceDate)
+		
+		return dateComponents.year == referenceComponents.year && dateComponents.month == referenceComponents.month
 	}
 	
 	var collectionView: some View {

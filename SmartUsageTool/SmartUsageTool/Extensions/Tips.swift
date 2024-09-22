@@ -175,3 +175,31 @@ struct ChangeArticleLanguageTip: Tip {
 		Image(systemName: "textformat")
 	}
 }
+
+struct getMoreStatistics: Tip {
+	var title: Text {
+		Text(Localize.getMoreStats)
+	}
+	
+	var message: Text? {
+		Text(Localize.getMoreStatsInTheSettingsAndGetYourOwnAPIkey)
+	}
+	
+	var image: Image? {
+		Image(systemName: "chart.bar")
+	}
+}
+
+struct howToGetWattageAndUseTime: Tip {
+	var title: Text {
+		Text(Localize.wattageAndUseTime)
+	}
+	
+	var message: Text? {
+		Text(Localize.howToGetWattageAndUseTime)
+	}
+	
+	var image: Image? {
+		Image(systemName: "poweroutlet.type.c.square.fill")
+	}
+}

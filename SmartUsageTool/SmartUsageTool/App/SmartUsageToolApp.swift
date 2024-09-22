@@ -33,6 +33,9 @@ struct SmartUsageToolApp: App {
 	}
 	
 	@StateObject private var electricityPriceController = ElectricityPriceController()
+	@StateObject private var electricityMapsAPIController = ElectricityMapsAPIController()
+	@StateObject private var electricityMapsAPIKeyController = ElectricityMapsAPIKeyController()
+
 	@AppStorage("selectedTintColor") var selectedTintColor: ColorEnum = .blue
 
     var body: some Scene {
@@ -41,6 +44,8 @@ struct SmartUsageToolApp: App {
 				.tint(selectedTintColor.toColor)
                 .modelContainer(sharedModelContainer)
 				.environmentObject(electricityPriceController)
+				.environmentObject(electricityMapsAPIController)
+				.environmentObject(electricityMapsAPIKeyController)
         }
     }
 }

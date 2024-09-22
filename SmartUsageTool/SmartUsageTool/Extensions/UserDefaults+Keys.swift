@@ -41,6 +41,22 @@ extension UserDefaults {
 		Self.standard.bool(forKey: Key.hasSeenOnboarding.rawValue)
 	}
 	
+	static var selectedTimePeriod: TimePeriod {
+		if let rawValue = Self.standard.string(forKey: Key.selectedTimePeriod.rawValue),
+		   let timePeriod = TimePeriod(rawValue: rawValue) {
+			return timePeriod
+		}
+		return .daily
+	}
+	
+	static var useContractEndTime: Bool {
+		Self.standard.bool(forKey: Key.useContractEndTime.rawValue)
+	}
+	
+	static var currentContractEndTime: Date? {
+		return Self.standard.object(forKey: Key.currentContractEndTime.rawValue) as? Date
+	}
+	
 	// setter
 	static func setCurrency(_ currency: String) {
 		Self.standard.setValue(currency, forKey: Key.currency.rawValue)
@@ -92,6 +108,22 @@ extension UserDefaults {
 			}
 		}
 	}
+	
+	static func setSelectedTimePeriod(_ timePeriod: TimePeriod) {
+		Self.standard.setValue(timePeriod.rawValue, forKey: Key.selectedTimePeriod.rawValue)
+	}
+	
+	static func setUseContractEndTime(_ value: Bool) {
+		Self.standard.setValue(value, forKey: Key.useContractEndTime.rawValue)
+	}
+	
+	static func setcurrentContractEndTime(_ date: Date?) {
+		if let date = date {
+			Self.standard.setValue(date, forKey: Key.currentContractEndTime.rawValue)
+		} else {
+			Self.standard.removeObject(forKey: Key.currentContractEndTime.rawValue)
+		}
+	}
 }
 
 
@@ -106,6 +138,9 @@ private extension UserDefaults {
 		case useDailyFetching
 		case selectedDailPriceFetchingCountry
 		case hasSeenOnboarding
+		case selectedTimePeriod
+		case useContractEndTime
+		case currentContractEndTime
 	}
 }
 
@@ -121,7 +156,10 @@ extension UserDefaults {
 			.nightPriceStoppTimeslot: 0,
 			.useDailyFetching: false,
 			.selectedDailPriceFetchingCountry: nil as SupportedPriceFetchingCountryModel? as Any,
-			.hasSeenOnboarding: false
+			.hasSeenOnboarding: false,
+			.selectedTimePeriod: TimePeriod.daily.rawValue,
+			.useContractEndTime: false,
+			.currentContractEndTime: nil as Date? ?? Date()
 		]
 		
 		for (key, value) in defaults {

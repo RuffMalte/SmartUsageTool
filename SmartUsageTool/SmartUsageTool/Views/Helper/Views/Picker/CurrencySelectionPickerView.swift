@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurrencySelectionPickerView: View {
-	
+	var useCompactView: Bool = false
 	@State var selectedCurrency: Currency?
 	@State private var isShowingCurrencyExplanation = false
 	@Environment(\.dismiss) var dismiss
@@ -37,33 +37,39 @@ struct CurrencySelectionPickerView: View {
 						.tag(currency)
 					}
 				} label: {
-					HStack {
-						Label {
-							Text(selectedCurrency?.flag ?? "")
-						} icon: {
-							Text(NSLocalizedString(selectedCurrency?.code ?? "USD", comment: ""))
-						}
-						Spacer()
-						
-						Button {
-							isShowingCurrencyExplanation.toggle()
-						} label: {
-							Image(systemName: "info.circle")
-						}
-					}
-					.popover(isPresented: $isShowingCurrencyExplanation, content: {
-						ScrollView(.vertical) {
-							VStack {
-								Text(Localize.currencyExplanation)
-									.presentationCompactAdaptation(.popover)
+					if !useCompactView {
+						HStack {
+							Label {
+								Text(selectedCurrency?.flag ?? "")
+							} icon: {
+								Text(NSLocalizedString(selectedCurrency?.code ?? "USD", comment: ""))
+							}
+							Spacer()
+							
+							Button {
+								isShowingCurrencyExplanation.toggle()
+							} label: {
+								Image(systemName: "info.circle")
 							}
 						}
-						.padding()
-						.frame(width: 200, height: 150)
-						.font(.system(.subheadline, design: .rounded, weight: .regular))
-						.foregroundStyle(.primary)
-					})
+						.popover(isPresented: $isShowingCurrencyExplanation, content: {
+							ScrollView(.vertical) {
+								VStack {
+									Text(Localize.currencyExplanation)
+										.presentationCompactAdaptation(.popover)
+								}
+							}
+							.padding()
+							.frame(width: 200, height: 150)
+							.font(.system(.subheadline, design: .rounded, weight: .regular))
+							.foregroundStyle(.primary)
+						})
+					} else {
+						EmptyView()
+					}
 				}
+				.listRowInsets(useCompactView ? EdgeInsets() : nil)
+				.listRowBackground(useCompactView ? Color.clear : nil)
 				.pickerStyle(.inline)
 				.onAppear {
 					selectedCurrency = Currency.currencies.first { $0.code == UserDefaults.currency }

@@ -87,7 +87,7 @@ struct ArticleHomeView: View {
 		.background {
 			RoundedRectangle(cornerRadius: 20)
 				.ignoresSafeArea()
-				.foregroundStyle(Color.background)
+				.foregroundStyle(Color.background.gradient)
 				.shadow(radius: 10)
 		}
 	}

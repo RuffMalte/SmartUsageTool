@@ -37,10 +37,24 @@
 		2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */; };
 		2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */; };
 		2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E28608A2C873A320018FAFF /* RegionSettingsView.swift */; };
+		2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */; };
+		2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */; };
+		2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */; };
+		2E414FC12CA04C890024A876 /* RoomPricesTableViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */; };
+		2E414FC42CA066240024A876 /* TimeRangeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FC32CA066240024A876 /* TimeRangeChartView.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
 		2E715FF12C9B1E75004B2A77 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FF02C9B1E75004B2A77 /* Tips.swift */; };
+		2E7543CA2C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7543C92C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift */; };
+		2E7543CC2C9F148800B7B1E7 /* CarbonIntensityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7543CB2C9F148800B7B1E7 /* CarbonIntensityData.swift */; };
+		2E7543D02C9F1B9500B7B1E7 /* ElectricityMapsAPIKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7543CF2C9F1B9500B7B1E7 /* ElectricityMapsAPIKeyController.swift */; };
+		2E7543D22C9F1BD700B7B1E7 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7543D12C9F1BD700B7B1E7 /* KeychainManager.swift */; };
+		2E7B376B2C9F4E4E00B52B04 /* StatisticsSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B376A2C9F4E4E00B52B04 /* StatisticsSettingsView.swift */; };
+		2E7B376D2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B376C2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift */; };
+		2E7B37722CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37712CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift */; };
+		2E7B37742CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37732CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift */; };
+		2E7B37762CA039F900B52B04 /* HomeCalculationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */; };
 		2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */; };
 		2E99FE532C96EE050048B153 /* DevicesPriceChartCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */; };
 		2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */; };
@@ -65,6 +79,7 @@
 		2ECA0D6B2C9AF9E600D0899D /* CurrencySelectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D6A2C9AF9E600D0899D /* CurrencySelectionPickerView.swift */; };
 		2ECA0D6D2C9AFAB900D0899D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA0D6C2C9AFAB900D0899D /* Currency.swift */; };
 		2ED8E5EE2C96D5CF007F2DBE /* DevicesPriceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */; };
+		2EDA973D2C9EC2A800B4A7DD /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */; };
 		2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */; };
 		2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */; };
 		2EDE63D32C95DC3400A14004 /* SummaryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */; };
@@ -117,12 +132,26 @@
 		2E2860862C871EF20018FAFF /* NightlyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightlyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E2860882C8738AA0018FAFF /* DailyUsageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageSettingsView.swift; sourceTree = "<group>"; };
 		2E28608A2C873A320018FAFF /* RegionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSettingsView.swift; sourceTree = "<group>"; };
+		2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractLengthSettingsView.swift; sourceTree = "<group>"; };
+		2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCalculationInformationView.swift; sourceTree = "<group>"; };
+		2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPricesChartView.swift; sourceTree = "<group>"; };
+		2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPricesTableViewSmall.swift; sourceTree = "<group>"; };
+		2E414FC32CA066240024A876 /* TimeRangeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRangeChartView.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		2E715FF02C9B1E75004B2A77 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		2E715FF22C9B2BC5004B2A77 /* SmartUsageToolTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SmartUsageToolTests.xctestplan; sourceTree = "<group>"; };
 		2E715FF72C9B2C32004B2A77 /* SmartUsageToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartUsageToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7543C92C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityMapsAPIController.swift; sourceTree = "<group>"; };
+		2E7543CB2C9F148800B7B1E7 /* CarbonIntensityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarbonIntensityData.swift; sourceTree = "<group>"; };
+		2E7543CF2C9F1B9500B7B1E7 /* ElectricityMapsAPIKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityMapsAPIKeyController.swift; sourceTree = "<group>"; };
+		2E7543D12C9F1BD700B7B1E7 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		2E7B376A2C9F4E4E00B52B04 /* StatisticsSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSettingsView.swift; sourceTree = "<group>"; };
+		2E7B376C2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCarbonIntensityModel.swift; sourceTree = "<group>"; };
+		2E7B37712CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCarbonFootPrintChartView.swift; sourceTree = "<group>"; };
+		2E7B37732CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCarbonFootPrintTableView.swift; sourceTree = "<group>"; };
+		2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalculationsController.swift; sourceTree = "<group>"; };
 		2E99FE4F2C96ECCD0048B153 /* DevicesPriceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceHomeView.swift; sourceTree = "<group>"; };
 		2E99FE522C96EE050048B153 /* DevicesPriceChartCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartCreationView.swift; sourceTree = "<group>"; };
 		2E99FE542C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartHeaderView.swift; sourceTree = "<group>"; };
@@ -147,6 +176,7 @@
 		2ECA0D6A2C9AF9E600D0899D /* CurrencySelectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectionPickerView.swift; sourceTree = "<group>"; };
 		2ECA0D6C2C9AFAB900D0899D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2ED8E5ED2C96D5CF007F2DBE /* DevicesPriceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesPriceChartView.swift; sourceTree = "<group>"; };
+		2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		2EDE63CD2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityPriceChartHeaderViewView.swift; sourceTree = "<group>"; };
 		2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMainView.swift; sourceTree = "<group>"; };
 		2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryItemListView.swift; sourceTree = "<group>"; };
@@ -208,8 +238,9 @@
 		0804AB822BCC0D3300E1636C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2E7543CE2C9F1A0100B7B1E7 /* Helper */,
+				2E7543C82C9F139C00B7B1E7 /* Controller */,
 				0804AB832BCC0D4300E1636C /* UserDefaults+Keys.swift */,
-				2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */,
 				2E715FEE2C9B19CE004B2A77 /* Haptics.swift */,
 				2E715FF02C9B1E75004B2A77 /* Tips.swift */,
 			);
@@ -313,9 +344,9 @@
 		2E095BBD2C8EEE59006B399B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E7543CD2C9F149F00B7B1E7 /* StatisticData */,
 				2ECA0D612C9A15D700D0899D /* Helper */,
 				2EC6F1292C985C9C00FF12E5 /* Article */,
-				2E095BC82C8EFC04006B399B /* EnergyPrice */,
 				2E095BC02C8EEF4E006B399B /* Room */,
 				2E095BBE2C8EEE78006B399B /* Device */,
 			);
@@ -335,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				087069B32BD01EE10033FE43 /* Devices.swift */,
+				2E7B376C2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -444,8 +476,27 @@
 				2E28608A2C873A320018FAFF /* RegionSettingsView.swift */,
 				2EA7CD622C91F57F007DF36B /* PriceFetchingSettingsView.swift */,
 				2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */,
+				2E2D1B002C9ED548003A7248 /* ContractLengthSettingsView.swift */,
+				2E7B376A2C9F4E4E00B52B04 /* StatisticsSettingsView.swift */,
 			);
 			path = SubSettingsView;
+			sourceTree = "<group>";
+		};
+		2E414FBD2CA049240024A876 /* RoomsPricesChart */ = {
+			isa = PBXGroup;
+			children = (
+				2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */,
+				2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */,
+			);
+			path = RoomsPricesChart;
+			sourceTree = "<group>";
+		};
+		2E414FC22CA05CAD0024A876 /* TimeRangePriceChart */ = {
+			isa = PBXGroup;
+			children = (
+				2E414FC32CA066240024A876 /* TimeRangeChartView.swift */,
+			);
+			path = TimeRangePriceChart;
 			sourceTree = "<group>";
 		};
 		2E715FE92C9B0C32004B2A77 /* OnBoarding */ = {
@@ -454,6 +505,43 @@
 				2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		2E7543C82C9F139C00B7B1E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E095BC62C8EF552006B399B /* ElectricityPriceController.swift */,
+				2E7543C92C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift */,
+				2E7B37752CA039F900B52B04 /* HomeCalculationsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E7543CD2C9F149F00B7B1E7 /* StatisticData */ = {
+			isa = PBXGroup;
+			children = (
+				2E095BC82C8EFC04006B399B /* EnergyPrice */,
+				2E7543CB2C9F148800B7B1E7 /* CarbonIntensityData.swift */,
+			);
+			path = StatisticData;
+			sourceTree = "<group>";
+		};
+		2E7543CE2C9F1A0100B7B1E7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2E7543D12C9F1BD700B7B1E7 /* KeychainManager.swift */,
+				2E7543CF2C9F1B9500B7B1E7 /* ElectricityMapsAPIKeyController.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2E7B376E2CA0087100B52B04 /* DevicesCarbonFootprint */ = {
+			isa = PBXGroup;
+			children = (
+				2E7B37712CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift */,
+				2E7B37732CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift */,
+			);
+			path = DevicesCarbonFootprint;
 			sourceTree = "<group>";
 		};
 		2E99FE4E2C96ECB20048B153 /* ChartView */ = {
@@ -533,6 +621,7 @@
 		2ECA0D612C9A15D700D0899D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2EDA973C2C9EC2A800B4A7DD /* TimePeriod.swift */,
 				2ECA0D6C2C9AFAB900D0899D /* Currency.swift */,
 				2ECA0D622C9A15DC00D0899D /* ColorEnum.swift */,
 			);
@@ -553,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECA0D682C9AF55F00D0899D /* ContactUsView.swift */,
+				2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -571,6 +661,9 @@
 			children = (
 				2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */,
 				2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */,
+				2E414FC22CA05CAD0024A876 /* TimeRangePriceChart */,
+				2E414FBD2CA049240024A876 /* RoomsPricesChart */,
+				2E7B376E2CA0087100B52B04 /* DevicesCarbonFootprint */,
 				2E99FE512C96EDB50048B153 /* Helper */,
 				2ED8E5EC2C96D5B3007F2DBE /* DevicePricesChart */,
 				2EB1D4DC2C8F040400F2BAA8 /* ElectricityPriceChart */,
@@ -687,14 +780,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E28607C2C85CF430018FAFF /* DeviceDetailView.swift in Sources */,
+				2E7543CA2C9F13D300B7B1E7 /* ElectricityMapsAPIController.swift in Sources */,
 				2EF3D2DD2C8884D100D73317 /* ModifyDeviceSheetView.swift in Sources */,
 				2ECA0D662C9A15FF00D0899D /* ColorPicker.swift in Sources */,
 				2E2860872C871EF20018FAFF /* NightlyUsageSettingsView.swift in Sources */,
+				2E7543D02C9F1B9500B7B1E7 /* ElectricityMapsAPIKeyController.swift in Sources */,
 				2E99FE502C96ECCD0048B153 /* DevicesPriceHomeView.swift in Sources */,
+				2E7B37742CA01D4700B52B04 /* DevicesCarbonFootPrintTableView.swift in Sources */,
 				2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */,
 				2EC6F1282C985C9300FF12E5 /* EnglishArticles.swift in Sources */,
+				2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */,
 				2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */,
 				2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */,
+				2E414FC42CA066240024A876 /* TimeRangeChartView.swift in Sources */,
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
 				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,
@@ -702,6 +800,8 @@
 				2ECA0D6D2C9AFAB900D0899D /* Currency.swift in Sources */,
 				2EA7CD562C90742A007DF36B /* HeaderView.swift in Sources */,
 				2E2860822C86FA500018FAFF /* MainSettingsView.swift in Sources */,
+				2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */,
+				2E7B37762CA039F900B52B04 /* HomeCalculationsController.swift in Sources */,
 				2E99FE552C96EE9B0048B153 /* DevicesPriceChartHeaderView.swift in Sources */,
 				2E2860892C8738AA0018FAFF /* DailyUsageSettingsView.swift in Sources */,
 				0815F1912BACCA70002B39BD /* ListView.swift in Sources */,
@@ -709,11 +809,14 @@
 				2E2860762C85AB980018FAFF /* DeleteButtonWithConfirmationView.swift in Sources */,
 				0815F18D2BACC827002B39BD /* HomeView.swift in Sources */,
 				2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */,
+				2EDA973D2C9EC2A800B4A7DD /* TimePeriod.swift in Sources */,
 				0804AB872BCC209D00E1636C /* DeviceInfoView.swift in Sources */,
 				2ECA0D6B2C9AF9E600D0899D /* CurrencySelectionPickerView.swift in Sources */,
 				2EA7CD5D2C91C1FF007DF36B /* ElectricityPriceChartExtremePointMarkView.swift in Sources */,
+				2E7B376B2C9F4E4E00B52B04 /* StatisticsSettingsView.swift in Sources */,
 				0850BA442BBAA8D400DB1C41 /* RoomType.swift in Sources */,
 				2E095BCA2C8EFC16006B399B /* PriceResponse.swift in Sources */,
+				2E414FC12CA04C890024A876 /* RoomPricesTableViewSmall.swift in Sources */,
 				2EC6F12E2C98670100FF12E5 /* ArticleItemListView.swift in Sources */,
 				2EC6F1232C985C2800FF12E5 /* ArticleHomeView.swift in Sources */,
 				0850BA422BBAA8AB00DB1C41 /* RoomModel.swift in Sources */,
@@ -725,8 +828,10 @@
 				2EB1D4E02C8F41C400F2BAA8 /* ElectricityPriceHomeView.swift in Sources */,
 				2EDE63D12C95CCCF00A14004 /* SummaryMainView.swift in Sources */,
 				2EF3D2DF2C8899C100D73317 /* HoursAndMinutesTimeIntervalPicker.swift in Sources */,
+				2E7B37722CA008D600B52B04 /* DevicesCarbonFootPrintChartView.swift in Sources */,
 				0815F17B2BACC524002B39BD /* InitialView.swift in Sources */,
 				2E28607A2C85B9DC0018FAFF /* DeviceItemListView.swift in Sources */,
+				2E7B376D2CA004E800B52B04 /* DeviceCarbonIntensityModel.swift in Sources */,
 				2E715FF12C9B1E75004B2A77 /* Tips.swift in Sources */,
 				2EB1D4DB2C8EFE4900F2BAA8 /* withEnviromentObjects.swift in Sources */,
 				2EC6F1262C985C8800FF12E5 /* GermanArticles.swift in Sources */,
@@ -736,6 +841,7 @@
 				2E2860852C8712890018FAFF /* SettingsAboutAppView.swift in Sources */,
 				0815F1792BACC524002B39BD /* SmartUsageToolApp.swift in Sources */,
 				08EE27912BF3DF6900CF9AEA /* Localize.swift in Sources */,
+				2E7543CC2C9F148800B7B1E7 /* CarbonIntensityData.swift in Sources */,
 				2E28608B2C873A320018FAFF /* RegionSettingsView.swift in Sources */,
 				2E095BBB2C88C9BC006B399B /* ModifyRoomSheetView.swift in Sources */,
 				2EDE63CE2C95A1D300A14004 /* ElectricityPriceChartHeaderViewView.swift in Sources */,
@@ -743,8 +849,10 @@
 				2E095BC72C8EF552006B399B /* ElectricityPriceController.swift in Sources */,
 				2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */,
 				2EB383242C94C5500090D865 /* SupportedPriceFetchingCountryModel.swift in Sources */,
+				2E7543D22C9F1BD700B7B1E7 /* KeychainManager.swift in Sources */,
 				2EA7CD632C91F57F007DF36B /* PriceFetchingSettingsView.swift in Sources */,
 				087069B62BD02B690033FE43 /* Rooms.swift in Sources */,
+				2E2D1B012C9ED548003A7248 /* ContractLengthSettingsView.swift in Sources */,
 				2EA7CD5F2C91C270007DF36B /* ElectricityPriceChartDateNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

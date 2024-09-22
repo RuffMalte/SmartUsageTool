@@ -188,5 +188,63 @@ struct Localize {
     static let changeArticleLanguage = NSLocalizedString("changeArticleLanguage", comment: "#bc-ignore!")
     static let changeArticleLanguageMessage = NSLocalizedString("changeArticleLanguageMessage", comment: "#bc-ignore!")
 
+    static let daily = NSLocalizedString("daily", comment: "#bc-ignore!")
+    static let monthly = NSLocalizedString("monthly", comment: "#bc-ignore!")
+    static let yearly = NSLocalizedString("yearly", comment: "#bc-ignore!")
+
+    static let timeRange = NSLocalizedString("timeRange", comment: "#bc-ignore!")
+    static let contractMangement = NSLocalizedString("contractMangement", comment: "#bc-ignore!")
+    static let alertOnContractEndTime = NSLocalizedString("alertOnContractEndTime", comment: "#bc-ignore!")
+    static let selectDate = NSLocalizedString("selectDate", comment: "#bc-ignore!")
+    static let alertOnContractEndTimeDescription = NSLocalizedString("alertOnContractEndTimeDescription", comment: "#bc-ignore!")
+    static let yourContractEndsSoon = NSLocalizedString("yourContractEndsSoon", comment: "#bc-ignore!")
+    static let yourContractEndsInTheNextFewDays = NSLocalizedString("yourContractEndsInTheNextFewDays", comment: "#bc-ignore!")
+
+    static let introduction = NSLocalizedString("introduction", comment: "#bc-ignore!")
+    static let energyUseTutorial = NSLocalizedString("energyUseTutorial", comment: "#bc-ignore!")
+    static let energyUseCalculationDefinition = NSLocalizedString("energyUseCalculationDefinition", comment: "#bc-ignore!")
+    static let energyUseCalculationDefinitionText = NSLocalizedString("energyUseCalculationDefinitionText", comment: "#bc-ignore!")
+    static let energyMonitoringImportance = NSLocalizedString("energyMonitoringImportance", comment: "#bc-ignore!")
+    static let energyMonitoringImportanceText = NSLocalizedString("energyMonitoringImportanceText", comment: "#bc-ignore!")
+    static let understandingEnergyCosts = NSLocalizedString("understandingEnergyCosts", comment: "#bc-ignore!")
+    static let understandingEnergyCostsText = NSLocalizedString("understandingEnergyCostsText", comment: "#bc-ignore!")
+    static let factorsAffectingConsumption = NSLocalizedString("factorsAffectingConsumption", comment: "#bc-ignore!")
+    static let factorsAffectingConsumptionText = NSLocalizedString("factorsAffectingConsumptionText", comment: "#bc-ignore!")
+    static let calculatingEnergyCosts = NSLocalizedString("calculatingEnergyCosts", comment: "#bc-ignore!")
+    static let calculatingEnergyCostsText = NSLocalizedString("calculatingEnergyCostsText", comment: "#bc-ignore!")
+    static let tipsForReducingConsumption = NSLocalizedString("tipsForReducingConsumption", comment: "#bc-ignore!")
+    static let tipsForReducingConsumptionText = NSLocalizedString("tipsForReducingConsumptionText", comment: "#bc-ignore!")
+
+    static let Source = NSLocalizedString("Source", comment: "#bc-ignore!")
+    static let moreInformation = NSLocalizedString("moreInformation", comment: "#bc-ignore!")
+    static let statisticSettings = NSLocalizedString("statisticSettings", comment: "#bc-ignore!")
+
+    static let EnergyMapsAPIKey = NSLocalizedString("EnergyMapsAPIKey", comment: "#bc-ignore!")
+    static let EnterAPIKey = NSLocalizedString("EnterAPIKey", comment: "#bc-ignore!")
+    static let apiTestResult = NSLocalizedString("apiTestResult", comment: "#bc-ignore!")
+    static let apiTestSuccess = NSLocalizedString("apiTestSuccess", comment: "#bc-ignore!")
+    static let apiTestFailed = NSLocalizedString("apiTestFailed", comment: "#bc-ignore!")
+    static let ok = NSLocalizedString("ok", comment: "#bc-ignore!")
+	static let whatIsAnAPIKey = NSLocalizedString("whatIsAnAPIKey", comment: "#bc-ignore!")
+    static let getYourOwnAPIKey = NSLocalizedString("getYourOwnAPIKey", comment: "#bc-ignore!")
+
+    static let devicesCarbonFootprint = NSLocalizedString("devicesCarbonFootprint", comment: "#bc-ignore!")
+    static let deviceName = NSLocalizedString("deviceName", comment: "#bc-ignore!")
+
+    static let info = NSLocalizedString("info", comment: "#bc-ignore!")
+    static let UnderstandingYourCarbonFootprint = NSLocalizedString("UnderstandingYourCarbonFootprint", comment: "#bc-ignore!")
+
+    static let getMoreStats = NSLocalizedString("getMoreStats", comment: "#bc-ignore!")
+    static let getMoreStatsInTheSettingsAndGetYourOwnAPIkey = NSLocalizedString("getMoreStatsInTheSettingsAndGetYourOwnAPIkey", comment: "#bc-ignore!")
+
+    static let mostExpensive = NSLocalizedString("mostExpensive", comment: "#bc-ignore!")
+    static let mostExpensiveRooms = NSLocalizedString("mostExpensiveRooms", comment: "#bc-ignore!")
+    static let rooms = NSLocalizedString("rooms", comment: "#bc-ignore!")
+    static let wattageAndUseTime = NSLocalizedString("wattageAndUseTime", comment: "#bc-ignore!")
+    static let howToGetWattageAndUseTime = NSLocalizedString("howToGetWattageAndUseTime", comment: "#bc-ignore!")
+
+    static let projectedYearlyCost = NSLocalizedString("projectedYearlyCost", comment: "#bc-ignore!")
+    static let allRooms = NSLocalizedString("allRooms", comment: "#bc-ignore!")
+    static let monthlyCost = NSLocalizedString("monthlyCost", comment: "#bc-ignore!")
 }
 

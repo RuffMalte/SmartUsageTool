@@ -10,8 +10,8 @@ import SwiftData
 
 @Model
 final class RoomModel: Identifiable {
-    let id = UUID()
-    let type: RoomType
+    var id = UUID()
+    var type: RoomType
     var name: String
     @Relationship(deleteRule: .cascade)  var devices: [DeviceModel] = []
 	
@@ -20,13 +20,18 @@ final class RoomModel: Identifiable {
 	}
 	
 	var monthlyExpenses: Double {
-		devices.filter { $0.isOn }.reduce(0.0) { $0 + $1.expenses }
+		dailyExpenses * 30 // Assuming an average month has 30 days
+	}
+	
+	var yearlyExpenses: Double {
+		dailyExpenses * 365 // Using 365 days for a year
 	}
     
     init(type: RoomType, name: String) {
         self.type = type
         self.name = name
     }
+	
 }
 
 extension RoomModel {

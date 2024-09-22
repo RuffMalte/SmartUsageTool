@@ -46,6 +46,21 @@ struct MainSettingsView: View {
 				} label: {
 					SettingsItemListView(icon: "moon.stars", iconBackground: .green, title: Localize.nightlyUsage)
 				}
+				
+				NavigationLink {
+					ContractLengthSettingsView()
+				} label: {
+					SettingsItemListView(icon: "clock.arrow.2.circlepath", iconBackground: .yellow, title: Localize.contractMangement)
+				}
+
+			}
+			
+			Section {
+				NavigationLink {
+					StatisticsSettingsView()
+				} label: {
+					SettingsItemListView(icon: "chart.bar", iconBackground: .blue, title: Localize.statisticSettings)
+				}
 			}
 			
 			Section {

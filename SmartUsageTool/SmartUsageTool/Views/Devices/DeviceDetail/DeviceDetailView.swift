@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftData
-
+import TipKit
 struct DeviceDetailView: View {
 	
 	@Bindable var device: DeviceModel
@@ -52,7 +52,7 @@ struct DeviceDetailView: View {
 						Spacer()
 						
 						Label {
-							Text(device.expenses.formatted(.number.precision(.fractionLength(5))))
+							Text(device.expenses, format: .currency(code: UserDefaults.currency).precision(.fractionLength(5)))
 								.font(.system(.headline, design: .monospaced, weight: .bold))
 						} icon: {
 							Image(systemName: "bolt.fill")
@@ -83,14 +83,14 @@ struct DeviceDetailView: View {
 						HStack {
 							Spacer()
 							Label {
-								Text(device.dayExpenses.formatted(.number.precision(.fractionLength(5))))
+								Text(device.dayExpenses, format: .currency(code: UserDefaults.currency).precision(.fractionLength(5)))
 									.font(.system(.headline, design: .monospaced, weight: .bold))
 							} icon: {
 								Image(systemName: "sun.max")
 							}
 							Spacer()
 							Label {
-								Text(device.nightExpenses.formatted(.number.precision(.fractionLength(5))))
+								Text(device.nightExpenses, format: .currency(code: UserDefaults.currency).precision(.fractionLength(5)))
 									.font(.system(.headline, design: .monospaced, weight: .bold))
 							} icon: {
 								Image(systemName: "moon.stars")
@@ -102,9 +102,12 @@ struct DeviceDetailView: View {
 				}
 				Divider()
 					.padding(.vertical)
-				
+					.tipBackground(.bar)
 				
 				VStack(spacing: 20) {
+					
+					
+					
 					DeviceInfoWithTextfield(
 						initialValue: Double(device.power),
 						type: Localize.w,
@@ -112,6 +115,8 @@ struct DeviceDetailView: View {
 					) { value in
 						device.power = Int(value)
 					}
+					
+					TipView(howToGetWattageAndUseTime())
 					
 					CustomHourMinutePicker(
 						selection: $device.dayTime,
@@ -165,7 +170,7 @@ struct DeviceDetailView: View {
 		.background {
 			RoundedRectangle(cornerRadius: 20)
 				.ignoresSafeArea()
-				.foregroundStyle(Color.background)
+				.foregroundStyle(Color.background.gradient)
 				.shadow(radius: 10)
 		}
 	}
