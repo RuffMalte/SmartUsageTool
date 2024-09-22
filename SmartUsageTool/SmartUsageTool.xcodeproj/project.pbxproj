@@ -41,6 +41,7 @@
 		2E2D1B042C9EE9F8003A7248 /* EnergyCalculationInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */; };
 		2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */; };
 		2E414FC12CA04C890024A876 /* RoomPricesTableViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */; };
+		2E414FC42CA066240024A876 /* TimeRangeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E414FC32CA066240024A876 /* TimeRangeChartView.swift */; };
 		2E44359F2C9B04CB00950C9D /* DangerousSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */; };
 		2E715FEB2C9B0C63004B2A77 /* OnBoardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */; };
 		2E715FEF2C9B19CE004B2A77 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E715FEE2C9B19CE004B2A77 /* Haptics.swift */; };
@@ -135,6 +136,7 @@
 		2E2D1B032C9EE9F8003A7248 /* EnergyCalculationInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCalculationInformationView.swift; sourceTree = "<group>"; };
 		2E414FBE2CA049460024A876 /* RoomsPricesChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPricesChartView.swift; sourceTree = "<group>"; };
 		2E414FC02CA04C890024A876 /* RoomPricesTableViewSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPricesTableViewSmall.swift; sourceTree = "<group>"; };
+		2E414FC32CA066240024A876 /* TimeRangeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRangeChartView.swift; sourceTree = "<group>"; };
 		2E44359E2C9B04CB00950C9D /* DangerousSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerousSettingsView.swift; sourceTree = "<group>"; };
 		2E715FEA2C9B0C63004B2A77 /* OnBoardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingMainView.swift; sourceTree = "<group>"; };
 		2E715FEE2C9B19CE004B2A77 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
@@ -489,6 +491,14 @@
 			path = RoomsPricesChart;
 			sourceTree = "<group>";
 		};
+		2E414FC22CA05CAD0024A876 /* TimeRangePriceChart */ = {
+			isa = PBXGroup;
+			children = (
+				2E414FC32CA066240024A876 /* TimeRangeChartView.swift */,
+			);
+			path = TimeRangePriceChart;
+			sourceTree = "<group>";
+		};
 		2E715FE92C9B0C32004B2A77 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +661,7 @@
 			children = (
 				2EDE63D02C95CCCF00A14004 /* SummaryMainView.swift */,
 				2EDE63D22C95DC3400A14004 /* SummaryItemListView.swift */,
+				2E414FC22CA05CAD0024A876 /* TimeRangePriceChart */,
 				2E414FBD2CA049240024A876 /* RoomsPricesChart */,
 				2E7B376E2CA0087100B52B04 /* DevicesCarbonFootprint */,
 				2E99FE512C96EDB50048B153 /* Helper */,
@@ -781,6 +792,7 @@
 				2E414FBF2CA049460024A876 /* RoomsPricesChartView.swift in Sources */,
 				2EB1D4DE2C8F068C00F2BAA8 /* ElectricityPriceChartView.swift in Sources */,
 				2EC6F12B2C985CC800FF12E5 /* ArticleModel.swift in Sources */,
+				2E414FC42CA066240024A876 /* TimeRangeChartView.swift in Sources */,
 				2E2860782C85B06D0018FAFF /* RoomItemListView.swift in Sources */,
 				0804AB842BCC0D4300E1636C /* UserDefaults+Keys.swift in Sources */,
 				087069B82BD0316B0033FE43 /* LaunchView.swift in Sources */,

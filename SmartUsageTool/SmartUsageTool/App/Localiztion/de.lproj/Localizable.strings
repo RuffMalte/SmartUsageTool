@@ -282,3 +282,6 @@ Durch das Verständnis dieser Zahlen können wir fundiertere Entscheidungen übe
 "rooms" = "Räume";
 "wattageAndUseTime" = "Leistung und Nutzungszeit";
 "howToGetWattageAndUseTime" = "Bei der Eingabe der Laufzeit beachten Sie bitte, dass dies die tatsächliche Betriebszeit des Geräts darstellt, nicht die Gesamtzeit, in der es angeschlossen ist. Für Geräte wie Kühlschränke, die zyklisch arbeiten, müssen Sie die effektive Laufzeit berechnen - beispielsweise bei einem Kühlschrank, der 12 Minuten pro Stunde aktiv ist, wären das 4,8 Stunden für einen ganzen Tag (12 Minuten x 24 Stunden / 60 Minuten).";
+"projectedYearlyCost" = "Jährliche Kosten";
+"allRooms" = "Alle Räume";
+"monthlyCost" = "Monatliche Kosten";

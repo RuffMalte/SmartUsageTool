@@ -59,4 +59,28 @@ class HomeCalculationsController {
 			return room.yearlyExpenses
 		}
 	}
+	
+	func getTotalYearlyExpenses(rooms: [RoomModel]) -> Double {
+		var totalYearlyExpenses: Double = 0.0
+		for room in rooms {
+			totalYearlyExpenses += room.yearlyExpenses
+		}
+		return totalYearlyExpenses
+	}
+	
+	func getTotalMonthlyCost(rooms: [RoomModel]) -> Double {
+		var totalMonthlyCost: Double = 0.0
+		for room in rooms {
+			totalMonthlyCost += room.monthlyExpenses
+		}
+		return totalMonthlyCost
+	}
+	
+	func getTotalDailyCoast(rooms: [RoomModel]) -> Double {
+		var totalDailyCoast: Double = 0.0
+		for room in rooms {
+			totalDailyCoast += room.dailyExpenses
+		}
+		return totalDailyCoast
+	}
 }

@@ -242,5 +242,9 @@ struct Localize {
     static let rooms = NSLocalizedString("rooms", comment: "#bc-ignore!")
     static let wattageAndUseTime = NSLocalizedString("wattageAndUseTime", comment: "#bc-ignore!")
     static let howToGetWattageAndUseTime = NSLocalizedString("howToGetWattageAndUseTime", comment: "#bc-ignore!")
+
+    static let projectedYearlyCost = NSLocalizedString("projectedYearlyCost", comment: "#bc-ignore!")
+    static let allRooms = NSLocalizedString("allRooms", comment: "#bc-ignore!")
+    static let monthlyCost = NSLocalizedString("monthlyCost", comment: "#bc-ignore!")
 }
 

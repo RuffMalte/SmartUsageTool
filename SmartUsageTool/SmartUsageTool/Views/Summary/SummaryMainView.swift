@@ -154,6 +154,38 @@ struct SummaryMainView: View {
 					}
 					
 					Section {
+						if !rooms.isEmpty {
+							NavigationLink {
+								TimeRangeChartView()
+							} label: {
+								SummaryItemListView(
+									title: Localize.projectedYearlyCost,
+									icon: "fireworks",
+									titleColor: .orange,
+									latestDate: Date(),
+									latestValueView: AnyView(
+										VStack(alignment: .leading) {
+											HStack(alignment: .firstTextBaseline) {
+												Text(Localize.allRooms)
+													.font(.system(.title2, design: .monospaced, weight: .bold))
+											}
+										}
+									),
+									chartView: AnyView(
+										VStack(alignment: .trailing) {
+											HStack(alignment: .lastTextBaseline) {
+												Text(HomeCalculationsController().getTotalYearlyExpenses(rooms: rooms), format: .currency(code: UserDefaults.currency))
+													.font(.system(.title2, design: .monospaced, weight: .semibold))
+											}
+										}
+									)
+								)
+							}
+						}
+					}
+
+					
+					Section {
 						TipView(getMoreStatistics())
 							.tipBackground(Color.clear)
 					}
