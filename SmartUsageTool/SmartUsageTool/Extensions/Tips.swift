@@ -189,3 +189,17 @@ struct getMoreStatistics: Tip {
 		Image(systemName: "chart.bar")
 	}
 }
+
+struct howToGetWattageAndUseTime: Tip {
+	var title: Text {
+		Text(Localize.wattageAndUseTime)
+	}
+	
+	var message: Text? {
+		Text(Localize.howToGetWattageAndUseTime)
+	}
+	
+	var image: Image? {
+		Image(systemName: "poweroutlet.type.c.square.fill")
+	}
+}

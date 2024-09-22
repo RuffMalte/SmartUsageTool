@@ -281,3 +281,5 @@ By understanding these numbers, we can make more informed choices about our ener
 "mostExpensive" = "Most Expensive";
 "mostExpensiveRooms" = "Most Expensive Rooms";
 "rooms" = "Rooms";
+"wattageAndUseTime" = "Wattage and Use Time";
+"howToGetWattageAndUseTime" = "When entering the runtime, please note that this represents the actual operating time of the device, not the total time it is plugged in. For devices like refrigerators that work cyclically, you need to calculate the effective runtime - for example, a refrigerator that is active for 12 minutes per hour would run for 4.8 hours in a full day (12 minutes x 24 hours / 60 minutes).";
